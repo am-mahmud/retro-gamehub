@@ -2,7 +2,7 @@ import React from 'react';
 
 const Login = () => {
 
-    const handleSubmit = (e) => {
+    const handleLogin = (e) => {
         e.preventDefault();
         console.log('Login attempt...');
 
@@ -23,7 +23,7 @@ const Login = () => {
                     </span> */}
                 </div>
 
-                <form onSubmit={handleSubmit} className="p-6 pt-10 flex flex-col items-center space-y-5">
+                <form onSubmit={handleLogin} className="p-6 pt-10 flex flex-col items-center space-y-5">
                     <div className="w-full">
                         <input
                             type="text"
