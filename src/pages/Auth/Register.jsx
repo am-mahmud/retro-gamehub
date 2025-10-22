@@ -1,43 +1,60 @@
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-import React, { useState } from 'react';
+// import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
-import { auth } from '../../firebase/firebase.config';
+// import { auth } from '../../firebase/firebase.config';
 import { GoEye, GoEyeClosed } from "react-icons/go";
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
+
+import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
 const Register = () => {
   const [show, setShow] = useState(false);
 
-  const handleSignUp = (e) => {
+  const {createUser} = use(AuthContext)
+
+  const handleRegister = (e) => {
     e.preventDefault();
+
+    
 
     const email = e.target.email?.value;
     const password = e.target.password?.value;
+    
+    createUser(email, password)
+    .then(result => {
+      console.log(result.user);
+      
+    })
+    .catch(error => {
+      console.log(error);
+      
+    })
 
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
+
+    // const passwordRegex =
+    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
 
 
-    if (!passwordRegex.test(password)) {
-      toast.error(
-        "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character."
-      );
-      return;
-    }
+    // if (!passwordRegex.test(password)) {
+    //   toast.error(
+    //     "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character."
+    //   );
+    //   return;
+    // }
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((res) => {
-        console.log(res);
-        toast.success("Account Created Successfully");
-        sendEmailVerification((auth.currentUser))
-          .then(() => {
-            toast.success("Verify Your Email!");
-          })
-      })
-      .catch((e) => {
-        console.log(e);
-        toast.error(e.message);
-      });
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((res) => {
+    //     console.log(res);
+    //     toast.success("Account Created Successfully");
+    //     sendEmailVerification((auth.currentUser))
+    //       .then(() => {
+    //         toast.success("Verify Your Email!");
+    //       })
+    //   })
+    //   .catch((e) => {
+    //     console.log(e);
+    //     toast.error(e.message);
+    //   });
   };
 
   return (
@@ -49,7 +66,7 @@ const Register = () => {
         <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
 
         <form
-          onSubmit={handleSignUp}
+          onSubmit={handleRegister}
           className="p-6 pt-10 flex flex-col items-center space-y-5"
         >
 
@@ -74,7 +91,6 @@ const Register = () => {
               required
             />
           </div>
-
 
           <div className="relative w-full">
             <input
