@@ -3,9 +3,9 @@ import ghLogo from '../../assets/gamehub-logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer footer-horizontal footer-center bg-[#FFC107] p-3 text-black space-mono">
+        <footer className="footer footer-horizontal footer-center bg-[#FFC107] p-3 text-black space-mono border-black border-t-5">
             <aside>
-                <img src={ghLogo} alt="" />
+                <img className='w-32 h-32' src={ghLogo} alt="" />
                 <p>
                    <span className='font-bold text-3xl'>Gamehub</span> 
                     <br />

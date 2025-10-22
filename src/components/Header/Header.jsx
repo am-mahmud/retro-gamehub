@@ -32,15 +32,15 @@ const Header = () => {
             </div>
 
 
-            <div className="navbar-end">
+            <div className="navbar-end gap-2">
                 <ul className="menu menu-horizontal px-1 hidden lg:flex">
                     {links}
                 </ul>
 
-                <button className="btn btn-dash">Signup</button>
+                <button className="btn border-4 border-black">Signup</button>
             </div>
 
-            <div className="dropdown dropdown-end">
+            {/* <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
                         <img
@@ -55,7 +55,7 @@ const Header = () => {
                     <li><a>Settings</a></li>
                     <li><a>Logout</a></li>
                 </ul>
-            </div>
+            </div> */}
 
 
         </div>
