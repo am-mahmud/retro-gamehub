@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import React, { useState } from 'react';
 import { Link } from 'react-router';
 import { auth } from '../../firebase/firebase.config';
@@ -22,13 +22,17 @@ const Register = () => {
       toast.error(
         "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character."
       );
-      return; 
+      return;
     }
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
         console.log(res);
         toast.success("Account Created Successfully");
+        sendEmailVerification((auth.currentUser))
+          .then(() => {
+            toast.success("Verify Your Email!");
+          })
       })
       .catch((e) => {
         console.log(e);
@@ -48,7 +52,18 @@ const Register = () => {
           onSubmit={handleSignUp}
           className="p-6 pt-10 flex flex-col items-center space-y-5"
         >
-        
+
+          <div className="w-full">
+            <input
+              name="name"
+              type="text"
+              placeholder="Name"
+              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+                         border-black border-2 bg-[#FFF8E1] text-[#444]"
+              required
+            />
+          </div>
+
           <div className="w-full">
             <input
               name="email"
@@ -60,7 +75,7 @@ const Register = () => {
             />
           </div>
 
-       
+
           <div className="relative w-full">
             <input
               name="password"
@@ -78,7 +93,7 @@ const Register = () => {
             </span>
           </div>
 
-        
+
           <button
             type="submit"
             className="w-48 mt-6 py-2 px-6 text-xl font-bold rounded-md cursor-pointer
@@ -88,7 +103,7 @@ const Register = () => {
             Get In
           </button>
 
-       
+
           <p className="text-center pb-4">
             Already have an account?{" "}
             <Link to="/login" className="text-[#444] underline">

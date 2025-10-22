@@ -7,6 +7,7 @@ import About from "../pages/About/About";
 import Developer from "../pages/Developer/Developer";
 import MyProfile from "../pages/Profile/MyProfile";
 import Error from "../pages/Error/Error";
+import ResetPassword from "../pages/Auth/ResetPassword";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/resetpassword",
+                element: <ResetPassword></ResetPassword>
             },
 
         ]
