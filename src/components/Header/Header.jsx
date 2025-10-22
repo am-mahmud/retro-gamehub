@@ -63,7 +63,7 @@ const Header = () => {
                 </ul>
 
 
-                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link>}
+                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get In</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link>}
 
             </div>
 
