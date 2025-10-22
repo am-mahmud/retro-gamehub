@@ -1,82 +1,73 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
 import { auth } from '../../firebase/firebase.config';
-import { GoEye } from "react-icons/go";
-import { GoEyeClosed } from "react-icons/go";
-
-
+import { GoEye, GoEyeClosed } from "react-icons/go";
+import { toast } from 'react-toastify';
 
 const Register = () => {
- const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+
   const handleSignUp = (e) => {
     e.preventDefault();
 
     const email = e.target.email?.value;
     const password = e.target.password?.value;
 
-    console.log("Sign up clicked", { email, password });
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!passwordRegex.test(password)) {
-      alert("Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.");
+      toast.error(
+        "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character."
+      );
+      return; 
     }
 
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        // Signed up 
-        console.log(res.user);
-
-        // ...
+        console.log(res);
+        toast.success("Account Created Successfully");
       })
-      .catch((error) => {
-        // const errorCode = error.code;
-        // const errorMessage = error.message;
-
-        console.log(error);
-
-        // ..
+      .catch((e) => {
+        console.log(e);
+        toast.error(e.message);
       });
   };
 
   return (
     <div className="flex justify-center items-center min-h-screen p-4">
-
       <div
-        className={`w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
-                    bg-[#FFF8E1] 
-                    border-black
-                    border-[3px]`}
+        className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
+                    bg-[#FFF8E1] border-black border-[3px]"
       >
+        <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
 
-
-        <div className={`h-8 flex justify-end items-center px-3 bg-[#FFD54F]`}>
-
-        </div>
-
-
-        <form onSubmit={handleSignUp} className="p-6 pt-10 flex flex-col items-center space-y-4">
-
+        <form
+          onSubmit={handleSignUp}
+          className="p-6 pt-10 flex flex-col items-center space-y-5"
+        >
+        
           <div className="w-full">
             <input
+              name="email"
               type="email"
-              placeholder="email"
-              className={`w-full p-3 text-lg font-bold rounded-md outline-none 
-                           border-black border-2 
-                          bg-[#FFF8E1] text-[#444]`}
+              placeholder="Email"
+              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+                         border-black border-2 bg-[#FFF8E1] text-[#444]"
               required
             />
           </div>
 
-
+       
           <div className="relative w-full">
             <input
-              type="password"
-              placeholder="xxxxxx"
-              className={`w-full p-3 text-lg font-bold rounded-md outline-none 
-                          border-black border-2 
-                          bg-[#FFF8E1] text-[#444]`}
+              name="password"
+              type={show ? "text" : "password"}
+              placeholder="Password"
+              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+                         border-black border-2 bg-[#FFF8E1] text-[#444]"
               required
             />
             <span
@@ -87,22 +78,23 @@ const Register = () => {
             </span>
           </div>
 
-
+        
           <button
             type="submit"
-            className={`w-48 mt-6 py-2 px-6 text-xl font-bold rounded-md cursor-pointer 
-                        bg-[#FFC107] 
-                        border-[#FFD54F] border-2 
-                        text-[#444] 
-                        transition duration-150 hover:opacity-80`}
+            className="w-48 mt-6 py-2 px-6 text-xl font-bold rounded-md cursor-pointer
+                       bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
+                       transition duration-150 hover:opacity-80"
           >
             Get In
           </button>
 
+       
           <p className="text-center pb-4">
-            Already have an account? <Link to='/login' className="text-[#444] underline">Login</Link>
+            Already have an account?{" "}
+            <Link to="/login" className="text-[#444] underline">
+              Login
+            </Link>
           </p>
-
         </form>
       </div>
     </div>
