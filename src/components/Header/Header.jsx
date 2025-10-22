@@ -2,15 +2,16 @@ import React from 'react';
 import ghLogo from '../../assets/gamehub-logo.png'
 import { NavLink } from 'react-router';
 import { RxHamburgerMenu } from "react-icons/rx";
+import GameLink from '../GameLink/GameLink';
 
 
 const Header = () => {
 
     const links = < >
         <div className='flex flex-col md:flex-row gap-4'>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/about'>About</NavLink>
-            <NavLink to='/developer'>Developer</NavLink>
+            <GameLink to='/'>Home</GameLink>
+            <GameLink to='/about'>About</GameLink>
+            <GameLink to='/developer'>Developer</GameLink>
         </div>
     </>
 
