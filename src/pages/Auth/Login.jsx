@@ -1,5 +1,5 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { use, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 // import { toast } from 'react-toastify';
@@ -13,7 +13,7 @@ const Login = () => {
 
     // const [user, setUser] = useState({});
 
-    const { logInUser } = use(AuthContext);
+    const { logInUser, logInWithGoogle } = useContext(AuthContext);
 
     const [show, setShow] = useState(false);
 
@@ -33,7 +33,7 @@ const Login = () => {
         logInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                e.target.reset();
+                e.target.reset('');
                 navigate(location.state || '/')
 
             })
@@ -54,6 +54,16 @@ const Login = () => {
         //     })
 
     };
+
+    const handleGoogleLogIn = () => {
+       logInWithGoogle()
+       .then()
+       .catch(error => {
+        console.log(error);
+        
+       })
+    }
+    
 
 
 
@@ -98,7 +108,7 @@ const Login = () => {
 
 
 
-                    <button
+                    <button onClick={handleGoogleLogIn}
                         type="submit"
                         className=" mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                                    bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
