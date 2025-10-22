@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Login = () => {
 
@@ -13,10 +14,10 @@ const Login = () => {
                 className={`w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
                     bg-[#FFF8E1] 
                     border-black
-                    border-[3px]`} 
+                    border-[3px]`}
             >
 
-              
+
                 <div className={`h-8 flex justify-end items-center px-3 bg-[#FFD54F]`}>
                     {/* <span className={`text-2xl font-bold cursor-pointer text-[#444]`}>
                         &times;
@@ -31,7 +32,7 @@ const Login = () => {
                             className={`w-full p-3 text-lg font-bold rounded-md outline-none 
                           border-black border-2 
                           bg-[#FFF8E1] text-[#444]`}
-                            
+
                             required
                         />
                     </div>
@@ -39,10 +40,10 @@ const Login = () => {
                     <div className="w-full">
                         <input
                             type="password"
-                            placeholder="xxxxxx" 
+                            placeholder="xxxxxx"
                             className={`w-full p-3 text-lg font-bold rounded-md outline-none 
                           border-black border-2 
-                          bg-[#FFF8E1 text-[#444]`}
+                          bg-[#FFF8E1] text-[#444]`}
                             required
                         />
                     </div>
@@ -57,8 +58,12 @@ const Login = () => {
                     >
                         Enter
                     </button>
-
                 </form>
+
+                <p className="text-center pb-4">
+                    Don’t have an account? <Link to='/register' className="text-[#444] underline">Register</Link>
+                </p>
+
             </div>
         </div>
     );

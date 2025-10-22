@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Register = () => {
 
@@ -30,7 +31,7 @@ const Register = () => {
         <form onSubmit={handleSignUp} className="p-6 pt-10 flex flex-col items-center space-y-4">
           
      
-          <div className="w-full">
+          {/* <div className="w-full">
             <input 
               type="text" 
               placeholder="username" 
@@ -39,7 +40,7 @@ const Register = () => {
                           bg-[#FFF8E1] text-[#444]`}
               required
             />
-          </div>
+          </div> */}
 
           <div className="w-full">
             <input 
@@ -65,7 +66,7 @@ const Register = () => {
           </div>
 
       
-          <div className="w-full">
+          {/* <div className="w-full">
             <input 
               type="password" 
               placeholder="xxxxxx" 
@@ -74,7 +75,7 @@ const Register = () => {
                           bg-[#FFF8E1] text-[#444]`}
               required
             />
-          </div>
+          </div> */}
 
          
           <button 
@@ -85,8 +86,12 @@ const Register = () => {
                         text-[#444] 
                         transition duration-150 hover:opacity-80`}
           >
-            Sign Up
+            Get In
           </button>
+
+          <p className="text-center pb-4">
+                    Already have an account? <Link to='/login' className="text-[#444] underline">Login</Link>
+                </p>
           
         </form>
       </div>

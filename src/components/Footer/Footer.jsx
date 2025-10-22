@@ -6,12 +6,12 @@ const Footer = () => {
         <footer className="footer footer-horizontal footer-center bg-[#FFC107] p-3 text-black space-mono">
             <aside>
                 <img src={ghLogo} alt="" />
-                <p className="font-bold">
-                    Gamehub
+                <p>
+                   <span className='font-bold text-3xl'>Gamehub</span> 
                     <br />
-                    A reliable game library since 1998
+                    <span>A reliable game library since 1998</span>
                 </p>
-                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                
             </aside>
             <nav>
                 <div className="grid grid-flow-col gap-4">
@@ -50,6 +50,9 @@ const Footer = () => {
                     </a>
                 </div>
             </nav>
+            <div>
+                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+            </div>
         </footer>
     );
 };
