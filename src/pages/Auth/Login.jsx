@@ -1,13 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const Login = () => {
 
+    const [user, setUser] = useState({})
+
     const handleLogin = (e) => {
+
         e.preventDefault();
-        console.log('Login attempt...');
+        const email = e.target.email?.value;
+        const password = e.target.password?.value;
+
+
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+
+                setUser(userCredential.user);
+                // const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                // const errorCode = error.code;
+                // const errorMessage = error.message;
+                console.log(error);
+
+            });
 
     };
+
+    console.log(user);
+
+
     return (
         <div className="flex justify-center items-center min-h-screen p-4 space-mono">
             <div
@@ -24,7 +49,7 @@ const Login = () => {
                     </span> */}
                 </div>
 
-                <form onSubmit={handleLogin} className="p-6 pt-10 flex flex-col items-center space-y-5">
+                {user ? "Logged In"  : (<form onSubmit={handleLogin} className="p-6 pt-10 flex flex-col items-center space-y-5">
                     <div className="w-full">
                         <input
                             type="text"
@@ -58,8 +83,8 @@ const Login = () => {
                     >
                         Enter
                     </button>
-                </form>
-
+                </form>)
+                }
                 <p className="text-center pb-4">
                     Don’t have an account? <Link to='/register' className="text-[#444] underline">Register</Link>
                 </p>

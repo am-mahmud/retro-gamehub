@@ -27,7 +27,7 @@ const Banner = () => {
                 </div>
             </div>
             <div className="flex w-full justify-center gap-2 py-2 ">
-                <a href="#item1" className="p-3 bg-white border-4 border-black hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none"></a>
+                <a href="#item1" className="p-3 bg-white border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none"></a>
                 <a href="#item2" className="p-3 bg-white border-4 border-black hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none"></a>
                 <a href="#item3" className="p-3 bg-white border-4 border-black hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none"></a>
                 <a href="#item4" className="p-3 bg-white border-4 border-black hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none"></a>
