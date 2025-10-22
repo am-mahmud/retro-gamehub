@@ -6,16 +6,20 @@ import { auth } from '../../firebase/firebase.config';
 const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState()
+    const [loading, setLoading] = useState(true)
 
     const createUser = (email, password) =>{
+        setLoading(true);
         return createUserWithEmailAndPassword(auth,email, password);
     }
 
     const logInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     const signOutUser = () => {
+        setLoading(true);
         return signOut(auth)
     }
 
@@ -33,6 +37,7 @@ const AuthProvider = ({children}) => {
      const unsubscribe =   onAuthStateChanged(auth, (currentUser) => {
             console.log(currentUser);
             setUser(currentUser)
+            setLoading(false)
             
         })
         return () => {
@@ -44,9 +49,11 @@ const AuthProvider = ({children}) => {
 
     const authInfo = {
         user,
+        loading,
         createUser,
         logInUser,
         signOutUser,
+        
     }
 
     return (

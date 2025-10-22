@@ -4,8 +4,11 @@ import { Navigate } from 'react-router';
 
 const PrivetRoutes = ({children}) => {
 
-    const {user} = use(AuthContext);
+    const {user, loading} = use(AuthContext);
 
+    if (loading){
+        return
+    }
     if(user ){
         return children;
     }
