@@ -1,7 +1,9 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
 import { Link } from 'react-router';
+import { auth } from '../../firebase/firebase.config';
 
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 const Register = () => {
 
@@ -13,23 +15,25 @@ const Register = () => {
 
     console.log("Sign up clicked", { email, password });
 
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     if (!passwordRegex.test(password)) {
       alert("Password must contain at least 8 characters, including uppercase, lowercase, number, and special character.");
     }
 
-
-    const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then((res) => {
         // Signed up 
-        const user = userCredential.user;
+        console.log(res.user);
+        
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+
+        console.log(error);
+        
         // ..
       });
   };

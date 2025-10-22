@@ -31,9 +31,9 @@ const router = createBrowserRouter([
             {
                 path: "/profile",
                 element: (
-                    <PrivateRoute>
+                   
                         <MyProfile></MyProfile>
-                    </PrivateRoute>
+                   
                 ),
             },
             {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
                 element: <Register></Register>,
             },
             {
-                path: "/signin",
+                path: "/login",
                 element: <Login></Login>
             },
 
