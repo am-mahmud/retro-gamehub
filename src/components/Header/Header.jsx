@@ -8,9 +8,9 @@ const Header = () => {
 
     const links = < >
         <div className='flex flex-col md:flex-row gap-4'>
-            <NavLink>Home</NavLink>
-            <NavLink>About</NavLink>
-            <NavLink>Developer</NavLink>
+            <NavLink to='/'>Home</NavLink>
+            <NavLink to='/about'>About</NavLink>
+            <NavLink to='/developer'>Developer</NavLink>
         </div>
     </>
 
