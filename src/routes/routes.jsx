@@ -6,15 +6,18 @@ import Register from "../pages/Auth/Register";
 import About from "../pages/About/About";
 import Developer from "../pages/Developer/Developer";
 import MyProfile from "../pages/Profile/MyProfile";
+import Error from "../pages/Error/Error";
 
 const router = createBrowserRouter([
     {
         path: "/",
         Component: MainLayout,
+        errorElement: <Error></Error>,
         children: [
             {
                 index: true,
-                Component: Home
+                Component: Home,
+                
             },
             {
                 path: '/about',

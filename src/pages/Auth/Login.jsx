@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import React , {useState}from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router';
 import { auth } from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
@@ -73,6 +73,10 @@ const Login = () => {
                             {show ? <GoEye /> : <GoEyeClosed />}
                         </span>
                     </div>
+
+                    
+                   <Link to='/resetpassword' className="text-[#444] underline">Forget password?</Link>
+                    
 
                     <button
                         type="submit"

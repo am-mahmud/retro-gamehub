@@ -2,12 +2,13 @@ import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import GameCard from '../../components/GameCard/GameCard';
 import useFetchGames from '../../hooks/useFetchGames';
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
 
     const { allGames } = useFetchGames();
 
-    const featuredGame = allGames.slice(0, 6);
+    const featuredGame = allGames.slice(0, 3);
 
     return (
         <div>
@@ -30,6 +31,12 @@ const Home = () => {
             ) : (
                 <p className="text-center mt-5 text-gray-600">No featured games available.</p>
             )} */}
+
+            <Marquee className='bg-[#FFC107] p-4 mt-6 mb-6'>
+                <div className=' text-black text-xl font-bold space-mono'>
+                    <p>Relive the nostalgia, discover timeless classics, and celebrate the magic of retro gaming at Retro Game Hub!</p>
+                </div>
+            </Marquee>
 
 
             {featuredGame.filter(game => game.ratings > 4.5).length > 0 ? (
