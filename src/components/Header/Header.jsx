@@ -53,7 +53,10 @@ const Header = () => {
                         {links}
                     </ul>
                 </div>
+                <Link to='/'>
                 <img className='w-14 h-14' src={ghLogo} alt="gamehub" />
+                </Link>
+                
             </div>
 
 

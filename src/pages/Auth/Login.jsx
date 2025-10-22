@@ -1,5 +1,5 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 // import { toast } from 'react-toastify';
@@ -13,7 +13,7 @@ const Login = () => {
 
     // const [user, setUser] = useState({});
 
-    const { logInUser, logInWithGoogle } = useContext(AuthContext);
+    const { logInUser, logInWithGoogle } = use(AuthContext);
 
     const [show, setShow] = useState(false);
 
@@ -33,7 +33,7 @@ const Login = () => {
         logInUser(email, password)
             .then(result => {
                 console.log(result.user);
-                e.target.reset('');
+                e.target.reset();
                 navigate(location.state || '/')
 
             })

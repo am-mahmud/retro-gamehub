@@ -14,7 +14,7 @@ const GameCard = ({ title, rating, category, developer, image }) => {
                 <div className="relative h-48 bg-white">
                     <img
                         src={image}
-                        alt={""}
+                        alt={title}
                         className="w-full h-full object-cover p-1"
                     />
 

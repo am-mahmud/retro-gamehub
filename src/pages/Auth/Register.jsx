@@ -1,5 +1,5 @@
 // import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
-import React, { useContext, useState } from 'react';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 import { GoEye, GoEyeClosed } from "react-icons/go";
@@ -10,7 +10,7 @@ import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 const Register = () => {
   const [show, setShow] = useState(false);
 
-  const {createUser} = useContext(AuthContext)
+  const {createUser} = use(AuthContext)
 
   const handleRegister = (e) => {
     e.preventDefault();
