@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { use } from 'react';
 import ghLogo from '../../assets/gamehub-logo.png'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { RxHamburgerMenu } from "react-icons/rx";
 import GameLink from '../GameLink/GameLink';
+import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
 
 const Header = () => {
+
+    const {user, signOutUser} = use(AuthContext);
+
+    const handleSignOut = () =>{
+        signOutUser()
+        .then(() => {
+
+        })
+        .catch(error => {
+            console.log(error);
+            
+        })
+    }
 
     const links = < >
         <div className='flex flex-col md:flex-row gap-4'>
@@ -37,9 +51,9 @@ const Header = () => {
                     {links}
                 </ul>
 
-               <NavLink to='/login'>
-                <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button>
-               </NavLink>
+            
+                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link> }
+
             </div>
 
             {/* <div className="dropdown dropdown-end">
