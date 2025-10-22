@@ -6,17 +6,17 @@ import Register from "../pages/Auth/Register";
 import About from "../pages/About/About";
 import Developer from "../pages/Developer/Developer";
 import MyProfile from "../pages/Profile/MyProfile";
-import Error from "../pages/Error/Error";
 import ResetPassword from "../pages/Auth/ResetPassword";
 import PrivetRoutes from "./PrivetRoutes";
 import GameDetails from "../pages/Games/GameDetails";
 import AllGames from "../pages/AllGames/AllGames";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
     {
         path: "/",
         Component: MainLayout,
-        errorElement: <Error></Error>,
+        errorElement: <NotFound></NotFound>,
         children: [
             {
                 index: true,
