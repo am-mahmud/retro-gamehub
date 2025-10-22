@@ -1,6 +1,6 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 // import { toast } from 'react-toastify';
 import { GoEye } from "react-icons/go";
@@ -16,6 +16,9 @@ const Login = () => {
 
     const [show, setShow] = useState(false);
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const handleLogin = (e) => {
         e.preventDefault();
 
@@ -30,6 +33,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 e.target.reset();
+                navigate(location.state || '/')
 
             })
             .catch(error => {
