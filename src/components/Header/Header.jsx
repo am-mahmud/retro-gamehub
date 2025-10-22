@@ -37,7 +37,9 @@ const Header = () => {
                     {links}
                 </ul>
 
+               <NavLink to='/login'>
                 <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button>
+               </NavLink>
             </div>
 
             {/* <div className="dropdown dropdown-end">

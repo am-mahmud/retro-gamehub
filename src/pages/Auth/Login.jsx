@@ -1,10 +1,10 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react';
+import React , {useState}from 'react';
 import { Link } from 'react-router';
 import { auth } from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
-import { FaEye } from 'react-icons/fa';
-import { IoEyeOff } from 'react-icons/io5';
+import { GoEye } from "react-icons/go";
+import { GoEyeClosed } from "react-icons/go";
 
 
 const Login = () => {
@@ -33,16 +33,6 @@ const Login = () => {
 
             })
 
-
-        // const auth = getAuth(); 
-        // signInWithEmailAndPassword(auth, email, password)
-        //     .then((userCredential) => {
-        //         setUser(userCredential.user);
-        //         console.log('Login successful!');
-        //     })
-        //     .catch((error) => {
-        //         console.error('Login failed:', error.message);
-        //     });
     };
 
     // console.log(user);
@@ -67,20 +57,20 @@ const Login = () => {
                         />
                     </div>
 
-                    <div className="w-full">
+                    <div className="relative w-full">
                         <input
                             name="password"
                             type={show ? "text" : "password"}
-                            placeholder="Password"
+                            placeholder="xxxxxx"
                             className="w-full p-3 text-lg font-bold rounded-md outline-none 
                                        border-black border-2 bg-[#FFF8E1] text-[#444]"
                             required
                         />
                         <span
                             onClick={() => setShow(!show)}
-                            className="absolute right-[8px] top-[36px] cursor-pointer z-50"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
                         >
-                            {show ? <FaEye /> : <IoEyeOff />}
+                            {show ? <GoEye /> : <GoEyeClosed />}
                         </span>
                     </div>
 

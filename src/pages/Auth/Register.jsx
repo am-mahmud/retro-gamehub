@@ -1,12 +1,14 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router';
 import { auth } from '../../firebase/firebase.config';
+import { GoEye } from "react-icons/go";
+import { GoEyeClosed } from "react-icons/go";
 
 
 
 const Register = () => {
-
+ const [show, setShow] = useState(false);
   const handleSignUp = (e) => {
     e.preventDefault();
 
@@ -25,7 +27,7 @@ const Register = () => {
       .then((res) => {
         // Signed up 
         console.log(res.user);
-        
+
         // ...
       })
       .catch((error) => {
@@ -33,7 +35,7 @@ const Register = () => {
         // const errorMessage = error.message;
 
         console.log(error);
-        
+
         // ..
       });
   };
@@ -68,7 +70,7 @@ const Register = () => {
           </div>
 
 
-          <div className="w-full">
+          <div className="relative w-full">
             <input
               type="password"
               placeholder="xxxxxx"
@@ -77,6 +79,12 @@ const Register = () => {
                           bg-[#FFF8E1] text-[#444]`}
               required
             />
+            <span
+              onClick={() => setShow(!show)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+            >
+              {show ? <GoEye /> : <GoEyeClosed />}
+            </span>
           </div>
 
 
