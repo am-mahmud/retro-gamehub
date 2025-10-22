@@ -111,7 +111,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-48 mt-6 py-2 px-6 text-xl font-bold rounded-md cursor-pointer
+            className="w-48 mt-6 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                        bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
                        transition duration-150 hover:opacity-80"
           >
@@ -119,9 +119,8 @@ const Register = () => {
           </button>
 
 
-          <p className="text-center pb-4">
-            Already have an account?{" "}
-            <Link to="/login" className="text-[#444] underline">
+          <p className="text-center pb-4 text-sm text-[#444] "> Already have an account?{" "}
+            <Link to="/login" className="underline">
               Login
             </Link>
           </p>

@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate } from 'react-router';
 import { GoEye } from "react-icons/go";
 import { GoEyeClosed } from "react-icons/go";
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
+import { SlSocialGoogle } from "react-icons/sl";
 
 
 const Login = () => {
@@ -93,13 +94,27 @@ const Login = () => {
                         </span>
                     </div>
 
+                    <div className="divider divider-neutral">Or</div>
 
-                    <Link to='/resetpassword' className="text-[#444] underline">Forget password?</Link>
 
 
                     <button
                         type="submit"
-                        className="w-36 mt-4 py-2 px-6 text-xl font-bold rounded-md cursor-pointer
+                        className=" mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
+                                   bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
+                                   transition duration-150 hover:opacity-80 flex items-center gap-2 md:gap-4"
+                    ><span><SlSocialGoogle /></span>
+                        Login With Google
+                    </button>
+
+
+
+                    <Link to='/resetpassword' className="text-[#444] underline text-sm">Forget password?</Link>
+
+
+                    <button
+                        type="submit"
+                        className="w-36 mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                                    bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
                                    transition duration-150 hover:opacity-80"
                     >
@@ -107,8 +122,8 @@ const Login = () => {
                     </button>
                 </form>
 
-                <p className="text-center pb-4">
-                    Don’t have an account? <Link to='/register' className="text-[#444] underline">Register</Link>
+                <p className="text-center pb-4 text-[#444] text-sm">
+                    Don’t have an account? <Link to='/register' className="underline">Register</Link>
                 </p>
             </div>
         </div>
