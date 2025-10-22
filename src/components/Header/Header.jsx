@@ -8,25 +8,36 @@ import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
 const Header = () => {
 
-    const {user, signOutUser} = use(AuthContext);
+    const { user, signOutUser } = use(AuthContext);
 
-    const handleSignOut = () =>{
+    const handleSignOut = () => {
         signOutUser()
-        .then(() => {
+            .then(() => {
 
-        })
-        .catch(error => {
-            console.log(error);
-            
-        })
+            })
+            .catch(error => {
+                console.log(error);
+
+            })
     }
 
     const links = < >
         <div className='flex flex-col md:flex-row gap-4'>
             <GameLink to='/'>Home</GameLink>
             <GameLink to='/about'>About</GameLink>
-            <GameLink to='/developer'>Developer</GameLink>
         </div>
+
+        {
+            user && <>
+                <div className='flex ml-4 gap-4'>
+                    <GameLink to='/allgames'>All Games</GameLink>                
+                    <GameLink to='/developer'>Developer</GameLink>
+                    <GameLink to='/profile'>Profile</GameLink>
+
+                </div>
+
+            </>
+        }
     </>
 
     return (
@@ -51,8 +62,8 @@ const Header = () => {
                     {links}
                 </ul>
 
-            
-                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link> }
+
+                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Login</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link>}
 
             </div>
 

@@ -8,6 +8,9 @@ import Developer from "../pages/Developer/Developer";
 import MyProfile from "../pages/Profile/MyProfile";
 import Error from "../pages/Error/Error";
 import ResetPassword from "../pages/Auth/ResetPassword";
+import PrivetRoutes from "./PrivetRoutes";
+import GameDetails from "../pages/Games/GameDetails";
+import AllGames from "../pages/AllGames/AllGames";
 
 const router = createBrowserRouter([
     {
@@ -26,19 +29,33 @@ const router = createBrowserRouter([
             },
             {
                 path: '/developer',
-                element: <Developer></Developer>
-            },
-            {
-                path: '/profile',
-                element: <MyProfile></MyProfile>
+                element: <PrivetRoutes>
+                    <Developer></Developer>
+                </PrivetRoutes>
             },
             {
                 path: "/profile",
-                element: (
-                   
-                        <MyProfile></MyProfile>
-                   
-                ),
+                element: <PrivetRoutes>
+                    <MyProfile></MyProfile>
+                </PrivetRoutes>
+            },
+            {
+                path: "/profile",
+                element: <PrivetRoutes>
+                    <MyProfile></MyProfile>
+                </PrivetRoutes>
+            },
+            {
+                path: "/gamedetails",
+                element: <PrivetRoutes>
+                   <GameDetails></GameDetails>
+                </PrivetRoutes>
+            },
+             {
+                path: "/allgames",
+                element: <PrivetRoutes>
+                   <AllGames></AllGames>
+                </PrivetRoutes>
             },
             {
                 path: "/register",
