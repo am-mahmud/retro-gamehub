@@ -1,15 +1,18 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react';
+// import { signInWithEmailAndPassword } from 'firebase/auth';
+import React, { use, useState } from 'react';
 import { Link } from 'react-router';
-import { auth } from '../../firebase/firebase.config';
-import { toast } from 'react-toastify';
+// import { auth } from '../../firebase/firebase.config';
+// import { toast } from 'react-toastify';
 import { GoEye } from "react-icons/go";
 import { GoEyeClosed } from "react-icons/go";
+import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
 
 const Login = () => {
 
     // const [user, setUser] = useState({});
+
+    const { logInUser } = use(AuthContext);
 
     const [show, setShow] = useState(false);
 
@@ -23,19 +26,30 @@ const Login = () => {
         console.log(password);
 
 
-        signInWithEmailAndPassword(auth, email, password)
-            .then(res => {
-                console.log(res);
-                toast.success("Sign In Success")
-            }).catch(e => {
-                console.log(e);
-                toast.error(e.message)
+        logInUser(email, password)
+            .then(result => {
+                console.log(result.user);
+
+            })
+            .catch(error => {
+                console.log(error);
 
             })
 
+
+        // signInWithEmailAndPassword(auth, email, password)
+        //     .then(res => {
+        //         console.log(res);
+        //         toast.success("Sign In Success")
+        //     }).catch(e => {
+        //         console.log(e);
+        //         toast.error(e.message)
+
+        //     })
+
     };
 
-    // console.log(user);
+
 
     return (
         <div className="flex justify-center items-center min-h-screen p-4 space-mono">
@@ -74,9 +88,9 @@ const Login = () => {
                         </span>
                     </div>
 
-                    
-                   <Link to='/resetpassword' className="text-[#444] underline">Forget password?</Link>
-                    
+
+                    <Link to='/resetpassword' className="text-[#444] underline">Forget password?</Link>
+
 
                     <button
                         type="submit"
