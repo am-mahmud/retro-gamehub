@@ -37,7 +37,7 @@ const GameCard = ({title, rating, category, developer}) => {
                                 console.log(`Download action triggered for `); // ${super mario}
                             }}
                         >
-                            START GAME
+                            GAME DETAILS
                         </a>
 
 
