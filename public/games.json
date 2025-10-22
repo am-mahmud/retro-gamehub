@@ -1,0 +1,402 @@
+[
+  {
+    "id": "1",
+    "title": "Super Mario Bros.",
+    "coverPhoto": "https://example.com/images/super_mario_bros.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "A classic side-scrolling platformer where Mario saves Princess Peach from Bowser across colorful worlds.",
+    "ratings": "4.9",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "2",
+    "title": "Pac-Man",
+    "coverPhoto": "https://example.com/images/pacman.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Guide Pac-Man through mazes while avoiding ghosts and eating pellets to rack up points.",
+    "ratings": "4.7",
+    "developer": "Namco"
+  },
+  {
+    "id": "3",
+    "title": "Space Invaders",
+    "coverPhoto": "https://example.com/images/space_invaders.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.taito.com",
+    "description": "Defend Earth from waves of alien invaders in one of the earliest shooting games.",
+    "ratings": "4.6",
+    "developer": "Taito"
+  },
+  {
+    "id": "4",
+    "title": "Donkey Kong",
+    "coverPhoto": "https://example.com/images/donkey_kong.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Climb ladders, dodge barrels, and rescue Pauline from the mighty Donkey Kong.",
+    "ratings": "4.8",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "5",
+    "title": "The Legend of Zelda",
+    "coverPhoto": "https://example.com/images/zelda.png",
+    "category": "Adventure",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "An epic action-adventure game where Link embarks on a quest to rescue Princess Zelda.",
+    "ratings": "4.9",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "6",
+    "title": "Metroid",
+    "coverPhoto": "https://example.com/images/metroid.png",
+    "category": "Action",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Play as bounty hunter Samus Aran in a sci-fi world filled with exploration and combat.",
+    "ratings": "4.6",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "7",
+    "title": "Tetris",
+    "coverPhoto": "https://example.com/images/tetris.png",
+    "category": "Puzzle",
+    "downloadLink": "https://tetris.com",
+    "description": "Arrange falling blocks to complete lines in this iconic puzzle challenge.",
+    "ratings": "4.9",
+    "developer": "Alexey Pajitnov"
+  },
+  {
+    "id": "8",
+    "title": "Street Fighter II",
+    "coverPhoto": "https://example.com/images/street_fighter_ii.png",
+    "category": "Fighting",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Battle iconic fighters in this legendary 2D combat game that defined a genre.",
+    "ratings": "4.8",
+    "developer": "Capcom"
+  },
+  {
+    "id": "9",
+    "title": "Contra",
+    "coverPhoto": "https://example.com/images/contra.png",
+    "category": "Run and Gun",
+    "downloadLink": "https://www.konami.com",
+    "description": "Run, jump, and shoot your way through alien forces in this fast-paced side scroller.",
+    "ratings": "4.5",
+    "developer": "Konami"
+  },
+  {
+    "id": "10",
+    "title": "Mega Man 2",
+    "coverPhoto": "https://example.com/images/megaman2.png",
+    "category": "Action",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Defeat robot masters and absorb their powers in this action-platforming masterpiece.",
+    "ratings": "4.8",
+    "developer": "Capcom"
+  },
+  {
+    "id": "11",
+    "title": "Duck Hunt",
+    "coverPhoto": "https://example.com/images/duck_hunt.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Use the NES Zapper to shoot ducks as they fly across the screen in this light-gun classic.",
+    "ratings": "4.3",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "12",
+    "title": "Castlevania",
+    "coverPhoto": "https://example.com/images/castlevania.png",
+    "category": "Action",
+    "downloadLink": "https://www.konami.com",
+    "description": "Fight through Dracula’s castle as Simon Belmont using your legendary whip.",
+    "ratings": "4.7",
+    "developer": "Konami"
+  },
+  {
+    "id": "13",
+    "title": "Punch-Out!!",
+    "coverPhoto": "https://example.com/images/punch_out.png",
+    "category": "Sports",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Step into the ring as Little Mac and take on a roster of colorful boxing opponents.",
+    "ratings": "4.6",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "14",
+    "title": "Sonic the Hedgehog",
+    "coverPhoto": "https://example.com/images/sonic.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.sega.com",
+    "description": "Speed through loops and collect rings as Sega’s blue blur in this iconic platformer.",
+    "ratings": "4.8",
+    "developer": "Sega"
+  },
+  {
+    "id": "15",
+    "title": "Final Fantasy",
+    "coverPhoto": "https://example.com/images/final_fantasy.png",
+    "category": "RPG",
+    "downloadLink": "https://www.square-enix.com",
+    "description": "Embark on a grand adventure filled with heroes, crystals, and turn-based battles.",
+    "ratings": "4.7",
+    "developer": "Square Enix"
+  },
+  {
+    "id": "16",
+    "title": "Galaga",
+    "coverPhoto": "https://example.com/images/galaga.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Blast through alien formations in this arcade shooter sequel to Galaxian.",
+    "ratings": "4.5",
+    "developer": "Namco"
+  },
+  {
+    "id": "17",
+    "title": "Frogger",
+    "coverPhoto": "https://example.com/images/frogger.png",
+    "category": "Arcade",
+    "downloadLink": "https://konami.com",
+    "description": "Guide your frog across roads and rivers to safety while avoiding hazards.",
+    "ratings": "4.4",
+    "developer": "Konami"
+  },
+  {
+    "id": "18",
+    "title": "Double Dragon",
+    "coverPhoto": "https://example.com/images/double_dragon.png",
+    "category": "Beat 'em Up",
+    "downloadLink": "https://www.arcade-museum.com",
+    "description": "Team up to fight street gangs in this side-scrolling martial arts brawler.",
+    "ratings": "4.6",
+    "developer": "Technos Japan"
+  },
+  {
+    "id": "19",
+    "title": "Excitebike",
+    "coverPhoto": "https://example.com/images/excitebike.png",
+    "category": "Racing",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Race across dirt tracks and perform stunts while managing your bike’s temperature.",
+    "ratings": "4.3",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "20",
+    "title": "Bomberman",
+    "coverPhoto": "https://example.com/images/bomberman.png",
+    "category": "Action",
+    "downloadLink": "https://www.konami.com",
+    "description": "Strategically place bombs to eliminate enemies and clear the maze.",
+    "ratings": "4.5",
+    "developer": "Hudson Soft"
+  },
+  {
+    "id": "21",
+    "title": "Dig Dug",
+    "coverPhoto": "https://example.com/images/dig_dug.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Dig underground tunnels to defeat monsters by inflating or dropping rocks on them.",
+    "ratings": "4.4",
+    "developer": "Namco"
+  },
+  {
+    "id": "22",
+    "title": "Paperboy",
+    "coverPhoto": "https://example.com/images/paperboy.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.atari.com",
+    "description": "Deliver newspapers while dodging cars, dogs, and other suburban hazards.",
+    "ratings": "4.2",
+    "developer": "Atari Games"
+  },
+  {
+    "id": "23",
+    "title": "Out Run",
+    "coverPhoto": "https://example.com/images/outrun.png",
+    "category": "Racing",
+    "downloadLink": "https://www.sega.com",
+    "description": "Cruise down highways in a Ferrari with branching routes and upbeat music.",
+    "ratings": "4.7",
+    "developer": "Sega"
+  },
+  {
+    "id": "24",
+    "title": "Q*bert",
+    "coverPhoto": "https://example.com/images/qbert.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.arcade-museum.com",
+    "description": "Hop around a pyramid changing cube colors while avoiding enemies.",
+    "ratings": "4.3",
+    "developer": "Gottlieb"
+  },
+  {
+    "id": "25",
+    "title": "Gauntlet",
+    "coverPhoto": "https://example.com/images/gauntlet.png",
+    "category": "Action RPG",
+    "downloadLink": "https://www.atari.com",
+    "description": "Choose your hero and fight hordes of monsters in this dungeon crawler classic.",
+    "ratings": "4.6",
+    "developer": "Atari Games"
+  },
+  {
+    "id": "26",
+    "title": "Bubble Bobble",
+    "coverPhoto": "https://example.com/images/bubble_bobble.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.taito.com",
+    "description": "Trap enemies in bubbles and pop them in this cute cooperative platformer.",
+    "ratings": "4.7",
+    "developer": "Taito"
+  },
+  {
+    "id": "27",
+    "title": "Rampage",
+    "coverPhoto": "https://example.com/images/rampage.png",
+    "category": "Action",
+    "downloadLink": "https://www.midway.com",
+    "description": "Destroy cities as giant monsters and survive against military attacks.",
+    "ratings": "4.4",
+    "developer": "Midway"
+  },
+  {
+    "id": "28",
+    "title": "1942",
+    "coverPhoto": "https://example.com/images/1942.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Pilot your fighter plane through enemy territory in this WWII vertical shooter.",
+    "ratings": "4.5",
+    "developer": "Capcom"
+  },
+  {
+    "id": "29",
+    "title": "Defender",
+    "coverPhoto": "https://example.com/images/defender.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.williams.com",
+    "description": "Protect astronauts from alien abduction in this fast-paced side-scrolling shooter.",
+    "ratings": "4.3",
+    "developer": "Williams Electronics"
+  },
+  {
+    "id": "30",
+    "title": "BurgerTime",
+    "coverPhoto": "https://example.com/images/burgertime.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.dataeast.com",
+    "description": "As Chef Peter Pepper, assemble giant burgers while avoiding angry food enemies.",
+    "ratings": "4.2",
+    "developer": "Data East"
+  },
+  {
+    "id": "31",
+    "title": "Ice Climber",
+    "coverPhoto": "https://example.com/images/ice_climber.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Climb icy mountains while breaking blocks and avoiding enemies.",
+    "ratings": "4.3",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "32",
+    "title": "Kid Icarus",
+    "coverPhoto": "https://example.com/images/kid_icarus.png",
+    "category": "Action",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Play as Pit and rise through mythological levels to defeat Medusa.",
+    "ratings": "4.5",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "33",
+    "title": "Adventure Island",
+    "coverPhoto": "https://example.com/images/adventure_island.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.hudsonsoft.com",
+    "description": "Run, jump, and throw axes across tropical islands to rescue your kidnapped princess.",
+    "ratings": "4.4",
+    "developer": "Hudson Soft"
+  },
+  {
+    "id": "34",
+    "title": "Ghosts 'n Goblins",
+    "coverPhoto": "https://example.com/images/ghosts_n_goblins.png",
+    "category": "Action",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Fight through demons and undead as a knight in this brutally hard platformer.",
+    "ratings": "4.2",
+    "developer": "Capcom"
+  },
+  {
+    "id": "35",
+    "title": "Prince of Persia",
+    "coverPhoto": "https://example.com/images/prince_of_persia.png",
+    "category": "Action",
+    "downloadLink": "https://www.ubisoft.com",
+    "description": "Solve puzzles and fight guards in a race against time to save the princess.",
+    "ratings": "4.6",
+    "developer": "Broderbund"
+  },
+  {
+    "id": "36",
+    "title": "Pole Position",
+    "coverPhoto": "https://example.com/images/pole_position.png",
+    "category": "Racing",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Race in the classic Formula One arcade experience with time trials and speed.",
+    "ratings": "4.3",
+    "developer": "Namco"
+  },
+  {
+    "id": "37",
+    "title": "Adventure",
+    "coverPhoto": "https://example.com/images/adventure.png",
+    "category": "Action Adventure",
+    "downloadLink": "https://www.atari.com",
+    "description": "Explore a pixelated world to recover the enchanted chalice from a dragon.",
+    "ratings": "4.1",
+    "developer": "Atari"
+  },
+  {
+    "id": "38",
+    "title": "Pitfall!",
+    "coverPhoto": "https://example.com/images/pitfall.png",
+    "category": "Platformer",
+    "downloadLink": "https://www.activision.com",
+    "description": "Swing on vines, jump over pits, and collect treasures in this jungle adventure.",
+    "ratings": "4.4",
+    "developer": "Activision"
+  },
+  {
+    "id": "39",
+    "title": "Centipede",
+    "coverPhoto": "https://example.com/images/centipede.png",
+    "category": "Shooter",
+    "downloadLink": "https://www.atari.com",
+    "description": "Shoot at a descending centipede while avoiding spiders and other creepy crawlies.",
+    "ratings": "4.5",
+    "developer": "Atari"
+  },
+  {
+    "id": "40",
+    "title": "Ms. Pac-Man",
+    "coverPhoto": "https://example.com/images/ms_pacman.png",
+    "category": "Arcade",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "The beloved sequel to Pac-Man featuring new mazes, faster gameplay, and smarter ghosts.",
+    "ratings": "4.8",
+    "developer": "Namco"
+  }
+]

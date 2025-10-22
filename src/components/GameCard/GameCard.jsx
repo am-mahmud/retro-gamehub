@@ -1,6 +1,7 @@
 import React from 'react';
+import { CiStar } from "react-icons/ci";
 
-const GameCard = () => {
+const GameCard = ({title, rating, category, developer}) => {
     return (
         <div>
             <div className=" max-w-sm w-full bg-[#e0dcfa] rounded-lg overflow-hidden shadow-2xl border-4 border-black transform transition-all duration-300
@@ -14,7 +15,7 @@ const GameCard = () => {
 
                         <div className=" absolute top-3 right-3 bg-[#FFC107] text-gray-900 font-extrabold text-sm px-3 py-1 rounded-md border-2 border-black
               shadow-[2px_2px_0px_rgba(0,0,0,0.5)] ">
-                            ⭐ {5.00}
+                            <span><CiStar /></span>{rating}
                         </div>
                     </div>
 
@@ -22,10 +23,10 @@ const GameCard = () => {
                         
                         <div className="mb-4 border-b-2 border-[#aac5da] pb-3">
                             <h1 className="text-3xl font-black text-black uppercase tracking-widest leading-tight">
-                                {`super Mario`}
+                                {title}
                             </h1>
                             <p className="text-sm text-black mt-1 font-semibold">
-                                {'retro'} | Dev: {`Captain D`}
+                                {category} | Dev: {developer}
                             </p>
                         </div>
 
