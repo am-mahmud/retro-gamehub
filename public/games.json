@@ -153,7 +153,7 @@
     "id": "16",
     "title": "Double Dragon",
     "coverPhoto": "https://i.ibb.co.com/YFgNY24T/retro-game-8.jpg",
-    "category": "Beat 'em up",
+    "category": "Fighting",
     "downloadLink": "https://www.arcadespot.com",
     "description": "Two brothers fight their way through gangs to save a kidnapped loved one.",
     "ratings": "4.5",
@@ -163,7 +163,7 @@
     "id": "17",
     "title": "Final Fight",
     "coverPhoto": "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg",
-    "category": "Beat 'em up",
+    "category": "Fighting",
     "downloadLink": "https://www.capcom.com",
     "description": "Clean up the streets of Metro City using raw fists and teamwork.",
     "ratings": "4.6",
@@ -379,7 +379,6 @@
     "ratings": "4.6",
     "developer": "Williams Electronics"
   },
- 
   {
     "id": "40",
     "title": "Prince of Persia",
