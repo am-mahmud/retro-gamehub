@@ -43,38 +43,42 @@ const AllGames = () => {
             </div>
 
 
-            <div className='flex flex-col-reverse md:flex-row justify-between items-stretch gap-4 mt-3'>
+            <div className="flex flex-col-reverse md:flex-row justify-between gap-6 mt-6">
 
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 border-4 border-black p-2 mt-4 mb-6 justify-center'>
-                    {
-                        searchedGames.map(game => (
-                            <GameCard key={game.id}
-                                id={game.id}
-                                title={game.title}
-                                image={game.coverPhoto}
-                                rating={game.ratings}
-                                category={game.category}
-                                developer={game.developer}>
-
-                            </GameCard>
-                        ))
-                    }
+        
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+                    {searchedGames.map(game => (
+                        <GameCard
+                            key={game.id}
+                            id={game.id}
+                            title={game.title}
+                            image={game.coverPhoto}
+                            rating={game.ratings}
+                            category={game.category}
+                            developer={game.developer}
+                            className="transition transform hover:scale-105 hover:shadow-xl"
+                        />
+                    ))}
                 </div>
 
-                <div className='flex-1 flex flex-col'>
-                    <div className='p-2 bg-[#FFC107] border-4 border-black text-black font-bold'>
-                        <h1>Category</h1>
-
+   
+                <div className="flex flex-col w-full md:w-64">
+              
+                    <div className="p-3 bg-yellow-400 border-4 border-black font-bold text-center rounded-t-lg shadow-md">
+                        <h1>Categories</h1>
                     </div>
 
-                    <div className="flex flex-col space-y-2 mt-2">
+                
+                    <div className="flex flex-col space-y-3 p-2 border-4 border-black rounded-b-lg shadow-inner mt-1 bg-yellow-100">
                         {[...new Set(searchedGames.map(game => game.category))].map((category, index) => (
-                            <div className="border-4 border-black p-2" key={index}>
+                            <div
+                                key={index}
+                                className="p-2 border-2 border-black rounded cursor-pointer hover:bg-yellow-300 hover:scale-105 transition-all text-center font-semibold"
+                            >
                                 {category}
                             </div>
                         ))}
                     </div>
-
                 </div>
 
             </div>

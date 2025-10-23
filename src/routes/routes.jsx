@@ -13,6 +13,7 @@ import AllGames from "../pages/AllGames/AllGames";
 import NotFound from "../pages/NotFound/NotFound";
 import UpdateProfile from "../pages/Profile/UpdateProfile";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
+// import { AnimatePresence } from "framer-motion";
 
 const router = createBrowserRouter([
     {
@@ -22,20 +23,30 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Home,
+
+                element: <PageWrapper>
+                    <Home></Home>
+                </PageWrapper>,
 
             },
             {
                 path: '/about',
-                element: <PageWrapper>
-                    <About></About>
-                </PageWrapper>
+
+                element:
+
+                    <PageWrapper>
+                        <About></About>
+                    </PageWrapper>
+
+
+
             },
             {
                 path: '/developer',
-                element: <PrivetRoutes>
-                    <Developer></Developer>
-                </PrivetRoutes>
+                element:
+                    <PrivetRoutes>
+                        <Developer></Developer>
+                    </PrivetRoutes>
             },
             {
                 path: "/profile",
@@ -51,15 +62,23 @@ const router = createBrowserRouter([
             },
             {
                 path: "/gamedetails/:id",
-                element: <PrivetRoutes>
-                    <GameDetails></GameDetails>
-                </PrivetRoutes>
+                element:
+                    <PageWrapper>
+                        <PrivetRoutes>
+                            <GameDetails></GameDetails>
+                        </PrivetRoutes>
+                    </PageWrapper>
+
             },
             {
                 path: "/allgames",
-                element: <PrivetRoutes>
-                    <AllGames></AllGames>
-                </PrivetRoutes>
+                element:
+                    <PageWrapper>
+                        <PrivetRoutes>
+                            <AllGames></AllGames>
+                        </PrivetRoutes>
+                    </PageWrapper>
+
             },
             {
                 path: "/register",

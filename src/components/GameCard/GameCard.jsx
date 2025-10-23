@@ -9,8 +9,7 @@ const GameCard = ({ title, rating, category, developer, image , id}) => {
 
     return (
         <div>
-            <div className=" max-w-sm w-full bg-[#e0dcfa] rounded-lg overflow-hidden shadow-2xl border-4 border-black transform transition-all duration-300
-          hover:scale-[1.02] shadow-[0_0_20px_rgba(255,80,0,0.5),_0_10px_15px_-3px_rgba(0,0,0,0.5)">
+            <div className=" bg-[#e0dcfa] rounded-lg overflow-hidden shadow-2xl border-4 border-black transform transition-all duration-300 hover:scale-[1.02]  space-mono">
                 <div className="relative h-48 bg-white">
                     <img
                         src={image}

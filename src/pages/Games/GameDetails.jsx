@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import useFetchGames from "../../hooks/useFetchGames";
+import { CiStar } from "react-icons/ci";
 
 const GameDetails = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const GameDetails = () => {
   const { title, category, downloadLink, ratings, developer, description, coverPhoto } = game;
 
   return (
-    <div className="max-w-3xl mx-auto mt-10 bg-gray-900 text-white p-6 rounded-2xl shadow-lg">
+    <div className="max-w-3xl mx-auto mt-10 bg-black text-white p-6 rounded-2xl shadow-lg">
       <img
         src={coverPhoto}
         alt={title}
@@ -22,9 +23,21 @@ const GameDetails = () => {
       />
 
       <h1 className="text-3xl font-bold mb-3">{title}</h1>
-      <p className="text-gray-300 mb-2"><strong>Category:</strong> {category}</p>
-      <p className="text-gray-300 mb-2"><strong>Developer:</strong> {developer}</p>
-      <p className="text-gray-300 mb-2"><strong>Ratings:</strong> ⭐ {ratings}</p>
+      <p className="text-gray-300 mb-2">
+        <strong>Category:</strong> {category}</p>
+      <p className="text-gray-300 mb-2">
+        <strong>Developer:</strong> {developer}</p>
+
+      <p className="text-gray-300 mb-2 flex gap-1">
+        <strong>Ratings:</strong> 
+        
+        <div className=" flex gap-1 items-center"> 
+        <span><CiStar /></span> 
+        <span>{ratings}</span >
+        </div> 
+        
+        </p>
+        
       <p className="text-gray-300 mb-4"><strong>Description:</strong> {description}</p>
 
       <a

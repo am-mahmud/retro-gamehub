@@ -9,7 +9,7 @@ const About = () => {
             <title>About - GameHub</title>
 
             
-                <h1 className='text-3xl font-bold space-mono text-center'>GameHub – Where Retro Lives</h1>
+                <h1 className='text-3xl font-bold space-mono text-center mt-4'>GameHub – Where Retro Lives</h1>
                 <div className='border-4 mt-4 border-black p-2 text-xl'>
                     <p>Welcome to GameHub, your ultimate destination for retro and classic games! Whether you’re a nostalgic gamer looking to relive the golden age of arcade adventures or a newcomer eager to explore legendary titles, GameHub brings the magic of gaming history right to your fingertips.</p>
                 </div>
