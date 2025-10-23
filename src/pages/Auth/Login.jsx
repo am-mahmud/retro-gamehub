@@ -1,6 +1,6 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { use, useState } from 'react';
-import { Link, Navigate, useLocation, useNavigate } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
 import { GoEye } from "react-icons/go";
@@ -19,7 +19,7 @@ const Login = () => {
 
     // const [user, setUser] = useState({});
 
-    const { logInUser, logInWithGoogle, forgetPassword } = use(AuthContext);
+    const { logInUser, logInWithGoogle} = use(AuthContext);
 
     const [show, setShow] = useState(false);
 
@@ -50,7 +50,7 @@ const Login = () => {
                         icon: <IoMdCheckmark className="text-white" />,
                     }
                 );
-                Navigate(location.state || '/');
+                navigate(location.state || '/');
             })
             .catch(error => {
                 console.error(error);
@@ -92,29 +92,29 @@ const Login = () => {
             });
     }
 
-    const handleForgetPassword = () => {
-        forgetPassword()
-            .then(() => {
-                toast.info(<div className="flex items-center gap-2">
-                    <MdOutlinePassword className="text-black" />
-                    <span>Password reset link sent!</span>
-                </div>, {
-                    className: "bg-yellow-400 text-black font-semibold rounded-lg shadow-lg",
-                    progressClassName: "bg-black",
-                });
-            })
-            .catch(error => {
-                console.error(error);
-                toast.error(<div className="flex items-center gap-2">
-                    <MdErrorOutline />
-                    <span>Failed to send reset link.</span>
-                </div>, {
-                    className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-                    progressClassName: "bg-white",
-                });
-            });
+    // const handleForgetPassword = () => {
+    //     forgetPassword()
+    //         .then(() => {
+    //             toast.info(<div className="flex items-center gap-2">
+    //                 <MdOutlinePassword className="text-black" />
+    //                 <span>Password reset link sent!</span>
+    //             </div>, {
+    //                 className: "bg-yellow-400 text-black font-semibold rounded-lg shadow-lg",
+    //                 progressClassName: "bg-black",
+    //             });
+    //         })
+    //         .catch(error => {
+    //             console.error(error);
+    //             toast.error(<div className="flex items-center gap-2">
+    //                 <MdErrorOutline />
+    //                 <span>Failed to send reset link.</span>
+    //             </div>, {
+    //                 className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+    //                 progressClassName: "bg-white",
+    //             });
+    //         });
 
-    }
+    // }
 
 
     return (
@@ -176,7 +176,9 @@ const Login = () => {
 
 
 
-                        <Link to='/resetpassword' onClick={handleForgetPassword} className="text-[#444] underline text-sm">Forget password?</Link>
+                        <Link to='/resetpassword' className="text-[#444] underline text-sm">
+                            Forgot password?
+                        </Link>
 
 
                         <button
