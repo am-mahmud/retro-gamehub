@@ -11,6 +11,7 @@ import PrivetRoutes from "./PrivetRoutes";
 import GameDetails from "../pages/Games/GameDetails";
 import AllGames from "../pages/AllGames/AllGames";
 import NotFound from "../pages/NotFound/NotFound";
+import UpdateProfile from "../pages/Profile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -40,9 +41,9 @@ const router = createBrowserRouter([
                 </PrivetRoutes>
             },
             {
-                path: "/profile",
+                path: "/updateprofile",
                 element: <PrivetRoutes>
-                    <MyProfile></MyProfile>
+                   <UpdateProfile></UpdateProfile>
                 </PrivetRoutes>
             },
             {
