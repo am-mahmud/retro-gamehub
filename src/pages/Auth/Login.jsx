@@ -43,12 +43,7 @@ const Login = () => {
                 toast(<div className="flex items-center gap-2">
                     <FaGamepad className="text-yellow-300" />
                     <span>Welcome back, gamer!</span>
-                </div>,
-                    {
-                        className: "bg-green-500 text-white font-semibold rounded-lg shadow-lg",
-                        progressClassName: "bg-yellow-400",
-                        icon: <IoMdCheckmark className="text-white" />,
-                    }
+                </div>
                 );
                 navigate(location.state || '/');
             })
@@ -57,12 +52,7 @@ const Login = () => {
                 toast(<div className="flex items-center gap-2">
                     <MdErrorOutline />
                     <span>Invalid email or password!</span>
-                </div>,
-                    {
-                        className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-                        progressClassName: "bg-yellow-400",
-                        icon: <ImCross className="text-white" />,
-                    }
+                </div>
                 );
             });
 
@@ -74,10 +64,7 @@ const Login = () => {
                 toast(<div className="flex items-center gap-2">
                     <FaGamepad className="text-yellow-300" />
                     <span>Logged in with Google successfully!</span>
-                </div>, {
-                    className: "bg-blue-500 text-white font-semibold rounded-lg shadow-lg",
-                    progressClassName: "bg-white",
-                });
+                </div>);
                 navigate('/');
             })
             .catch(error => {
@@ -85,10 +72,7 @@ const Login = () => {
                 toast(<div className="flex items-center gap-2">
                     <MdErrorOutline />
                     <span>Google login failed!</span>
-                </div>, {
-                    className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-                    progressClassName: "bg-white",
-                });
+                </div>);
             });
     }
 

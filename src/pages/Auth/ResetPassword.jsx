@@ -17,11 +17,7 @@ const ResetPassword = () => {
                     <div className="flex items-center gap-2">
                         <MdOutlinePassword className="text-black" />
                         <span>Password reset link sent!</span>
-                    </div>,
-                    {
-                        className: "bg-yellow-400 text-black font-semibold rounded-lg shadow-lg",
-                        progressClassName: "bg-black",
-                    }
+                    </div>
                 );
                 e.target.reset();
             })
@@ -31,11 +27,7 @@ const ResetPassword = () => {
                     <div className="flex items-center gap-2">
                         <MdErrorOutline />
                         <span>Failed to send reset link.</span>
-                    </div>,
-                    {
-                        className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-                        progressClassName: "bg-white",
-                    }
+                    </div>
                 );
             });
     };

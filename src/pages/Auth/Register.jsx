@@ -55,39 +55,26 @@ const Register = () => {
 
     if (!passwordRegex.test(password)) {
       if (password.length < 6) {
-        toast.error(<div className="flex items-center gap-2">
+        toast(<div className="flex items-center gap-2">
           <MdErrorOutline />
           <span>Password must be at least 6 characters long.
           </span>
-        </div>,
-          {
-            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-            progressClassName: "bg-yellow-400",
-            icon: <ImCross className="text-white" />,
-          }
+        </div>
         );
-      } else if (!/[A-Z]/.test(password)) {
-        toast.error(<div className="flex items-center gap-2">
+      } 
+      else if (!/[A-Z]/.test(password)) {
+        toast(<div className="flex items-center gap-2">
           <MdErrorOutline />
           <span>Password must contain at least one uppercase letter.
           </span>
-        </div>,
-          {
-            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-            progressClassName: "bg-yellow-400",
-            icon: <ImCross className="text-white" />,
-          });
-      } else if (!/[a-z]/.test(password)) {
-        toast.error(<div className="flex items-center gap-2">
+        </div>);
+      } 
+      else if (!/[a-z]/.test(password)) {
+        toast(<div className="flex items-center gap-2">
           <MdErrorOutline />
           <span>Password must contain at least one lowercase letter.
           </span>
-        </div>,
-          {
-            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-            progressClassName: "bg-yellow-400",
-            icon: <ImCross className="text-white" />,
-          });
+        </div>);
       }
       return;
     }
@@ -96,20 +83,19 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         console.log(result.user);
-        toast.success(<div className="flex items-center gap-2">
+        toast(<div className="flex items-center gap-2">
           <FaGamepad className="text-yellow-300" />
           <span>Welcome to Gamehub, gamer!</span>
-        </div>,
-          {
-            className: "bg-green-500 text-white font-semibold rounded-lg shadow-lg",
-            progressClassName: "bg-yellow-400",
-            icon: <IoMdCheckmark className="text-white" />,
-          });
+        </div>);
         e.target.reset();
       })
       .catch(error => {
-        console.log(error);
-        toast.error("Error: " + error.message);
+        // console.log(error);
+        toast(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Try Again.
+          </span>
+        </div>);
       });
   };
 
