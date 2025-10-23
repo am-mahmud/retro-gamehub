@@ -12,13 +12,22 @@ import router from './routes/routes';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    
+
     <AuthProvider>
-      
+
       <RouterProvider router={router} />
-     <ToastContainer />
-   
+      <ToastContainer
+        position="top-center"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        theme="dark"
+      />
+
     </AuthProvider>
-      
+
   </StrictMode>,
 )

@@ -29,7 +29,7 @@ const Header = () => {
 
         {
             user && <>
-                <div className='flex flex-col md:flex-row md:ml-4 mt-2 gap-2 md:gap-4'>
+                <div className='flex flex-col md:flex-row md:ml-4 mt-2 md:mt-0 gap-2 md:gap-4'>
                     <GameLink to='/allgames'>All Games</GameLink>                
                     <GameLink to='/developer'>Developer</GameLink>
                     <GameLink to='/profile'>Profile</GameLink>

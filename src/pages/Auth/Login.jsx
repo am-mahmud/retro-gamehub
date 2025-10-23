@@ -2,11 +2,15 @@
 import React, { use, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { GoEye } from "react-icons/go";
 import { GoEyeClosed } from "react-icons/go";
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { SlSocialGoogle } from "react-icons/sl";
+import { FaGamepad } from "react-icons/fa";
+import { IoMdCheckmark } from "react-icons/io";
+import { MdErrorOutline, MdOutlinePassword } from "react-icons/md";
+import { ImCross } from "react-icons/im";;
 
 
 
@@ -36,35 +40,81 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 e.target.reset();
-                navigate(location.state || '/')
-
+                toast.success(<div className="flex items-center gap-2">
+                    <FaGamepad className="text-yellow-300" />
+                    <span>Welcome back, gamer!</span>
+                </div>,
+                    {
+                        className: "bg-green-500 text-white font-semibold rounded-lg shadow-lg",
+                        progressClassName: "bg-yellow-400",
+                        icon: <IoMdCheckmark className="text-white" />,
+                    }
+                );
+                navigate(location.state || '/');
             })
             .catch(error => {
-                console.log(error);
+                console.error(error);
+                toast.error(<div className="flex items-center gap-2">
+                    <MdErrorOutline />
+                    <span>Invalid email or password!</span>
+                </div>,
+                    {
+                        className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+                        progressClassName: "bg-yellow-400",
+                        icon: <ImCross className="text-white" />,
+                    }
+                );
+            });
 
-            })
     };
 
     const handleGoogleLogIn = () => {
         logInWithGoogle()
-            .then()
-            .catch(error => {
-                console.log(error);
-
+            .then(() => {
+                toast.success(<div className="flex items-center gap-2">
+                    <FaGamepad className="text-yellow-300" />
+                    <span>Logged in with Google successfully!</span>
+                </div>, {
+                    className: "bg-blue-500 text-white font-semibold rounded-lg shadow-lg",
+                    progressClassName: "bg-white",
+                });
+                navigate('/');
             })
+            .catch(error => {
+                console.error(error);
+                toast.error(<div className="flex items-center gap-2">
+                    <MdErrorOutline />
+                    <span>Google login failed!</span>
+                </div>, {
+                    className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+                    progressClassName: "bg-white",
+                });
+            });
     }
 
     const handleForgetPassword = () => {
         forgetPassword()
-            .then()
-            .catch(error => {
-                console.log(error);
-
+            .then(() => {
+                toast.info(<div className="flex items-center gap-2">
+                    <MdOutlinePassword className="text-black" />
+                    <span>Password reset link sent!</span>
+                </div>, {
+                    className: "bg-yellow-400 text-black font-semibold rounded-lg shadow-lg",
+                    progressClassName: "bg-black",
+                });
             })
+            .catch(error => {
+                console.error(error);
+                toast.error(<div className="flex items-center gap-2">
+                    <MdErrorOutline />
+                    <span>Failed to send reset link.</span>
+                </div>, {
+                    className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+                    progressClassName: "bg-white",
+                });
+            });
 
     }
-
-
 
 
     return (
