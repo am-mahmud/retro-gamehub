@@ -6,12 +6,23 @@ import { GoEye, GoEyeClosed } from "react-icons/go";
 import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
+import { SlSocialGoogle } from "react-icons/sl";
 
 
 const Register = () => {
   const [show, setShow] = useState(false);
 
-  const { createUser } = use(AuthContext)
+  const { createUser, logInWithGoogle } = use(AuthContext)
+
+
+  const handleGoogleLogIn = () => {
+    logInWithGoogle()
+      .then()
+      .catch(error => {
+        console.log(error);
+
+      })
+  }
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -32,6 +43,7 @@ const Register = () => {
       }
       return;
     }
+
 
     createUser(email, password)
       .then(result => {
@@ -103,6 +115,20 @@ const Register = () => {
                 {show ? <GoEye /> : <GoEyeClosed />}
               </span>
             </div>
+
+            <div className="divider divider-neutral">Or</div>
+
+
+
+            <button onClick={handleGoogleLogIn}
+              type="submit"
+              className=" mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
+                        bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
+                        transition duration-150 hover:opacity-80 flex items-center gap-2 md:gap-4"
+            ><span><SlSocialGoogle /></span>
+              Proceed With Google
+            </button>
+
 
 
             <button
