@@ -1,6 +1,6 @@
 import React, { use } from 'react';
 import ghLogo from '../../assets/gamehub-logo.png'
-import { Link, NavLink } from 'react-router';
+import { Link } from 'react-router';
 import { RxHamburgerMenu } from "react-icons/rx";
 import GameLink from '../GameLink/GameLink';
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
@@ -30,9 +30,9 @@ const Header = () => {
         {
             user && <>
                 <div className='flex flex-col md:flex-row md:ml-4 mt-2 md:mt-0 gap-2 md:gap-4'>
-                    <GameLink to='/allgames'>All Games</GameLink>                
+                    <GameLink to='/allgames'>All Games</GameLink>
                     <GameLink to='/developer'>Developer</GameLink>
-                    <GameLink to='/profile'>Profile</GameLink>
+                    {/* <GameLink to='/profile'>Profile</GameLink> */}
 
                 </div>
 
@@ -54,9 +54,9 @@ const Header = () => {
                     </ul>
                 </div>
                 <Link to='/'>
-                <img className='w-14 h-14' src={ghLogo} alt="gamehub" />
+                    <img className='w-14 h-14' src={ghLogo} alt="gamehub" />
                 </Link>
-                
+
             </div>
 
 
@@ -66,7 +66,15 @@ const Header = () => {
                 </ul>
 
 
-                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none text-base md:text-xl">Get In</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none text-base md:text-xl">Get Out</button></Link>}
+                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 text-base md:text-xl">Get In</button> </Link> : <div className=' flex items-center gap-1'> <Link to="/profile">
+                    <img
+                        src={user.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
+                        alt="Profile"
+                        className="w-10 h-10 rounded-full border-2 border-black cursor-pointer"
+                    />
+                </Link><Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 text-base md:text-xl">Get Out</button></Link>
+
+                </div>}
 
             </div>
 
