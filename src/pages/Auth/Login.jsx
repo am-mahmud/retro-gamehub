@@ -40,7 +40,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 e.target.reset();
-                toast.success(<div className="flex items-center gap-2">
+                toast(<div className="flex items-center gap-2">
                     <FaGamepad className="text-yellow-300" />
                     <span>Welcome back, gamer!</span>
                 </div>,
@@ -54,7 +54,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
-                toast.error(<div className="flex items-center gap-2">
+                toast(<div className="flex items-center gap-2">
                     <MdErrorOutline />
                     <span>Invalid email or password!</span>
                 </div>,
@@ -71,7 +71,7 @@ const Login = () => {
     const handleGoogleLogIn = () => {
         logInWithGoogle()
             .then(() => {
-                toast.success(<div className="flex items-center gap-2">
+                toast(<div className="flex items-center gap-2">
                     <FaGamepad className="text-yellow-300" />
                     <span>Logged in with Google successfully!</span>
                 </div>, {
@@ -82,7 +82,7 @@ const Login = () => {
             })
             .catch(error => {
                 console.error(error);
-                toast.error(<div className="flex items-center gap-2">
+                toast(<div className="flex items-center gap-2">
                     <MdErrorOutline />
                     <span>Google login failed!</span>
                 </div>, {

@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/Banner';
 import GameCard from '../../components/GameCard/GameCard';
 import useFetchGames from '../../hooks/useFetchGames';
 import Marquee from "react-fast-marquee";
+import Newsletter from '../../components/NewsLetter/NewsLetter';
 
 
 
@@ -47,7 +48,9 @@ const Home = () => {
 
 
            
-
+            <div>
+                <Newsletter></Newsletter>
+            </div>
 
 
 
