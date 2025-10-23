@@ -3,7 +3,7 @@ import React, { use, useState } from 'react';
 import { Link } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 import { GoEye, GoEyeClosed } from "react-icons/go";
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
@@ -19,51 +19,39 @@ const Register = () => {
     const email = e.target.email?.value;
     const password = e.target.password?.value;
 
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+      if (password.length < 6) {
+        toast.error("Password must be at least 6 characters long.");
+      } else if (!/[A-Z]/.test(password)) {
+        toast.error("Password must contain at least one uppercase letter.");
+      } else if (!/[a-z]/.test(password)) {
+        toast.error("Password must contain at least one lowercase letter.");
+      }
+      return;
+    }
+
     createUser(email, password)
       .then(result => {
         console.log(result.user);
+        toast.success("Account created successfully!");
         e.target.reset();
-
       })
       .catch(error => {
         console.log(error);
-
-      })
-
-
-    // const passwordRegex =
-    //   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
-
-
-    // if (!passwordRegex.test(password)) {
-    //   toast.error(
-    //     "Password must contain at least 8 characters, including uppercase, lowercase, number, and special character."
-    //   );
-    //   return;
-    // }
-
-    // createUserWithEmailAndPassword(auth, email, password)
-    //   .then((res) => {
-    //     console.log(res);
-    //     toast.success("Account Created Successfully");
-    //     sendEmailVerification((auth.currentUser))
-    //       .then(() => {
-    //         toast.success("Verify Your Email!");
-    //       })
-    //   })
-    //   .catch((e) => {
-    //     console.log(e);
-    //     toast.error(e.message);
-    //   });
+        toast.error("Error: " + error.message);
+      });
   };
 
   return (
 
     <>
 
-   
-        <title>Register - GameHub</title>
-  
+
+      <title>Register - GameHub</title>
+
 
       <div className="flex justify-center items-center min-h-screen p-4">
         <div
