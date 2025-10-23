@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from 'react';
 import { AuthContext } from '../AuthContext/AuthContext';
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import { auth } from '../../firebase/firebase.config';
 
 
@@ -32,6 +32,10 @@ const AuthProvider = ({children}) => {
         return signOut(auth)
     }
 
+    const forgetPassword = (email) => {
+        setLoading(true)
+        return sendPasswordResetEmail(auth, email)
+    }
     
 
     // get user info
@@ -64,6 +68,7 @@ const AuthProvider = ({children}) => {
         logInUser,
         logInWithGoogle,
         signOutUser,
+        forgetPassword,
         
     }
 

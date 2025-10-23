@@ -6,28 +6,29 @@ import { GoEye, GoEyeClosed } from "react-icons/go";
 // import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
+import { Helmet } from 'react-helmet';
 
 const Register = () => {
   const [show, setShow] = useState(false);
 
-  const {createUser} = use(AuthContext)
+  const { createUser } = use(AuthContext)
 
   const handleRegister = (e) => {
     e.preventDefault();
 
     const email = e.target.email?.value;
     const password = e.target.password?.value;
-    
+
     createUser(email, password)
-    .then(result => {
-      console.log(result.user);
-      e.target.reset();
-      
-    })
-    .catch(error => {
-      console.log(error);
-      
-    })
+      .then(result => {
+        console.log(result.user);
+        e.target.reset();
+
+      })
+      .catch(error => {
+        console.log(error);
+
+      })
 
 
     // const passwordRegex =
@@ -57,76 +58,86 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4">
-      <div
-        className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
+
+    <>
+
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Register - GameHub</title>
+      </Helmet>
+      
+      <div className="flex justify-center items-center min-h-screen p-4">
+        <div
+          className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
                     bg-[#FFF8E1] border-black border-[3px]"
-      >
-        <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
-
-        <form
-          onSubmit={handleRegister}
-          className="p-6 pt-10 flex flex-col items-center space-y-5"
         >
+          <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
 
-          <div className="w-full">
-            <input
-              name="name"
-              type="text"
-              placeholder="Name"
-              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+          <form
+            onSubmit={handleRegister}
+            className="p-6 pt-10 flex flex-col items-center space-y-5"
+          >
+
+            <div className="w-full">
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                className="w-full p-3 text-lg font-bold rounded-md outline-none 
                          border-black border-2 bg-[#FFF8E1] text-[#444]"
-              required
-            />
-          </div>
+                required
+              />
+            </div>
 
-          <div className="w-full">
-            <input
-              name="email"
-              type="email"
-              placeholder="Email"
-              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+            <div className="w-full">
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                className="w-full p-3 text-lg font-bold rounded-md outline-none 
                          border-black border-2 bg-[#FFF8E1] text-[#444]"
-              required
-            />
-          </div>
+                required
+              />
+            </div>
 
-          <div className="relative w-full">
-            <input
-              name="password"
-              type={show ? "text" : "password"}
-              placeholder="Password"
-              className="w-full p-3 text-lg font-bold rounded-md outline-none 
+            <div className="relative w-full">
+              <input
+                name="password"
+                type={show ? "text" : "password"}
+                placeholder="Password"
+                className="w-full p-3 text-lg font-bold rounded-md outline-none 
                          border-black border-2 bg-[#FFF8E1] text-[#444]"
-              required
-            />
-            <span
-              onClick={() => setShow(!show)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
-            >
-              {show ? <GoEye /> : <GoEyeClosed />}
-            </span>
-          </div>
+                required
+              />
+              <span
+                onClick={() => setShow(!show)}
+                className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
+              >
+                {show ? <GoEye /> : <GoEyeClosed />}
+              </span>
+            </div>
 
 
-          <button
-            type="submit"
-            className="w-48 mt-6 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
+            <button
+              type="submit"
+              className="w-48 mt-6 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                        bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
                        transition duration-150 hover:opacity-80"
-          >
-            Get In
-          </button>
+            >
+              Get In
+            </button>
 
 
-          <p className="text-center pb-4 text-sm text-[#444] "> Already have an account?{" "}
-            <Link to="/login" className="underline">
-              Login
-            </Link>
-          </p>
-        </form>
+            <p className="text-center pb-4 text-sm text-[#444] "> Already have an account?{" "}
+              <Link to="/login" className="underline">
+                Login
+              </Link>
+            </p>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
+
   );
 };
 
