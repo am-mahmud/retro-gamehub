@@ -1,12 +1,14 @@
 // import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
 import React, { use, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, Navigate, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 import { GoEye, GoEyeClosed } from "react-icons/go";
 import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { SlSocialGoogle } from "react-icons/sl";
+import { FaGamepad } from "react-icons/fa";
+import { MdErrorOutline } from "react-icons/md";
 
 
 const Register = () => {
@@ -14,14 +16,31 @@ const Register = () => {
 
   const { createUser, logInWithGoogle } = use(AuthContext)
 
+  const navigate = useNavigate();
+
 
   const handleGoogleLogIn = () => {
     logInWithGoogle()
-      .then()
-      .catch(error => {
-        console.log(error);
-
+      .then(() => {
+        toast.success(<div className="flex items-center gap-2">
+          <FaGamepad className="text-yellow-300" />
+          <span>Logged in with Google successfully!</span>
+        </div>, {
+          className: "bg-blue-500 text-white font-semibold rounded-lg shadow-lg",
+          progressClassName: "bg-white",
+        });
+        navigate('/');
       })
+      .catch(error => {
+        console.error(error);
+        toast.error(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Google login failed!</span>
+        </div>, {
+          className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+          progressClassName: "bg-white",
+        });
+      });
   }
 
   const handleRegister = (e) => {
@@ -35,11 +54,39 @@ const Register = () => {
 
     if (!passwordRegex.test(password)) {
       if (password.length < 6) {
-        toast.error("Password must be at least 6 characters long.");
+        toast.error(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Password must be at least 6 characters long.
+          </span>
+        </div>,
+          {
+            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+            progressClassName: "bg-yellow-400",
+            icon: <ImCross className="text-white" />,
+          }
+        );
       } else if (!/[A-Z]/.test(password)) {
-        toast.error("Password must contain at least one uppercase letter.");
+        toast.error(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Password must contain at least one uppercase letter.
+          </span>
+        </div>,
+          {
+            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+            progressClassName: "bg-yellow-400",
+            icon: <ImCross className="text-white" />,
+          });
       } else if (!/[a-z]/.test(password)) {
-        toast.error("Password must contain at least one lowercase letter.");
+        toast.error(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Password must contain at least one lowercase letter.
+          </span>
+        </div>,
+          {
+            className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
+            progressClassName: "bg-yellow-400",
+            icon: <ImCross className="text-white" />,
+          });
       }
       return;
     }
@@ -48,7 +95,15 @@ const Register = () => {
     createUser(email, password)
       .then(result => {
         console.log(result.user);
-        toast.success("Account created successfully!");
+        toast.success(<div className="flex items-center gap-2">
+          <FaGamepad className="text-yellow-300" />
+          <span>Welcome to Gamehub, gamer!</span>
+        </div>,
+          {
+            className: "bg-green-500 text-white font-semibold rounded-lg shadow-lg",
+            progressClassName: "bg-yellow-400",
+            icon: <IoMdCheckmark className="text-white" />,
+          });
         e.target.reset();
       })
       .catch(error => {

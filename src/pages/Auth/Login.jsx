@@ -1,6 +1,6 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { use, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 // import { auth } from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
 import { GoEye } from "react-icons/go";
@@ -50,7 +50,7 @@ const Login = () => {
                         icon: <IoMdCheckmark className="text-white" />,
                     }
                 );
-                navigate(location.state || '/');
+                Navigate(location.state || '/');
             })
             .catch(error => {
                 console.error(error);
