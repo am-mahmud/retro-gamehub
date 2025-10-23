@@ -1,14 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
 import { RiUpload2Fill } from "react-icons/ri";
 
 const Developer = () => {
     return (
         <div>
-             <Helmet>
-                <meta charSet="utf-8" />
+           
                 <title>Developer - GameHub</title>
-            </Helmet>
+          
 
             <h1 className='text-3xl font-bold space-mono text-center mt-2'>Retro Game Developer?</h1>
             <div className='border-4 mt-4 mb-6 border-black min-h-screen flex items-center justify-center text-xl'>

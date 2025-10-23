@@ -1,13 +1,12 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
 
 const About = () => {
     return (
         <div>
-             <Helmet>
-                <meta charSet="utf-8" />
+             
                 <title>About - GameHub</title>
-            </Helmet>
+          
 
             <h1 className='text-3xl font-bold space-mono text-center'>GameHub – Where Retro Lives</h1>
             <div className='border-4 mt-4 border-black p-2 text-xl'>

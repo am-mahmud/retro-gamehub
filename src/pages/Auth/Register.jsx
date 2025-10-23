@@ -6,7 +6,7 @@ import { GoEye, GoEyeClosed } from "react-icons/go";
 // import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
-import { Helmet } from 'react-helmet';
+
 
 const Register = () => {
   const [show, setShow] = useState(false);
@@ -61,11 +61,10 @@ const Register = () => {
 
     <>
 
-      <Helmet>
-        <meta charSet="utf-8" />
+   
         <title>Register - GameHub</title>
-      </Helmet>
-      
+  
+
       <div className="flex justify-center items-center min-h-screen p-4">
         <div
           className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden 

@@ -7,7 +7,7 @@ import { GoEye } from "react-icons/go";
 import { GoEyeClosed } from "react-icons/go";
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { SlSocialGoogle } from "react-icons/sl";
-import { Helmet } from 'react-helmet';
+
 
 
 const Login = () => {
@@ -70,10 +70,8 @@ const Login = () => {
 
         <>
 
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Login - GameHub</title>
-            </Helmet>
+
+            <title>Login - GameHub</title>
 
             <div className="flex justify-center items-center min-h-screen p-4 space-mono">
 

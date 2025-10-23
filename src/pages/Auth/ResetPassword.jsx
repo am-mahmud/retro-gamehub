@@ -1,15 +1,14 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+
 
 const ResetPassword = () => {
     return (
 
         <>
 
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Reset Password - GameHub</title>
-            </Helmet>
+
+            <title>Reset Password - GameHub</title>
+
 
 
             <div className="flex justify-center items-center min-h-screen p-4 space-mono">

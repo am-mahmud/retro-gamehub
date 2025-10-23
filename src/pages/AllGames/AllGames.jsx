@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useFetchGames from '../../hooks/useFetchGames';
 import GameCard from '../../components/GameCard/GameCard';
-import { Helmet } from 'react-helmet';
+
 
 const AllGames = () => {
 
@@ -15,10 +15,9 @@ const AllGames = () => {
 
     return (
         <div >
-             <Helmet>
-                <meta charSet="utf-8" />
-                <title>All Games - GameHub</title>
-            </Helmet>
+
+            <title>All Games - GameHub</title>
+
 
             <div className='text-center mt-2'>
 

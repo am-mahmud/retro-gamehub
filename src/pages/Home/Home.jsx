@@ -4,6 +4,7 @@ import GameCard from '../../components/GameCard/GameCard';
 import useFetchGames from '../../hooks/useFetchGames';
 import Marquee from "react-fast-marquee";
 
+
 const Home = () => {
 
     const { allGames } = useFetchGames();
@@ -12,6 +13,9 @@ const Home = () => {
 
     return (
         <div>
+
+           <title>Home - Gamehub</title>
+
             <Banner></Banner>
 
             {/* {featuredGame.length > 0 ? (
