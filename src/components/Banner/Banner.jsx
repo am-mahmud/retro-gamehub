@@ -1,32 +1,32 @@
 import React from 'react';
-import pacMan from '../../assets/pacman-banner.jpeg'
-import superMario from '../../assets/supermario-banner.jpg'
-import spaceInveders from '../../assets/spaceinvaders-banner.png'
+import gameOne from '../../assets/retro-game-banner-1.png'
+import gameTwo from '../../assets/retro-game-banner-2.png'
+import gameThree from '../../assets/retro-game-banner-3.png'
 
 const Banner = () => {
     return (
         <div>
 
-            <div className="carousel w-full mt-2 border-4 border-black">
+            <div className="carousel w-full mt-2 border-4 border-black h-80">
                 <div id="item1" className="carousel-item w-full">
                     <img
-                        src={pacMan}
-                        className=" w-fit rounded-lg" 
-                        alt="Pac-Man"
+                        src={gameOne}
+                        className=" w-full" 
+                        alt=""
                     />
                 </div>
                 <div id="item2" className="carousel-item w-full">
                     <img
-                        src={superMario}
-                        className="w-full h-80 object-cover rounded-lg"
-                        alt="Super Mario"
+                        src={gameTwo}
+                        className="w-full"
+                        alt=""
                     />
                 </div>
                 <div id="item3" className="carousel-item w-full">
                     <img
-                        src={spaceInveders}
-                        className="w-full h-80 object-cover rounded-lg"
-                        alt="Space Invaders"
+                        src={gameThree}
+                        className="w-full"
+                        alt=""
                     />
                 </div>
             </div>

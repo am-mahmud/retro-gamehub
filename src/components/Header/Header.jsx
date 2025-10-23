@@ -29,7 +29,7 @@ const Header = () => {
 
         {
             user && <>
-                <div className='flex ml-4 gap-4'>
+                <div className='flex flex-col md:flex-row md:ml-4 mt-2 gap-2 md:gap-4'>
                     <GameLink to='/allgames'>All Games</GameLink>                
                     <GameLink to='/developer'>Developer</GameLink>
                     <GameLink to='/profile'>Profile</GameLink>
@@ -61,12 +61,12 @@ const Header = () => {
 
 
             <div className="navbar-end gap-2">
-                <ul className="menu menu-horizontal px-1 hidden lg:flex">
+                <ul className="menu menu-horizontal text-base md:text-xl px-1 hidden lg:flex">
                     {links}
                 </ul>
 
 
-                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get In</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none">Get Out</button></Link>}
+                {!user ? <Link to='/login'> <button className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none text-base md:text-xl">Get In</button> </Link> : <Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:shadow-[4px_4px_0px_black] active:translate-x-0 active:translate-y-0 active:shadow-none text-base md:text-xl">Get Out</button></Link>}
 
             </div>
 
