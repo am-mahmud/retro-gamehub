@@ -1,4 +1,5 @@
 import React from 'react';
+import Newsletter from '../../components/NewsLetter/NewsLetter';
 
 
 
@@ -21,6 +22,9 @@ const About = () => {
                 </div>
 
 
+                  <div>
+                <Newsletter></Newsletter>
+            </div>
         </div>
     );
 };
