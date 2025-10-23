@@ -9,6 +9,7 @@ import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { SlSocialGoogle } from "react-icons/sl";
 import { FaGamepad } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
+import { IoMdCheckmark } from 'react-icons/io';
 
 
 const Register = () => {

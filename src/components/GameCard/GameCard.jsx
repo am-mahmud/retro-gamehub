@@ -3,7 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { Link } from 'react-router';
 
-const GameCard = ({ title, rating, category, developer, image }) => {
+const GameCard = ({ title, rating, category, developer, image , id}) => {
 
     const user = use(AuthContext);
 
@@ -36,13 +36,12 @@ const GameCard = ({ title, rating, category, developer, image }) => {
                         </p>
                     </div>
 
-                    {user ? <Link to='/gamedetails'><a href={"game.downloadLink"} className="w-full inline-block text-center font-extrabold text-lg bg-[#6652e4] text-white py-3 px-6 rounded-lg uppercase transition-all duration-100 ease-in-out
-              hover:bg-[#644eef] hover:shadow-[0_3px_0_0_#644eef] active:translate-y-[2px] active:shadow-none active:bg-[#e0dcfa]"
+                    {user ? <Link to={`/gamedetails/${id}`}><a href={""} className="w-full inline-block text-center font-extrabold text-lg bg-[#6652e4] text-white py-3 px-6 rounded-lg uppercase transition-all duration-100 ease-in-out hover:bg-[#644eef]]"
 
                     >
                         GAME DETAILS
-                    </a></Link> : <Link to='/login'><a href={"game.downloadLink"} className="w-full inline-block text-center font-extrabold text-lg bg-[#6652e4] text-white py-3 px-6 rounded-lg uppercase transition-all duration-100 ease-in-out
-              hover:bg-[#644eef] hover:shadow-[0_3px_0_0_#644eef] active:translate-y-[2px] active:shadow-none active:bg-[#e0dcfa]"
+                    </a></Link> : <Link to='/login'><a href={""} className="w-full inline-block text-center font-extrabold text-lg bg-[#6652e4] text-white py-3 px-6 rounded-lg uppercase transition-all duration-100 ease-in-out
+              hover:bg-[#644eef]]"
 
                     >
                         GAME DETAILS

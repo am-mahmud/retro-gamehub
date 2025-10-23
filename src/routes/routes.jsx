@@ -12,6 +12,7 @@ import GameDetails from "../pages/Games/GameDetails";
 import AllGames from "../pages/AllGames/AllGames";
 import NotFound from "../pages/NotFound/NotFound";
 import UpdateProfile from "../pages/Profile/UpdateProfile";
+import PageWrapper from "../components/PageWrapper/PageWrapper";
 
 const router = createBrowserRouter([
     {
@@ -22,11 +23,13 @@ const router = createBrowserRouter([
             {
                 index: true,
                 Component: Home,
-                
+
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <PageWrapper>
+                    <About></About>
+                </PageWrapper>
             },
             {
                 path: '/developer',
@@ -43,19 +46,19 @@ const router = createBrowserRouter([
             {
                 path: "/updateprofile",
                 element: <PrivetRoutes>
-                   <UpdateProfile></UpdateProfile>
+                    <UpdateProfile></UpdateProfile>
                 </PrivetRoutes>
             },
             {
-                path: "/gamedetails",
+                path: "/gamedetails/:id",
                 element: <PrivetRoutes>
-                   <GameDetails></GameDetails>
+                    <GameDetails></GameDetails>
                 </PrivetRoutes>
             },
-             {
+            {
                 path: "/allgames",
                 element: <PrivetRoutes>
-                   <AllGames></AllGames>
+                    <AllGames></AllGames>
                 </PrivetRoutes>
             },
             {
