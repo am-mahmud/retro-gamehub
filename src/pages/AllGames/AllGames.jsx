@@ -38,7 +38,7 @@ const AllGames = () => {
             </div>
 
 
-            <div className='flex justify-between items-stretch gap-4'>
+            <div className='flex flex-col-reverse md:flex-row justify-between items-stretch gap-4 mt-3'>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 border-4 border-black p-2 mt-4 mb-6 justify-center'>
                     {
