@@ -7,7 +7,7 @@ import { toast } from 'react-toastify';
 
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { SlSocialGoogle } from "react-icons/sl";
-import { FaGamepad } from "react-icons/fa";
+import { FaGamepad, FaGoogle } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
 import { IoMdCheckmark } from 'react-icons/io';
 
@@ -167,7 +167,7 @@ const Register = () => {
               className=" mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                         bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
                         transition duration-150 hover:opacity-80 flex items-center gap-2 md:gap-4"
-            ><span><SlSocialGoogle /></span>
+            ><span><FaGoogle /></span>
               Proceed With Google
             </button>
 

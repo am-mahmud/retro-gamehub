@@ -10,7 +10,8 @@ import { SlSocialGoogle } from "react-icons/sl";
 import { FaGamepad } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
 import { MdErrorOutline, MdOutlinePassword } from "react-icons/md";
-import { ImCross } from "react-icons/im";;
+import { ImCross } from "react-icons/im";
+import { FaGoogle } from "react-icons/fa";
 
 
 
@@ -76,30 +77,6 @@ const Login = () => {
             });
     }
 
-    // const handleForgetPassword = () => {
-    //     forgetPassword()
-    //         .then(() => {
-    //             toast.info(<div className="flex items-center gap-2">
-    //                 <MdOutlinePassword className="text-black" />
-    //                 <span>Password reset link sent!</span>
-    //             </div>, {
-    //                 className: "bg-yellow-400 text-black font-semibold rounded-lg shadow-lg",
-    //                 progressClassName: "bg-black",
-    //             });
-    //         })
-    //         .catch(error => {
-    //             console.error(error);
-    //             toast.error(<div className="flex items-center gap-2">
-    //                 <MdErrorOutline />
-    //                 <span>Failed to send reset link.</span>
-    //             </div>, {
-    //                 className: "bg-red-500 text-white font-semibold rounded-lg shadow-lg",
-    //                 progressClassName: "bg-white",
-    //             });
-    //         });
-
-    // }
-
 
     return (
 
@@ -154,7 +131,7 @@ const Login = () => {
                             className=" mt-4 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
                                    bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
                                    transition duration-150 hover:opacity-80 flex items-center gap-2 md:gap-4"
-                        ><span><SlSocialGoogle /></span>
+                        ><span><FaGoogle /></span>
                             Login With Google
                         </button>
 
