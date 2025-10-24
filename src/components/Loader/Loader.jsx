@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Loader = () => {
   const bounceTransition = {
     y: {
-      duration: 0.8,  // slower bounce
+      duration: 0.8,  
       yoyo: Infinity,
       ease: "easeOut",
     },
