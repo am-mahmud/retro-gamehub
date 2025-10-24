@@ -48,8 +48,6 @@ const AuthProvider = ({ children }) => {
     // })
 
     const updateUserProfile = (name, photoURL) => {
-        // if (!auth.currentUser)
-        //     return Promise.reject("No user logged in");
        return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: photoURL,
