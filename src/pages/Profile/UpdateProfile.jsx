@@ -2,8 +2,10 @@
 import React, { useState, useEffect, use } from "react";
 import { AuthContext } from "../../contexts/AuthContext/AuthContext";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import { useNavigate } from "react-router";
+import { FaGamepad } from "react-icons/fa";
+import { MdErrorOutline } from "react-icons/md";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile } = use(AuthContext);
