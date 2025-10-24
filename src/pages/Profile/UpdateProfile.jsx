@@ -35,12 +35,18 @@ const UpdateProfile = () => {
 
     updateUserProfile(name, photoURL)
       .then(() => {
-        toast("Profile updated successfully!");
+        toast(<div className="flex items-center gap-2">
+          <FaGamepad className="text-yellow-300" />
+          <span>Profile updated successfully!</span>
+        </div>);
         navigate("/profile");
       })
       .catch((error) => {
         console.error(error);
-        toast("Failed to update profile!");
+        toast(<div className="flex items-center gap-2">
+          <MdErrorOutline />
+          <span>Failed to update profile!</span>
+        </div>);
       });
   };
 
