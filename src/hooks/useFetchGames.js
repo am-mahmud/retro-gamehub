@@ -8,7 +8,7 @@ const useFetchGames = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("/games.json") 
+    axios.get("../games.json") 
       .then(res => setAllGames(res.data))
       .catch(err => setError(err))
       .finally(() => setLoading(false));
