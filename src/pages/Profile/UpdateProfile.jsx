@@ -1,12 +1,12 @@
 // src/pages/UpdateProfile.jsx
 import React, { useState, useEffect, use } from "react";
 import { AuthContext } from "../../contexts/AuthContext/AuthContext";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router";
 
 const UpdateProfile = () => {
-  const { user, updateUserProfile } = use(AuthContext); 
+  const { user, updateUserProfile } = use(AuthContext);
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -27,29 +27,27 @@ const UpdateProfile = () => {
     setPhotoURL(e.target.value);
   };
 
+
   const handleUpdate = (e) => {
     e.preventDefault();
 
-    if (!name.trim() || !photoURL.trim()) {
-      toast.error("Name and Photo URL cannot be empty!");
-      return;
-    }
+    console.log("handle update clicked");
 
     updateUserProfile(name, photoURL)
       .then(() => {
-        toast.success("Profile updated successfully!");
+        toast("Profile updated successfully!");
         navigate("/profile");
       })
       .catch((error) => {
         console.error(error);
-        toast.error("Failed to update profile. Try again.");
+        toast("Failed to update profile!");
       });
   };
 
   return (
     <>
       <title>Update Profile - GameHub</title>
-     
+
       <div className="flex justify-center items-center min-h-screen p-4">
         <div className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden bg-[#FFF8E1] border-black border-[3px]">
           <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
