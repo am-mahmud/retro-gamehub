@@ -1,4 +1,4 @@
-# 🎮 GameHub – React Gaming Platform
+# 🎮 GameHub – Retro Gaming Platform
 
 > A modern gaming web app built with React, Vite, Tailwind CSS, and Firebase.  
 > GameHub lets users explore games, authenticate securely, and enjoy a visually interactive experience powered by animations and notifications.
@@ -8,6 +8,12 @@
 ## 📁 Project Overview
 
 **GameHub** is a dynamic, component-driven React application that displays a list of games, supports authentication via Firebase (email/password + Google login), and provides interactive UI features such as animations and toast notifications.
+
+---
+
+## 🔗 Project Links
+- Privet Project Repo: https://github.com/programming-hero-web-course2/b12-a9-firesheild-am-mahmud
+- Live Link: https://gamehub-ph-am.netlify.app/
 
 ---
 
@@ -272,10 +278,10 @@ npm run preview
 ---
 
 ## 🧰 Future Improvements
-- Add route protection for authenticated pages (e.g., Profile, Developer).
+- Add Game Uploading system for developer.
 - Migrate `games.json` to Firebase Firestore for real-time updates.
-- Add search and filtering in `AllGames` page.
-- Optimize loading states and error handling.
+- Download games from site and give review.
+- Play game on the live site.
 
 ---
 
