@@ -13,6 +13,10 @@ const AllGames = () => {
 
     const searchedGames = term ? allGames.filter(app => app.title.toLowerCase().includes(term)) : allGames;
 
+    // const handleByCategory = () =>{
+    //     if category.includes()
+    // }
+
     return (
         <div >
 
@@ -46,7 +50,7 @@ const AllGames = () => {
             <div className="flex flex-col-reverse md:flex-row justify-between gap-6 mt-6">
 
         
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1 mb-10">
                     {searchedGames.map(game => (
                         <GameCard
                             key={game.id}
@@ -70,9 +74,9 @@ const AllGames = () => {
 
                 
                     <div className="flex flex-col space-y-3 p-2 border-4 border-black rounded-b-lg shadow-inner mt-1 bg-yellow-100">
-                        {[...new Set(searchedGames.map(game => game.category))].map((category, index) => (
+                        {[...new Set(searchedGames.map(game => game.category))].map((category, id) => (
                             <div
-                                key={index}
+                                key={id}
                                 className="p-2 border-2 border-black rounded cursor-pointer hover:bg-yellow-300 hover:scale-105 transition-all text-center font-semibold"
                             >
                                 {category}
