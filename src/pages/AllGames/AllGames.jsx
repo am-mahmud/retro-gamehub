@@ -1,28 +1,40 @@
 import React, { useState } from 'react';
 import useFetchGames from '../../hooks/useFetchGames';
 import GameCard from '../../components/GameCard/GameCard';
+import Loader from '../../components/Loader/Loader';
 
 
 const AllGames = () => {
 
-    const { allGames } = useFetchGames();
+    const { allGames, loading } = useFetchGames();
 
     const [search, setSearch] = useState('')
 
     const term = search.trim().toLowerCase()
 
-    const searchedGames = term ? allGames.filter(app => app.title.toLowerCase().includes(term)) : allGames;
+    const [selectedCategory, setSelectedCategory] = useState('');
 
-    // const handleByCategory = () =>{
-    //     if category.includes()
-    // }
+
+    const filteredGames = allGames.filter(game => {
+        const matchesSearch = game.title.toLowerCase().includes(term);
+        const matchesCategory = selectedCategory ? game.category === selectedCategory : true;
+        return matchesSearch && matchesCategory;
+    });
+
+
+    const handleByCategory = (category) => {
+        console.log("Category Clicked");
+        setSelectedCategory(category);
+
+    }
+
 
     return (
         <div >
 
             <title>All Games - GameHub</title>
 
-
+            {loading && <Loader></Loader>}
             <div className='text-center mt-2'>
 
                 <h1 className='text-3xl space-mono font-bold'>Hello Human Being! These Are All Games</h1>
@@ -49,9 +61,9 @@ const AllGames = () => {
 
             <div className="flex flex-col-reverse md:flex-row justify-between gap-6 mt-6">
 
-        
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1 mb-10">
-                    {searchedGames.map(game => (
+                    {filteredGames.map(game => (
                         <GameCard
                             key={game.id}
                             id={game.id}
@@ -65,17 +77,18 @@ const AllGames = () => {
                     ))}
                 </div>
 
-   
+
                 <div className="flex flex-col w-full md:w-64">
-              
+
                     <div className="p-3 bg-yellow-400 border-4 border-black font-bold text-center rounded-t-lg shadow-md">
                         <h1>Categories</h1>
                     </div>
 
-                
+
                     <div className="flex flex-col space-y-3 p-2 border-4 border-black rounded-b-lg shadow-inner mt-1 bg-yellow-100">
-                        {[...new Set(searchedGames.map(game => game.category))].map((category, id) => (
+                        {[...new Set(filteredGames.map(game => game.category))].map((category, id) => (
                             <div
+                                onClick={() => handleByCategory(category)}
                                 key={id}
                                 className="p-2 border-2 border-black rounded cursor-pointer hover:bg-yellow-300 hover:scale-105 transition-all text-center font-semibold"
                             >

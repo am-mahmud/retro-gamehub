@@ -70,7 +70,7 @@ const Header = () => {
                     <img
                         src={user.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
                         alt="Profile"
-                        className="w-10 h-10 rounded-full border-2 border-black cursor-pointer"
+                        className="w-10 h-10 rounded-lg border-2 border-black cursor-pointer"
                     />
                 </Link><Link to='/register'><button onClick={handleSignOut} className="btn border-4 border-black rounded hover:bg-[#FFC107] transition-all duration-300 text-base md:text-xl">Get Out</button></Link>
 
