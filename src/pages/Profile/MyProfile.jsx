@@ -8,7 +8,7 @@ const MyProfile = () => {
 
     return (
         <>
-
+            <title>User Profile - Gamehub</title>
             <div className="flex flex-col md:flex-row mt-20 gap-5 border-4 border-black p-10 space-mono">
                 <img
                     src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
