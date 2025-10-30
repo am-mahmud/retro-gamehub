@@ -1,0 +1,392 @@
+[
+  {
+    "id": "1",
+    "title": "Super Mario Bros.",
+    "coverPhoto": "https://i.ibb.co.com/DgsX8SgQ/retro-game-1.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Guide Mario through the Mushroom Kingdom to rescue Princess Peach from Bowser.",
+    "ratings": "4.9",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "2",
+    "title": "Pac-Man",
+    "coverPhoto": "https://i.ibb.co.com/B2gsXb00/retro-game-2.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Navigate Pac-Man through mazes, avoid ghosts, and eat pellets to earn points.",
+    "ratings": "4.7",
+    "developer": "Namco"
+  },
+  {
+    "id": "3",
+    "title": "Space Invaders",
+    "coverPhoto": "https://i.ibb.co.com/V0PdHwHj/retro-game-3.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.taito.com",
+    "description": "Defend Earth from descending alien invaders in this classic arcade shooter.",
+    "ratings": "4.6",
+    "developer": "Taito"
+  },
+  {
+    "id": "4",
+    "title": "Donkey Kong",
+    "coverPhoto": "https://i.ibb.co.com/YBf2NZht/retro-game-4.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Climb ladders, jump barrels, and save Pauline from Donkey Kong’s tower.",
+    "ratings": "4.8",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "5",
+    "title": "The Legend of Zelda",
+    "coverPhoto": "https://i.ibb.co.com/MDm7Ss8X/retro-game-5.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Embark on a heroic journey to rescue Princess Zelda and defeat Ganon.",
+    "ratings": "4.9",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "6",
+    "title": "Metroid",
+    "coverPhoto": "https://i.ibb.co.com/fjTMp0Z/retro-game-6.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Play as Samus Aran exploring alien planets and battling space pirates.",
+    "ratings": "4.6",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "7",
+    "title": "Tetris",
+    "coverPhoto": "https://i.ibb.co.com/1YRnVmhT/retro-game-7.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://tetris.com",
+    "description": "Arrange falling blocks to complete lines and prevent the screen from filling up.",
+    "ratings": "4.9",
+    "developer": "Alexey Pajitnov"
+  },
+  {
+    "id": "8",
+    "title": "Street Fighter II",
+    "coverPhoto": "https://i.ibb.co.com/YFgNY24T/retro-game-8.jpg",
+    "category": "Fighting",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Choose your fighter and battle across the world in classic one-on-one combat.",
+    "ratings": "4.8",
+    "developer": "Capcom"
+  },
+  {
+    "id": "9",
+    "title": "Contra",
+    "coverPhoto": "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg",
+    "category": "Run and Gun",
+    "downloadLink": "https://www.konami.com",
+    "description": "Fight alien forces with powerful weapons and fast-paced side-scrolling action.",
+    "ratings": "4.5",
+    "developer": "Konami"
+  },
+  {
+    "id": "10",
+    "title": "Mega Man 2",
+    "coverPhoto": "https://i.ibb.co.com/LXhpsH2L/retro-game-10.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Defeat robot masters, steal their powers, and stop Dr. Wily’s evil plans.",
+    "ratings": "4.8",
+    "developer": "Capcom"
+  },
+  {
+    "id": "11",
+    "title": "Castlevania",
+    "coverPhoto": "https://i.ibb.co.com/B2gsXb00/retro-game-2.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.konami.com",
+    "description": "Battle vampires and monsters in Dracula’s castle using your whip and power-ups.",
+    "ratings": "4.7",
+    "developer": "Konami"
+  },
+  {
+    "id": "12",
+    "title": "Duck Hunt",
+    "coverPhoto": "https://i.ibb.co.com/DgsX8SgQ/retro-game-1.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Use the NES Zapper to shoot ducks as they fly across the screen.",
+    "ratings": "4.4",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "13",
+    "title": "Punch-Out!!",
+    "coverPhoto": "https://i.ibb.co.com/MDm7Ss8X/retro-game-5.jpg",
+    "category": "Sports",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Fight against colorful boxers as Little Mac in this classic boxing challenge.",
+    "ratings": "4.7",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "14",
+    "title": "Excitebike",
+    "coverPhoto": "https://i.ibb.co.com/fjTMp0Z/retro-game-6.jpg",
+    "category": "Racing",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Race dirt bikes and build your own tracks in this NES motocross classic.",
+    "ratings": "4.3",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "15",
+    "title": "Galaga",
+    "coverPhoto": "https://i.ibb.co.com/V0PdHwHj/retro-game-3.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Shoot alien bugs in waves and rescue your captured ship for double firepower.",
+    "ratings": "4.8",
+    "developer": "Namco"
+  },
+  {
+    "id": "16",
+    "title": "Double Dragon",
+    "coverPhoto": "https://i.ibb.co.com/YFgNY24T/retro-game-8.jpg",
+    "category": "Fighting",
+    "downloadLink": "https://www.arcadespot.com",
+    "description": "Two brothers fight their way through gangs to save a kidnapped loved one.",
+    "ratings": "4.5",
+    "developer": "Technōs Japan"
+  },
+  {
+    "id": "17",
+    "title": "Final Fight",
+    "coverPhoto": "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg",
+    "category": "Fighting",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Clean up the streets of Metro City using raw fists and teamwork.",
+    "ratings": "4.6",
+    "developer": "Capcom"
+  },
+  {
+    "id": "18",
+    "title": "Frogger",
+    "coverPhoto": "https://i.ibb.co.com/1YRnVmhT/retro-game-7.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.konami.com",
+    "description": "Guide your frog across roads and rivers to reach safety.",
+    "ratings": "4.5",
+    "developer": "Konami"
+  },
+  {
+    "id": "19",
+    "title": "Bubble Bobble",
+    "coverPhoto": "https://i.ibb.co.com/YBf2NZht/retro-game-4.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.taito.com",
+    "description": "Trap monsters in bubbles and pop them to clear each level.",
+    "ratings": "4.7",
+    "developer": "Taito"
+  },
+  {
+    "id": "20",
+    "title": "Dig Dug",
+    "coverPhoto": "https://i.ibb.co.com/LXhpsH2L/retro-game-10.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Dig tunnels and inflate underground monsters to defeat them.",
+    "ratings": "4.3",
+    "developer": "Namco"
+  },
+  {
+    "id": "21",
+    "title": "Adventure Island",
+    "coverPhoto": "https://i.ibb.co.com/B2gsXb00/retro-game-2.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.hudson.co.jp",
+    "description": "Run, jump, and throw axes in a tropical adventure full of danger.",
+    "ratings": "4.6",
+    "developer": "Hudson Soft"
+  },
+  {
+    "id": "22",
+    "title": "Ghosts 'n Goblins",
+    "coverPhoto": "https://i.ibb.co.com/DgsX8SgQ/retro-game-1.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Battle undead enemies to rescue the princess in this brutally hard action game.",
+    "ratings": "4.4",
+    "developer": "Capcom"
+  },
+  {
+    "id": "23",
+    "title": "Balloon Fight",
+    "coverPhoto": "https://i.ibb.co.com/MDm7Ss8X/retro-game-5.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Fly and pop your opponent’s balloons before they pop yours.",
+    "ratings": "4.5",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "24",
+    "title": "Bomberman",
+    "coverPhoto": "https://i.ibb.co.com/fjTMp0Z/retro-game-6.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://www.konami.com",
+    "description": "Strategically place bombs to defeat enemies and destroy walls.",
+    "ratings": "4.8",
+    "developer": "Hudson Soft"
+  },
+  {
+    "id": "25",
+    "title": "Ice Climber",
+    "coverPhoto": "https://i.ibb.co.com/V0PdHwHj/retro-game-3.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.nintendo.com",
+    "description": "Climb icy peaks and break blocks while avoiding falling hazards.",
+    "ratings": "4.2",
+    "developer": "Nintendo"
+  },
+  {
+    "id": "26",
+    "title": "Q*bert",
+    "coverPhoto": "https://i.ibb.co.com/YFgNY24T/retro-game-8.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.arcade-museum.com",
+    "description": "Jump across cubes to change their color while avoiding enemies.",
+    "ratings": "4.3",
+    "developer": "Gottlieb"
+  },
+  {
+    "id": "27",
+    "title": "Paperboy",
+    "coverPhoto": "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg",
+    "category": "Simulation",
+    "downloadLink": "https://www.arcadespot.com",
+    "description": "Deliver newspapers while avoiding obstacles in this fun cycling challenge.",
+    "ratings": "4.1",
+    "developer": "Atari Games"
+  },
+  {
+    "id": "28",
+    "title": "Pole Position",
+    "coverPhoto": "https://i.ibb.co.com/YBf2NZht/retro-game-4.jpg",
+    "category": "Racing",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Classic Formula One racing game that set the standard for the genre.",
+    "ratings": "4.2",
+    "developer": "Namco"
+  },
+  {
+    "id": "29",
+    "title": "1942",
+    "coverPhoto": "https://i.ibb.co.com/LXhpsH2L/retro-game-10.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.capcom.com",
+    "description": "Pilot a World War II plane and shoot down enemy aircraft.",
+    "ratings": "4.4",
+    "developer": "Capcom"
+  },
+  {
+    "id": "30",
+    "title": "Xevious",
+    "coverPhoto": "https://i.ibb.co.com/B2gsXb00/retro-game-2.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.bandainamcoent.com",
+    "description": "Shoot air and ground targets in a scrolling battlefield.",
+    "ratings": "4.3",
+    "developer": "Namco"
+  },
+  {
+    "id": "31",
+    "title": "BurgerTime",
+    "coverPhoto": "https://i.ibb.co.com/DgsX8SgQ/retro-game-1.jpg",
+    "category": "Arcade",
+    "downloadLink": "https://www.dataeastgames.com",
+    "description": "As a chef, build burgers while avoiding food-themed enemies.",
+    "ratings": "4.4",
+    "developer": "Data East"
+  },
+  {
+    "id": "32",
+    "title": "Rampage",
+    "coverPhoto": "https://i.ibb.co.com/MDm7Ss8X/retro-game-5.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.midway.com",
+    "description": "Destroy buildings and eat people as a giant monster.",
+    "ratings": "4.6",
+    "developer": "Midway"
+  },
+  {
+    "id": "33",
+    "title": "OutRun",
+    "coverPhoto": "https://i.ibb.co.com/fjTMp0Z/retro-game-6.jpg",
+    "category": "Racing",
+    "downloadLink": "https://www.sega.com",
+    "description": "Drive a red sports car through scenic routes while racing against time.",
+    "ratings": "4.7",
+    "developer": "Sega"
+  },
+  {
+    "id": "34",
+    "title": "Golden Axe",
+    "coverPhoto": "https://i.ibb.co.com/V0PdHwHj/retro-game-3.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.sega.com",
+    "description": "Battle fantasy enemies using swords and magic in a medieval world.",
+    "ratings": "4.8",
+    "developer": "Sega"
+  },
+  {
+    "id": "35",
+    "title": "Gauntlet",
+    "coverPhoto": "https://i.ibb.co.com/YFgNY24T/retro-game-8.jpg",
+    "category": "Adventure",
+    "downloadLink": "https://www.atari.com",
+    "description": "Explore dungeons, fight monsters, and collect treasures cooperatively.",
+    "ratings": "4.7",
+    "developer": "Atari"
+  },
+  {
+    "id": "36",
+    "title": "Marble Madness",
+    "coverPhoto": "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg",
+    "category": "Puzzle",
+    "downloadLink": "https://www.atari.com",
+    "description": "Roll a marble through obstacle courses in this physics-based classic.",
+    "ratings": "4.4",
+    "developer": "Atari"
+  },
+  {
+    "id": "37",
+    "title": "Spy Hunter",
+    "coverPhoto": "https://i.ibb.co.com/1YRnVmhT/retro-game-7.jpg",
+    "category": "Action",
+    "downloadLink": "https://www.midway.com",
+    "description": "Drive a high-tech car equipped with weapons to stop enemy agents.",
+    "ratings": "4.5",
+    "developer": "Midway"
+  },
+  {
+    "id": "38",
+    "title": "Defender",
+    "coverPhoto": "https://i.ibb.co.com/YBf2NZht/retro-game-4.jpg",
+    "category": "Shooter",
+    "downloadLink": "https://www.williamsgames.com",
+    "description": "Defend humans from alien abductions in a fast-paced horizontal shooter.",
+    "ratings": "4.6",
+    "developer": "Williams Electronics"
+  },
+  {
+    "id": "40",
+    "title": "Prince of Persia",
+    "coverPhoto": "https://i.ibb.co.com/B2gsXb00/retro-game-2.jpg",
+    "category": "Platformer",
+    "downloadLink": "https://www.ubisoft.com",
+    "description": "Escape the dungeon and rescue the princess using skillful timing and agility.",
+    "ratings": "4.8",
+    "developer": "Broderbund"
+  }
+]
