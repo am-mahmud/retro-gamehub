@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import gameOne from '../../assets/retro-game-banner-1.png'
 import gameTwo from '../../assets/retro-game-banner-2.png'
 import gameThree from '../../assets/retro-game-banner-3.png'
 
 const Banner = () => {
+
+    const [currentSlide, setCurrentSlide] = useState(0);
     return (
         <div>
 

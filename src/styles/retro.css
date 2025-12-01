@@ -1,0 +1,366 @@
+/* ============================================
+   RETRO GAME HUB - DESIGN SYSTEM
+   ============================================ */
+
+/* Import Retro Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  /* Retro Color Palette */
+  --retro-primary: #FF6B35;
+  --retro-secondary: #F7931E;
+  --retro-accent: #FFC107;
+  --retro-dark: #1a1a2e;
+  --retro-darker: #0f0f1e;
+  --retro-light: #FFF8E1;
+  --retro-cyan: #00D9FF;
+  --retro-magenta: #FF00E5;
+  --retro-green: #00FF41;
+  
+  /* Arcade Colors */
+  --arcade-red: #FF3366;
+  --arcade-blue: #3366FF;
+  --arcade-yellow: #FFFF00;
+  --arcade-purple: #9933FF;
+}
+
+/* ============================================
+   CRT SCREEN EFFECT
+   ============================================ */
+.crt-effect {
+  position: relative;
+  background: var(--retro-darker);
+  overflow: hidden;
+}
+
+.crt-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 3px
+  );
+  pointer-events: none;
+  z-index: 10;
+  animation: scanline 8s linear infinite;
+}
+
+.crt-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* ============================================
+   NEON GLOW EFFECTS
+   ============================================ */
+.neon-glow {
+  text-shadow: 
+    0 0 5px var(--retro-cyan),
+    0 0 10px var(--retro-cyan),
+    0 0 20px var(--retro-cyan),
+    0 0 40px var(--retro-magenta);
+  animation: neon-flicker 3s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 
+      0 0 5px var(--retro-cyan),
+      0 0 10px var(--retro-cyan),
+      0 0 20px var(--retro-cyan),
+      0 0 40px var(--retro-magenta);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* ============================================
+   PIXEL BORDERS
+   ============================================ */
+.pixel-border {
+  border: 4px solid #000;
+  box-shadow: 
+    inset -4px -4px 0px rgba(0, 0, 0, 0.3),
+    inset 4px 4px 0px rgba(255, 255, 255, 0.3);
+}
+
+.pixel-border-glow {
+  border: 4px solid #000;
+  box-shadow: 
+    0 0 10px var(--retro-accent),
+    0 0 20px var(--retro-accent),
+    inset 0 0 10px rgba(255, 193, 7, 0.3);
+}
+
+/* ============================================
+   RETRO BUTTONS
+   ============================================ */
+.retro-button {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  padding: 12px 24px;
+  background: var(--retro-accent);
+  border: 4px solid #000;
+  color: #000;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.1s;
+  box-shadow: 
+    6px 6px 0px #000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.retro-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 
+    4px 4px 0px #000,
+    inset -2px -2px 0px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+.retro-button:active {
+  transform: translate(6px, 6px);
+  box-shadow: 
+    0px 0px 0px #000,
+    inset 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   GLITCH EFFECT
+   ============================================ */
+.glitch {
+  position: relative;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch:hover::before {
+  animation: glitch-1 0.3s infinite;
+  color: var(--retro-cyan);
+  z-index: -1;
+}
+
+.glitch:hover::after {
+  animation: glitch-2 0.3s infinite;
+  color: var(--retro-magenta);
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+  0% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+/* ============================================
+   ARCADE CABINET STYLE
+   ============================================ */
+.arcade-frame {
+  background: linear-gradient(145deg, #2a2a3e 0%, #1a1a2e 100%);
+  border: 6px solid #000;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 -8px 20px rgba(0, 0, 0, 0.3),
+    inset 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+.arcade-screen {
+  background: #000;
+  border: 8px solid #1a1a2e;
+  border-radius: 10px;
+  box-shadow: 
+    inset 0 0 50px rgba(0, 217, 255, 0.3),
+    0 0 20px rgba(0, 217, 255, 0.5);
+}
+
+/* ============================================
+   PIXEL ANIMATIONS
+   ============================================ */
+.pixel-bounce {
+  animation: pixel-bounce 1s infinite;
+}
+
+@keyframes pixel-bounce {
+  0%, 100% { transform: translateY(0px); }
+  25% { transform: translateY(-8px); }
+  50% { transform: translateY(0px); }
+  75% { transform: translateY(-4px); }
+}
+
+.pixel-pulse {
+  animation: pixel-pulse 2s infinite;
+}
+
+@keyframes pixel-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+/* ============================================
+   RETRO CARD HOVER EFFECT
+   ============================================ */
+.retro-card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.retro-card-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px #000;
+}
+
+.retro-card-hover:hover::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 2px solid var(--retro-accent);
+  pointer-events: none;
+  animation: border-pulse 1s infinite;
+}
+
+@keyframes border-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ============================================
+   LOADING ANIMATIONS
+   ============================================ */
+.retro-loading {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border: 8px solid var(--retro-dark);
+  border-top-color: var(--retro-accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ============================================
+   RETRO MARQUEE
+   ============================================ */
+.retro-marquee {
+  background: linear-gradient(
+    90deg,
+    var(--retro-accent) 0%,
+    var(--retro-secondary) 50%,
+    var(--retro-accent) 100%
+  );
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+  box-shadow: 
+    inset 0 4px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   SCROLL INDICATOR
+   ============================================ */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: pixel-bounce 2s infinite;
+  z-index: 20;
+}
+
+.scroll-arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid var(--retro-accent);
+  filter: drop-shadow(0 0 10px var(--retro-accent));
+}
+
+/* ============================================
+   RETRO FONT CLASSES
+   ============================================ */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive;
+  line-height: 1.6;
+}
+
+.font-mono-retro {
+  font-family: 'VT323', monospace;
+  line-height: 1.2;
+}
+
+/* ============================================
+   RESPONSIVE UTILITIES
+   ============================================ */
+@media (max-width: 768px) {
+  .retro-button {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+  
+  .font-pixel {
+    font-size: 10px;
+  }
+  
+  .arcade-frame {
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+  }
+}
