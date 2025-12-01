@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-<<<<<<< HEAD
 @import './styles/retro.css';
-=======
-
->>>>>>> d7102866814bcdd6f1c1aac96b09406f6250e073
 @import "tailwindcss";
 @plugin "daisyui";
 
