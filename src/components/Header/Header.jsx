@@ -68,7 +68,7 @@ const Header = () => {
                 </ul>
 
 
-                {!user ? <Link to='/login'> <button className="btn bg-[#f35815] hover:border-3 hover:border-blue-500 transition-all duration-300 space-mono md:text-xl">Get In</button> </Link> : <div className=' flex items-center gap-1'> <Link to="/profile">
+                {!user ? <Link to='/login'> <button className="btn bg-orange-400 hover:border-3 hover:border-black transition-all duration-300 space-mono md:text-xl">Get In</button> </Link> : <div className=' flex items-center gap-1'> <Link to="/profile">
                     <img
                         src={user.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
                         alt="Profile"
