@@ -20,7 +20,7 @@ const Newsletter = () => {
         }
 
         toast(<div className="flex items-center gap-2">
-            <FaGamepad className="text-yellow-300" />
+            <FaGamepad className="text-orange-300" />
             <span>You will get your Knowledge!</span>
         </div>);
 
@@ -46,7 +46,7 @@ const Newsletter = () => {
                     </div>
                     <button
                         type="submit"
-                        className="bg-yellow-400 text-black font-bold px-6 py-3 rounded-md hover:bg-yellow-500 transition"
+                        className="bg-orange-400 text-black font-bold px-6 py-3  hover:bg-orange-500 transition"
                     >
                         Subscribe
                     </button>
