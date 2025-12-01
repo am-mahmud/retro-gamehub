@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import React, { useState, useEffect }  from 'react';
+=======
+import React from 'react';
+>>>>>>> d7102866814bcdd6f1c1aac96b09406f6250e073
 import gameOne from '../../assets/retro-game-banner-1.png'
 import gameTwo from '../../assets/retro-game-banner-2.png'
 import gameThree from '../../assets/retro-game-banner-3.png'
 
 const Banner = () => {
+<<<<<<< HEAD
 
     const [currentSlide, setCurrentSlide] = useState(0);
+=======
+>>>>>>> d7102866814bcdd6f1c1aac96b09406f6250e073
     return (
         <div>
 
