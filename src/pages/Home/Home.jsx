@@ -5,6 +5,7 @@ import useFetchGames from '../../hooks/useFetchGames';
 import Marquee from "react-fast-marquee";
 import Newsletter from '../../components/NewsLetter/NewsLetter';
 import FAQ from '../../components/FAQ/FAQ';
+import GameCategory from '../../components/GameCategory/GameCategory';
 
 
 
@@ -12,7 +13,7 @@ const Home = () => {
 
     const { allGames } = useFetchGames();
 
-    const featuredGame = allGames.slice(0, 3);
+    const featuredGame = allGames.slice(0, 4);
 
     return (
         <div>
@@ -33,9 +34,9 @@ const Home = () => {
                 </div>
             </Marquee> */}
 
-            <section className="container mx-auto px-4">
+            <section className="container mx-auto mb-10">
                 <div className="text-center mb-8">
-                    <span className="bg-orange-400 p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
+                    <span className="bg-orange-400 p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight mb-2 space-mono">
                         HANDPICKED FOR YOU
                     </span>
                     <h2 className="font-bold text-3xl md:text-4xl space-mono mb-4">
@@ -47,7 +48,7 @@ const Home = () => {
                 </div>
 
                 {featuredGame.filter(game => game.ratings > 4.5).length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4">
                         {featuredGame
                             .filter(game => game.ratings > 4.5)
                             .map((game) => (
@@ -69,6 +70,9 @@ const Home = () => {
 
             </section>
 
+            <div>
+                <GameCategory></GameCategory>
+            </div>
 
 
             <div>

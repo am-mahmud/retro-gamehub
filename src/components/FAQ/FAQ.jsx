@@ -36,7 +36,7 @@ const FAQ = () => {
         <section className="container mx-auto px-4 py-12 bg-white">
             <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
-                    <FaQuestionCircle className="text-4xl text-orange-400" />
+                    <FaQuestionCircle className="text-4xl text-orange-500" />
                     <h2 className="font-bold text-3xl md:text-4xl space-mono">
                         FREQUENTLY ASKED QUESTIONS
                     </h2>
@@ -46,14 +46,12 @@ const FAQ = () => {
                 </p>
             </div>
 
-            {/* FAQ List */}
             <div className="max-w-4xl mx-auto space-y-4">
                 {faqs.map((faq, index) => (
                     <div 
                         key={index}
                         className="bg-white border-4 border-black overflow-hidden"
                     >
-                        {/* Question Button */}
                         <button
                             onClick={() => toggleFAQ(index)}
                             className={`w-full p-6 flex items-center justify-between text-left font-bold space-mono transition-colors ${
