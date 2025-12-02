@@ -4,6 +4,7 @@ import GameCard from '../../components/GameCard/GameCard';
 import useFetchGames from '../../hooks/useFetchGames';
 import Marquee from "react-fast-marquee";
 import Newsletter from '../../components/NewsLetter/NewsLetter';
+import FAQ from '../../components/FAQ/FAQ';
 
 
 
@@ -19,9 +20,22 @@ const Home = () => {
 
             <Banner></Banner>
 
-            <section className="container mx-auto px-4 py-12">
+            {/* <Marquee className="bg-[#ff8904] border-y-4 border-black p-4 my-8" speed={50}>
+                <div className="text-black text-lg md:text-xl font-bold space-mono flex items-center gap-8">
+                    <span>🎮 RELIVE THE NOSTALGIA</span>
+                    <span className="text-2xl">|</span>
+                    <span>⭐ DISCOVER TIMELESS CLASSICS</span>
+                    <span className="text-2xl">|</span>
+                    <span>🏆 CELEBRATE RETRO GAMING</span>
+                    <span className="text-2xl">|</span>
+                    <span>🎯 JOIN THE GAME HUB COMMUNITY</span>
+                    <span className="text-2xl">|</span>
+                </div>
+            </Marquee> */}
+
+            <section className="container mx-auto px-4">
                 <div className="text-center mb-8">
-                    <span className="bg-[#FFC107] p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
+                    <span className="bg-orange-400 p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
                         HANDPICKED FOR YOU
                     </span>
                     <h2 className="font-bold text-3xl md:text-4xl space-mono mb-4">
@@ -57,7 +71,9 @@ const Home = () => {
 
 
 
-
+            <div>
+                <FAQ></FAQ>
+            </div>
 
             <div>
                 <Newsletter></Newsletter>

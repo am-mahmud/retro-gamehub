@@ -133,9 +133,7 @@ const Banner = () => {
                         </p>
                     </div>
 
-                    {/* <p className="space-mono text-center">
-                        
-                    </p> */}
+                  
 
                     <div className="flex gap-4 items-center justify-center">
                         <button className="bg-black text-white px-6 py-3 border-4 border-black hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[4px_4px_0px_black] transition">
