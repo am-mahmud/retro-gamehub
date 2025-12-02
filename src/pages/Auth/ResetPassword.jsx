@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { toast } from 'react-toastify';
 import { MdErrorOutline, MdOutlinePassword } from "react-icons/md";
+import { Link } from 'react-router';
 
 const ResetPassword = () => {
 
@@ -32,51 +33,65 @@ const ResetPassword = () => {
             });
     };
 
-
     return (
-
         <>
-
-
             <title>Reset Password - GameHub</title>
 
-            <div className="flex justify-center items-center min-h-screen p-4 space-mono">
+            <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono">
+                <div className="w-full max-w-sm border-2 border-black p-4">
+                    
+                    <div className="text-center mb-8">
+                        <h1 className="text-5xl font-black text-black tracking-tight mb-2">
+                            GAMEHUB
+                        </h1>
+                    </div>
 
+                    <h2 className="text-2xl font-bold text-center mb-4 text-black uppercase tracking-wide">
+                        Reset Password
+                    </h2>
 
-                <div
-                    className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden 
-                    bg-[#FFF8E1] border-black border-[3px]"
-                >
-                    <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
-                    <p className='font-semibold text-center text-xl mt-2 text-[#444]'>Enter your email</p>
+                    <p className="text-center text-sm text-gray-600 mb-8">
+                        Enter your email to receive a password reset link
+                    </p>
 
-                    <form  onSubmit={handleReset} className="p-6 pt-10 flex flex-col items-center space-y-5">
-                        <div className="w-full">
+                    <form onSubmit={handleReset} className="space-y-4">
+                      
+                        <div>
                             <input
                                 name="email"
                                 type="email"
-                                placeholder="Email"
-                                className="w-full p-3 text-lg font-bold rounded-md outline-none 
-                                       border-black border-2 bg-[#FFF8E1] text-[#444]"
+                                placeholder="EMAIL"
+                                className="w-full px-5 py-4 text-sm font-semibold rounded-xl
+                                       border-2 border-black bg-white text-black
+                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black"
                                 required
                             />
                         </div>
 
+                    
                         <button
                             type="submit"
-                            className="w-36 mt-4 py-2 px-6 text-xl font-bold rounded-md cursor-pointer
-                                   bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
-                                   transition duration-150 hover:opacity-80"
+                            className="w-full py-4 text-sm font-bold rounded-xl
+                                   bg-orange-400 text-white uppercase tracking-wider
+                                   hover:bg-[#FF6B35] transition-colors"
                         >
-                            Reset Password
+                            Send Reset Link
                         </button>
                     </form>
 
+                  
+                    <div className="text-center mt-6">
+                        <Link 
+                            to='/login' 
+                            className="text-gray-500 text-sm hover:text-black transition-colors inline-flex items-center gap-2"
+                        >
+                            ← Back to Login
+                        </Link>
+                    </div>
                 </div>
             </div>
-
         </>
-
     );
 };
 
