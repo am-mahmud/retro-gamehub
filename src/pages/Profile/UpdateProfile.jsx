@@ -1,9 +1,7 @@
-// src/pages/UpdateProfile.jsx
 import React, { useState, useEffect, use } from "react";
 import { AuthContext } from "../../contexts/AuthContext/AuthContext";
 import { toast } from "react-toastify";
-
-import { useNavigate } from "react-router";
+import { useNavigate, Link } from "react-router";
 import { FaGamepad } from "react-icons/fa";
 import { MdErrorOutline } from "react-icons/md";
 
@@ -29,7 +27,6 @@ const UpdateProfile = () => {
     setPhotoURL(e.target.value);
   };
 
-
   const handleUpdate = (e) => {
     e.preventDefault();
 
@@ -38,7 +35,7 @@ const UpdateProfile = () => {
     updateUserProfile(name, photoURL)
       .then(() => {
         toast(<div className="flex items-center gap-2">
-          <FaGamepad className="text-yellow-300" />
+          <FaGamepad className="text-[#FF6B35]" />
           <span>Profile updated successfully!</span>
         </div>);
         navigate("/profile");
@@ -56,44 +53,111 @@ const UpdateProfile = () => {
     <>
       <title>Update Profile - GameHub</title>
 
-      <div className="flex justify-center items-center min-h-screen p-4">
-        <div className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden bg-[#FFF8E1] border-black border-[3px]">
-          <div className="h-8 flex justify-end items-center px-3 bg-[#FFD54F]" />
+      <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono">
+        <div className="w-full max-w-md border-2 border-black p-4">
+          
+         
+          <div className="text-center mb-8">
+            <h1 className="text-5xl font-black text-black tracking-tight mb-2">
+              GAMEHUB
+            </h1>
+          </div>
 
-          <h2 className="text-center font-bold text-xl mt-4 text-[#444]">
-            Update Your Information
+        
+          <h2 className="text-2xl font-bold text-center mb-4 text-black uppercase tracking-wide">
+            Update Profile
           </h2>
 
-          <form
-            onSubmit={handleUpdate}
-            className="p-6 pt-4 flex flex-col items-center space-y-4"
-          >
-            <input
-              type="text"
-              value={name}
-              onChange={handleNameChange}
-              placeholder="Enter your name"
-              className="w-full p-3 text-lg font-bold rounded-md outline-none border-black border-2 bg-[#FFF8E1] text-[#444]"
-              required
-            />
-            <input
-              type="text"
-              value={photoURL}
-              onChange={handlePhotoURLChange}
-              placeholder="Enter your photo URL"
-              className="w-full p-3 text-lg font-bold rounded-md outline-none border-black border-2 bg-[#FFF8E1] text-[#444]"
-              required
-            />
+          <p className="text-center text-sm text-gray-600 mb-8">
+            Edit your player information below
+          </p>
 
+          <form onSubmit={handleUpdate} className="space-y-6">
+          
+            {photoURL && (
+              <div className="flex justify-center mb-4">
+                <img
+                  src={photoURL}
+                  alt="Profile Preview"
+                  className="w-24 h-24 object-cover border-4 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]"
+                  onError={(e) => {
+                    e.target.src = "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg";
+                  }}
+                />
+              </div>
+            )}
+
+            
+            <div>
+              <label className="block text-black font-bold mb-2 text-xs uppercase tracking-wider">
+                Player Name
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={handleNameChange}
+                placeholder="ENTER YOUR NAME"
+                className="w-full px-5 py-4 text-sm font-semibold rounded-xl
+                       border-2 border-black bg-white text-black
+                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
+                       focus:outline-none focus:ring-2 focus:ring-black"
+                required
+              />
+            </div>
+
+            
+            <div>
+              <label className="block text-black font-bold mb-2 text-xs uppercase tracking-wider">
+                Photo URL
+              </label>
+              <input
+                type="url"
+                value={photoURL}
+                onChange={handlePhotoURLChange}
+                placeholder="ENTER PHOTO URL"
+                className="w-full px-5 py-4 text-sm font-semibold rounded-xl
+                       border-2 border-black bg-white text-black
+                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
+                       focus:outline-none focus:ring-2 focus:ring-black"
+                required
+              />
+              <p className="text-xs text-gray-500 mt-2">
+                Enter a valid image URL for your profile picture
+              </p>
+            </div>
+
+            
             <button
               type="submit"
-              className="w-48 mt-2 py-2 px-6 text-base md:text-xl font-bold rounded-md cursor-pointer
-                         bg-[#FFC107] border-[#FFD54F] border-2 text-[#444]
-                         transition duration-150 hover:opacity-80"
+              className="w-full py-4 text-sm font-bold rounded-xl
+                     bg-orange-400 text-white uppercase tracking-wider
+                     hover:bg-[#FF6B35] transition-colors"
             >
-              Update Information
+              Save Changes
             </button>
+
+          
+            <Link to="/profile" className="block">
+              <button
+                type="button"
+                className="w-full py-4 text-sm font-bold rounded-xl
+                       bg-white text-black uppercase tracking-wider
+                       border-2 border-black hover:bg-gray-100 transition-colors"
+              >
+                Cancel
+              </button>
+            </Link>
           </form>
+
+        
+          <div className="text-center mt-6">
+            <Link 
+              to='/profile' 
+              className="text-gray-500 text-sm hover:text-black transition-colors inline-flex items-center gap-2"
+            >
+              ← Back to Profile
+            </Link>
+          </div>
         </div>
       </div>
     </>
