@@ -30,7 +30,7 @@ const GameCategory = () => {
                 ].map((category, index) => (
                     <div
                         key={index}
-                        className="flex items-center justify-center h-32 border border-blue-400"
+                        className="flex items-center justify-center h-32 border border-[#00D9FF]"
                     >
                         <span className="font-bold text-xl space-mono">{category}</span>
                     </div>

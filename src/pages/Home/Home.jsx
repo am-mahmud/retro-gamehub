@@ -21,18 +21,6 @@ const Home = () => {
 
             <Banner></Banner>
 
-            {/* <Marquee className="bg-[#ff8904] border-y-4 border-black p-4 my-8" speed={50}>
-                <div className="text-black text-lg md:text-xl font-bold space-mono flex items-center gap-8">
-                    <span>🎮 RELIVE THE NOSTALGIA</span>
-                    <span className="text-2xl">|</span>
-                    <span>⭐ DISCOVER TIMELESS CLASSICS</span>
-                    <span className="text-2xl">|</span>
-                    <span>🏆 CELEBRATE RETRO GAMING</span>
-                    <span className="text-2xl">|</span>
-                    <span>🎯 JOIN THE GAME HUB COMMUNITY</span>
-                    <span className="text-2xl">|</span>
-                </div>
-            </Marquee> */}
 
             <section className="container mx-auto mb-10">
                 <div className="text-center mb-8">
