@@ -21,6 +21,26 @@ const Home = () => {
 
             <Banner></Banner>
 
+            <div className="overflow-hidden my-8 mb-10">
+                <Marquee
+                    speed={40}
+                    className="marquee-fade bg-[#ff8904] border-y-4 border-black p-4 -rotate-3"
+                >
+                    <div className="text-black text-lg md:text-xl font-bold space-mono flex items-center gap-8">
+                        <span>🎮 RELIVE THE NOSTALGIA</span>
+                        <span className="text-2xl">|</span>
+                        <span>⭐ DISCOVER TIMELESS CLASSICS</span>
+                        <span className="text-2xl">|</span>
+                        <span>🏆 CELEBRATE RETRO GAMING</span>
+                        <span className="text-2xl">|</span>
+                        <span>🎯 JOIN THE GAME HUB COMMUNITY</span>
+                        <span className="text-2xl">|</span>
+                    </div>
+                </Marquee>
+            </div>
+
+
+
 
             <section className="container mx-auto mb-10">
                 <div className="text-center mb-8">

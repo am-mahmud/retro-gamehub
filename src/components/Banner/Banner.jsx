@@ -92,6 +92,7 @@
 
 
 import React from "react";
+import { Link } from "react-router";
 
 
 const Banner = () => {
@@ -112,7 +113,7 @@ const Banner = () => {
                     }}
                 ></div>
 
-              
+
                 <div className="absolute inset-0 bg-linear-to-b from-white via-white/50 to-white/90"></div>
             </div>
 
@@ -133,16 +134,28 @@ const Banner = () => {
                         </p>
                     </div>
 
-                  
+
 
                     <div className="flex gap-4 items-center justify-center">
-                        <button className="bg-black text-white px-6 py-3 border-4 border-black hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[4px_4px_0px_black] transition">
-                            Start Playing →
-                        </button>
+                        <Link to='/allgames'>
 
-                        <button className="bg-white px-6 py-3 border-4 border-black hover:bg-[#ff8904] transition">
-                           Start Building →
-                        </button>
+                            <button className="bg-black text-white px-6 py-3 border-4 border-black hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[4px_4px_0px_black] transition">
+                                Start Playing →
+                            </button>
+
+                        </Link>
+
+
+                        <Link to='/developer'>
+
+                            <button className="bg-white px-6 py-3 border-4 border-black hover:bg-[#ff8904] transition">
+                                Start Building →
+                            </button>
+
+                        </Link>
+
+
+
                     </div>
                 </div>
             </div>
