@@ -21,26 +21,22 @@ const Header = () => {
             })
     }
 
-    const links = < >
-        <div className='flex flex-col md:flex-row gap-4'>
-            <GameLink to='/'>Home</GameLink> 
-            <GameLink to='/about'>About</GameLink> 
-            <GameLink to='/review'>Review</GameLink> 
-            <GameLink to='/community'>Community</GameLink> 
-            <GameLink to='/help'>Help</GameLink> 
+    const links = (
+        <div className="flex flex-col md:flex-row gap-4">
+            <GameLink to="/">Home</GameLink>
+            <GameLink to="/about">About</GameLink>
+            <GameLink to="/community">Community</GameLink>
+            <GameLink to="/help">Help</GameLink>
+
+            {user && (
+                <>
+                    <GameLink to="/allgames">Games</GameLink>
+                    <GameLink to="/developer">Developer</GameLink>
+                </>
+            )}
         </div>
+    );
 
-        {
-            user && <>
-                <div className='flex flex-col md:flex-row md:ml-4 mt-2 md:mt-0 gap-2 md:gap-4'>
-                    <GameLink to='/allgames'>All Games</GameLink>
-                    <GameLink to='/developer'>Developer</GameLink>
-                
-                </div>
-
-            </>
-        }
-    </>
 
     return (
         <div className="navbar space-mono max-w-7xl mx-auto">
@@ -80,7 +76,7 @@ const Header = () => {
 
             </div>
 
-        
+
         </div>
     );
 };
