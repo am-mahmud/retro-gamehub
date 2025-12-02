@@ -25,7 +25,6 @@ const Header = () => {
         <div className="flex flex-col md:flex-row gap-4">
             <GameLink to="/">Home</GameLink>
             <GameLink to="/about">About</GameLink>
-            <GameLink to="/community">Community</GameLink>
             <GameLink to="/help">Help</GameLink>
 
             {user && (
@@ -58,19 +57,13 @@ const Header = () => {
             </div>
 
 
-            <div className="navbar-end gap-4">
-                <ul className="menu menu-horizontal text-base md:text-xl px-1 hidden lg:flex">
+            <div className="navbar-end">
+                <ul className="menu menu-horizontal text-base md:text-xl hidden lg:flex">
                     {links}
                 </ul>
 
 
-                {!user ? <Link to='/login'> <button className="btn bg-orange-400 hover:border-2 hover:border-black transition-all duration-300 space-mono md:text-xl">Get In</button> </Link> : <div className=' flex items-center gap-1'> <Link to="/profile">
-                    <img
-                        src={user.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
-                        alt="Profile"
-                        className="w-10 h-10 rounded-lg border-2 border-black cursor-pointer"
-                    />
-                </Link><Link to='/register'><button onClick={handleSignOut} className="btn  rounded hover:bg-[#FFC107] transition-all duration-300 text-base md:text-xl">Get Out</button></Link>
+                {!user ? <Link to='/login'> <button className="btn bg-[#ff8904] hover:border-2 hover:border-black transition-all duration-300 space-mono md:text-xl ">Get In</button> </Link> : <div className=' flex justify-between items-center gap-1'> <Link to='/register'><button onClick={handleSignOut} className="btn  hover:bg-[#ff8904] transition-all duration-300 text-base md:text-xl">Get Out</button></Link>
 
                 </div>}
 
