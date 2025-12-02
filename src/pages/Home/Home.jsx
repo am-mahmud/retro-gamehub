@@ -18,26 +18,43 @@ const Home = () => {
             <title>Home - Gamehub</title>
 
             <Banner></Banner>
-            
-            {featuredGame.filter(game => game.ratings > 4.5).length > 0 ? (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-                    {featuredGame
-                        .filter(game => game.ratings > 4.5)
-                        .map((game) => (
-                            <GameCard
-                                key={game.id}
-                                id={game.id}
-                                title={game.title}
-                                image={game.coverPhoto}
-                                rating={game.ratings}
-                                category={game.category}
-                                developer={game.developer}
-                            />
-                        ))}
+
+            <section className="container mx-auto px-4 py-12">
+                <div className="text-center mb-8">
+                    <span className="bg-orange-400 px-2 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
+                        HANDPICKED FOR YOU
+                    </span>
+                    <h2 className="font-bold text-3xl md:text-4xl space-mono mb-4">
+                        FEATURED GAMES
+                    </h2>
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        Our top-rated games with ratings above 4.5 stars
+                    </p>
                 </div>
-            ) : (
-                <p className="text-center mt-5 text-gray-600">No featured games above 4.5 stars.</p>
-            )}
+
+                {featuredGame.filter(game => game.ratings > 4.5).length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                        {featuredGame
+                            .filter(game => game.ratings > 4.5)
+                            .map((game) => (
+                                <GameCard
+                                    key={game.id}
+                                    id={game.id}
+                                    title={game.title}
+                                    image={game.coverPhoto}
+                                    rating={game.ratings}
+                                    category={game.category}
+                                    developer={game.developer}
+                                />
+                            ))}
+                    </div>
+                ) : (
+                    <p className="text-center mt-5 text-gray-600">No featured games above 4.5 stars.</p>
+                )}
+
+            </section>
+
+
 
 
 
