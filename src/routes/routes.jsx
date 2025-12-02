@@ -14,7 +14,6 @@ import NotFound from "../pages/NotFound/NotFound";
 import UpdateProfile from "../pages/Profile/UpdateProfile";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import Help from "../pages/Help/Help";
-// import { AnimatePresence } from "framer-motion";
 
 const router = createBrowserRouter([
     {
@@ -38,8 +37,6 @@ const router = createBrowserRouter([
                     <PageWrapper>
                         <About></About>
                     </PageWrapper>
-
-
 
             },
              {

@@ -12,7 +12,7 @@ const Header = () => {
 
     const handleSignOut = () => {
         signOutUser()
-            .then(() => {})
+            .then(() => { })
             .catch(error => {
                 console.log(error);
             })
@@ -36,22 +36,22 @@ const Header = () => {
     return (
         <div className="sticky top-0 z-50 bg-white border-b-4 border-black shadow-md">
             <div className="navbar space-mono max-w-7xl mx-auto px-4">
-                
+
                 <div className="navbar-start">
                     <div className="lg:hidden">
-                        <button 
+                        <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="btn btn-ghost text-3xl p-2"
                         >
                             {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
                         </button>
                     </div>
-                    
+
                     <Link to='/' className="flex items-center gap-2">
-                        <img 
-                            className='w-12 h-12 md:w-14 md:h-14' 
-                            src={ghLogo} 
-                            alt="gamehub" 
+                        <img
+                            className='w-12 h-12 md:w-14 md:h-14'
+                            src={ghLogo}
+                            alt="gamehub"
                         />
                         <span className="hidden md:block text-xl font-bold">GAMEHUB</span>
                     </Link>
@@ -63,7 +63,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-              
+
                 <div className="navbar-end gap-3">
                     {!user ? (
                         <Link to='/login'>
@@ -75,14 +75,14 @@ const Header = () => {
                         </Link>
                     ) : (
                         <div className="flex items-center gap-3">
-                           
+
                             <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar border-2 border-black hover:border-orange-400 transition-all">
-                                    <div className="w-10 rounded-full">
-                                        <img 
-                                            src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"} 
+                                <label tabIndex={0} className="btn btn-ghost btn-square avatar transition-all">
+                                    <div className="w-10 h-10">
+                                        <img
+                                            src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
                                             alt="Profile"
-                                            className="object-cover"
+                                            className="object-cover w-full h-full"
                                         />
                                     </div>
                                 </label>
@@ -104,7 +104,7 @@ const Header = () => {
                                     </li>
                                     <div className="divider my-1"></div>
                                     <li>
-                                        <button 
+                                        <button
                                             onClick={handleSignOut}
                                             className="font-semibold hover:bg-red-500 hover:text-white"
                                         >
