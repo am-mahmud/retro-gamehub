@@ -1,28 +1,25 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import ghLogo from '../../assets/gamehub-logo.png'
 import { Link } from 'react-router';
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from "react-icons/io5";
 import GameLink from '../GameLink/GameLink';
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 
-
 const Header = () => {
-
     const { user, signOutUser } = use(AuthContext);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleSignOut = () => {
         signOutUser()
-            .then(() => {
-
-            })
+            .then(() => {})
             .catch(error => {
                 console.log(error);
-
             })
     }
 
     const links = (
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
             <GameLink to="/">Home</GameLink>
             <GameLink to="/about">About</GameLink>
             <GameLink to="/help">Help</GameLink>
@@ -36,40 +33,98 @@ const Header = () => {
         </div>
     );
 
-
     return (
-        <div className="navbar space-mono max-w-7xl mx-auto">
-            <div className="navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden text-4xl">
-                        <RxHamburgerMenu />
+        <div className="sticky top-0 z-50 bg-white border-b-4 border-black shadow-md">
+            <div className="navbar space-mono max-w-7xl mx-auto px-4">
+                
+                <div className="navbar-start">
+                    <div className="lg:hidden">
+                        <button 
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="btn btn-ghost text-3xl p-2"
+                        >
+                            {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
+                        </button>
                     </div>
-                    <ul
-                        tabIndex="-1"
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-32 p-2 shadow">
+                    
+                    <Link to='/' className="flex items-center gap-2">
+                        <img 
+                            className='w-12 h-12 md:w-14 md:h-14' 
+                            src={ghLogo} 
+                            alt="gamehub" 
+                        />
+                        <span className="hidden md:block text-xl font-bold">GAMEHUB</span>
+                    </Link>
+                </div>
+
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal text-base font-semibold">
                         {links}
                     </ul>
                 </div>
-                <Link to='/'>
-                    <img className='w-14 h-14' src={ghLogo} alt="gamehub" />
-                </Link>
 
+              
+                <div className="navbar-end gap-3">
+                    {!user ? (
+                        <Link to='/login'>
+                            <button className="px-6 py-2 bg-orange-400 text-white font-bold border-2 border-black 
+                                             hover:translate-x-0.5 hover:translate-y-0.5
+                                             hover:shadow-[3px_3px_0px_black] transition-all uppercase text-sm">
+                                Get In
+                            </button>
+                        </Link>
+                    ) : (
+                        <div className="flex items-center gap-3">
+                           
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar border-2 border-black hover:border-orange-400 transition-all">
+                                    <div className="w-10 rounded-full">
+                                        <img 
+                                            src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"} 
+                                            alt="Profile"
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-lg bg-white border-2 border-black w-52">
+                                    <li className="menu-title px-4 py-2">
+                                        <span className="text-xs font-bold uppercase text-gray-500">Player</span>
+                                        <span className="text-sm font-bold truncate">{user?.displayName || "Anonymous"}</span>
+                                    </li>
+                                    <div className="divider my-1"></div>
+                                    <li>
+                                        <Link to="/profile" className="font-semibold hover:bg-orange-400 hover:text-white">
+                                            🎮 My Profile
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/updateprofile" className="font-semibold hover:bg-orange-400 hover:text-white">
+                                            ⚙️ Settings
+                                        </Link>
+                                    </li>
+                                    <div className="divider my-1"></div>
+                                    <li>
+                                        <button 
+                                            onClick={handleSignOut}
+                                            className="font-semibold hover:bg-red-500 hover:text-white"
+                                        >
+                                            🚪 Sign Out
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </div>
 
-
-            <div className="navbar-end">
-                <ul className="menu menu-horizontal text-base md:text-xl hidden lg:flex">
-                    {links}
-                </ul>
-
-
-                {!user ? <Link to='/login'> <button className="btn bg-[#ff8904] hover:border-2 hover:border-black transition-all duration-300 space-mono md:text-xl ">Get In</button> </Link> : <div className=' flex justify-between items-center gap-1'> <Link to='/register'><button onClick={handleSignOut} className="btn  hover:bg-[#ff8904] transition-all duration-300 text-base md:text-xl">Get Out</button></Link>
-
-                </div>}
-
-            </div>
-
-
+            {isMenuOpen && (
+                <div className="lg:hidden border-t-2 border-black bg-white">
+                    <div className="p-4 space-y-2">
+                        {links}
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
