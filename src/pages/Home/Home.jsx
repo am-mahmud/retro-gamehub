@@ -21,7 +21,7 @@ const Home = () => {
 
             <section className="container mx-auto px-4 py-12">
                 <div className="text-center mb-8">
-                    <span className="bg-orange-400 px-2 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
+                    <span className="bg-[#FFC107] p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight space-mono">
                         HANDPICKED FOR YOU
                     </span>
                     <h2 className="font-bold text-3xl md:text-4xl space-mono mb-4">
@@ -45,6 +45,7 @@ const Home = () => {
                                     rating={game.ratings}
                                     category={game.category}
                                     developer={game.developer}
+                                    description={game.description}
                                 />
                             ))}
                     </div>
