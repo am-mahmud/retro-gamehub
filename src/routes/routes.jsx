@@ -42,23 +42,23 @@ const router = createBrowserRouter([
                     </PageWrapper>
 
             },
-             {
+            {
                 path: '/blogs',
 
                 element:
 
                     <PageWrapper>
-                      <Blogs></Blogs>
+                        <Blogs></Blogs>
                     </PageWrapper>
 
             },
-             {
+            {
                 path: '/events',
 
                 element:
 
                     <PageWrapper>
-                       <Events></Events>
+                        <Events></Events>
                     </PageWrapper>
 
             },
@@ -74,7 +74,6 @@ const router = createBrowserRouter([
             },
             {
                 path: '/career',
-
                 element:
 
                     <PageWrapper>
@@ -104,9 +103,9 @@ const router = createBrowserRouter([
                 path: "/gamedetails/:id",
                 element:
                     <PageWrapper>
-                        <PrivetRoutes>
-                            <GameDetails></GameDetails>
-                        </PrivetRoutes>
+
+                        <GameDetails></GameDetails>
+
                     </PageWrapper>
 
             },
@@ -114,9 +113,9 @@ const router = createBrowserRouter([
                 path: "/allgames",
                 element:
                     <PageWrapper>
-                        <PrivetRoutes>
-                            <AllGames></AllGames>
-                        </PrivetRoutes>
+
+                        <AllGames></AllGames>
+
                     </PageWrapper>
 
             },

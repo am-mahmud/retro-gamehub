@@ -21,12 +21,14 @@ const Header = () => {
     const links = (
         <div className="flex flex-col lg:flex-row gap-2 lg:gap-6">
             <GameLink to="/">Home</GameLink>
+            <GameLink to="/allgames">Games</GameLink>
             <GameLink to="/about">About</GameLink>
             <GameLink to="/help">Help</GameLink>
+            
 
             {user && (
                 <>
-                    <GameLink to="/allgames">Games</GameLink>
+
                     <GameLink to="/developer">Developer</GameLink>
                 </>
             )}
