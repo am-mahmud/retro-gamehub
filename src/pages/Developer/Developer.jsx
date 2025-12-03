@@ -7,8 +7,6 @@ const Developer = () => {
     return (
         <div className="min-h-screen bg-white">
             <title>Developer - GameHub</title>
-
-
             <section className="relative min-h-[60vh] px-8 md:px-14 py-16">
                
                 <div className="absolute inset-0 -z-10">
