@@ -15,6 +15,8 @@ import UpdateProfile from "../pages/Profile/UpdateProfile";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import Help from "../pages/Help/Help";
 import Career from "../pages/Career/Career";
+import Blogs from "../pages/Blogs/Blogs";
+import Events from "../pages/Events/Events";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +39,26 @@ const router = createBrowserRouter([
 
                     <PageWrapper>
                         <About></About>
+                    </PageWrapper>
+
+            },
+             {
+                path: '/blogs',
+
+                element:
+
+                    <PageWrapper>
+                      <Blogs></Blogs>
+                    </PageWrapper>
+
+            },
+             {
+                path: '/events',
+
+                element:
+
+                    <PageWrapper>
+                       <Events></Events>
                     </PageWrapper>
 
             },

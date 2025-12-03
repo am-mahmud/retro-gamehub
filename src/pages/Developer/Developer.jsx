@@ -24,7 +24,6 @@ const Developer = () => {
                         </p>
                     </div>
 
-                   =
                     <div className="pt-4">
                         <button
                             className="px-8 py-4 text-xl font-bold border-4 border-black 

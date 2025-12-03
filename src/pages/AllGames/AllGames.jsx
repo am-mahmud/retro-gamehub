@@ -35,23 +35,7 @@ const AllGames = () => {
 
             {loading && <Loader />}
 
-            {/* Hero Section */}
-            <div className="relative py-12 px-4 mb-8">
-                {/* Grid Background */}
-                <div className="absolute inset-0 -z-10">
-                    <div
-                        className="w-full h-full"
-                        style={{
-                            backgroundImage: `
-                                linear-gradient(to right, #00D9FF 1px, transparent 1px),
-                                linear-gradient(to bottom, #00D9FF 1px, transparent 1px)
-                            `,
-                            backgroundSize: '40px 40px'
-                        }}
-                    ></div>
-                    <div className="absolute inset-0 bg-linear-to-b from-white via-white/50 to-white/90"></div>
-                </div>
-
+            <div className="py-12 px-4 mb-8">
                 <div className="max-w-7xl mx-auto text-center space-y-6">
                     <h1 className="text-4xl md:text-5xl font-bold space-mono">
                         Browse All{" "}

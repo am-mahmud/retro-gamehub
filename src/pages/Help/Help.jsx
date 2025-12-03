@@ -7,7 +7,7 @@ const Help = () => {
         <div className="bg-white">
             <title>Help Center - GameHub</title>
 
-            <section className="relative min-h-[50vh] px-8 md:px-14 mt-10 mb-16">
+            <section className="min-h-[50vh] px-8 md:px-14 mt-10 mb-16">
             
                 <div className="max-w-4xl mx-auto text-center space-y-8">
                     <div className="flex justify-center mb-6">
