@@ -7,23 +7,7 @@ const Developer = () => {
     return (
         <div className="min-h-screen bg-white">
             <title>Developer - GameHub</title>
-            <section className="relative min-h-[60vh] px-8 md:px-14 py-16">
-               
-                <div className="absolute inset-0 -z-10">
-                    <div
-                        className="w-full h-full"
-                        style={{
-                            backgroundImage: `
-                                linear-gradient(to right, #00D9FF 1px, transparent 1px),
-                                linear-gradient(to bottom, #00D9FF 1px, transparent 1px)
-                            `,
-                            backgroundSize: '40px 40px'
-                        }}
-                    ></div>
-                    <div className="absolute inset-0 bg-linear-to-b from-white via-white/50 to-white/90"></div>
-                </div>
-
-                {/* Content */}
+            <section className="min-h-[60vh] px-8 md:px-14 py-16">
                 <div className="max-w-5xl mx-auto text-center space-y-8">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight space-mono">
                         Are You A <br />
@@ -40,7 +24,7 @@ const Developer = () => {
                         </p>
                     </div>
 
-                    {/* CTA Button */}
+                   =
                     <div className="pt-4">
                         <button
                             className="px-8 py-4 text-xl font-bold border-4 border-black 

@@ -14,6 +14,7 @@ import NotFound from "../pages/NotFound/NotFound";
 import UpdateProfile from "../pages/Profile/UpdateProfile";
 import PageWrapper from "../components/PageWrapper/PageWrapper";
 import Help from "../pages/Help/Help";
+import Career from "../pages/Career/Career";
 
 const router = createBrowserRouter([
     {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
                     </PageWrapper>
 
             },
-             {
+            {
                 path: '/help',
 
                 element:
@@ -48,8 +49,15 @@ const router = createBrowserRouter([
                         <Help></Help>
                     </PageWrapper>
 
+            },
+            {
+                path: '/career',
 
+                element:
 
+                    <PageWrapper>
+                        <Career></Career>
+                    </PageWrapper>
             },
             {
                 path: '/developer',
