@@ -12,12 +12,7 @@
 ---
 
 ## 🔗 Project Links
-<<<<<<< HEAD
-- Privet Project Repo: https://github.com/programming-hero-web-course2/b12-a9-firesheild-am-mahmud
-=======
-- Privet Project Repo: Confidential Repo 
->>>>>>> d7102866814bcdd6f1c1aac96b09406f6250e073
-- Live Link: https://gamehub-ph-am.netlify.app/
+
 
 ---
 
