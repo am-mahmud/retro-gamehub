@@ -24,6 +24,7 @@ const GameDetails = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen mt-10">
+       <title>Game Details - GameHub</title>
 
       <div className="container mx-auto px-4 pb-12">
         <div className="max-w-6xl mx-auto">

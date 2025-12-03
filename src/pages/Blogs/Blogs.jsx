@@ -3,6 +3,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div>
+             <title>Blogs - GameHub</title>
             <div className="py-12 px-4 mb-8">
                 <div className="max-w-7xl mx-auto text-center space-y-6">
                     <h1 className="text-4xl md:text-5xl font-bold space-mono">

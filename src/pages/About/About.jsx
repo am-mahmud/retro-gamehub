@@ -7,23 +7,8 @@ const About = () => {
             <title>About - GameHub</title>
 
           
-            <section className="relative min-h-[50vh] px-8 md:px-14 mt-10 mb-16">
-              
-                <div className="absolute inset-0 -z-10">
-                    <div
-                        className="w-full h-full"
-                        style={{
-                            backgroundImage: `
-                                linear-gradient(to right, #00D9FF 1px, transparent 1px),
-                                linear-gradient(to bottom, #00D9FF 1px, transparent 1px)
-                            `,
-                            backgroundSize: '40px 40px'
-                        }}
-                    ></div>
-                    <div className="absolute inset-0 bg-linear-to-b from-white via-white/50 to-white/90"></div>
-                </div>
-
-                
+            <section className="min-h-[50vh] px-8 md:px-14 mt-10">
+            
                 <div className="max-w-4xl mx-auto text-center space-y-8">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight space-mono">
                         Where Retro <br />

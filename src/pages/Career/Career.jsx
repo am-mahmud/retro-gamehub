@@ -4,7 +4,8 @@ import { RiUpload2Fill } from 'react-icons/ri';
 const Career = () => {
     return (
         <div className="min-h-screen bg-white">
-            <title>Developer - GameHub</title>
+            
+            <title>Career - GameHub</title>
             <section className="min-h-[60vh] px-8 md:px-14 py-16">
                 <div className="max-w-5xl mx-auto text-center space-y-8">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight space-mono">

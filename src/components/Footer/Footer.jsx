@@ -18,8 +18,7 @@ const Footer = () => {
             <h2 className="font-bold text-xl tracking-wide">GAMEHUB</h2>
           </div>
           <p className="text-gray-600 mb-5">
-            Building the future of digital experiences with bold design and
-            cutting-edge technology.
+            Retro Game Hub brings the golden age of gaming back to life
           </p>
 
           <div className="flex gap-4 text-xl text-black">
