@@ -1,7 +1,5 @@
 import React, { use, useState } from 'react';
-
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
-
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router';
@@ -36,59 +34,65 @@ const Header = () => {
 
     return (
         <div className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-4 border-black dark:border-cyan-400 shadow-md transition-colors">
-            <div className="navbar space-mono max-w-7xl mx-auto px-4">
+            <div className="navbar space-mono max-w-7xl mx-auto px-2 sm:px-4">
                 
-               
+                {/* Navbar Start */}
                 <div className="navbar-start">
                     <div className="lg:hidden">
                         <button 
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="btn btn-ghost text-3xl p-2 dark:text-white"
+                            className="btn btn-ghost text-2xl sm:text-3xl p-1 sm:p-2 dark:text-white min-h-0 h-auto"
                         >
                             {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
                         </button>
                     </div>
                     
-                    <Link to='/' className="flex items-center gap-2">
+                    <Link to='/' className="flex items-center gap-1 sm:gap-2">
                         <img 
-                            className='w-12 h-12 md:w-14 md:h-14 ' 
+                            className='w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14' 
                             src={ghLogo} 
                             alt="gamehub" 
                         />
-                        <span className="hidden md:block text-xl font-bold dark:text-white">GAMEHUB</span>
+                        <span className="hidden sm:block text-lg md:text-xl font-bold dark:text-white">GAMEHUB</span>
                     </Link>
                 </div>
 
-                
+               
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-base font-semibold">
                         {links}
                     </ul>
                 </div>
 
-              
-                <div className="navbar-end gap-3">
-                  
+            
+                <div className="navbar-end gap-1 sm:gap-2 md:gap-3">
+                   
                     <DarkModeToggle />
 
-               
+                    
                     {!user ? (
                         <Link to='/login'>
-                            <button className="px-6 py-2 bg-orange-400 text-white font-bold border-2 border-black 
-                                             dark:border-cyan-400 hover:translate-x-0.5 hover:translate-y-0.5
+                            <button className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 
+                                             bg-orange-400 text-white font-bold 
+                                             border-2 border-black dark:border-cyan-400 
+                                             hover:translate-x-0.5 hover:translate-y-0.5
                                              hover:shadow-[3px_3px_0px_black] dark:hover:shadow-[3px_3px_0px_#00D9FF] 
-                                             transition-all uppercase text-sm">
+                                             transition-all uppercase text-xs sm:text-sm">
                                 Get In
                             </button>
                         </Link>
                     ) : (
-                        <div className="flex items-center gap-3">
-                          
+                        <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
+                           
                             <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-ghost btn-square avatar border-2 border-black 
-                                                              dark:border-cyan-400 hover:border-orange-400 
-                                                              dark:hover:border-orange-400 transition-all p-1">
-                                    <div className="w-10 h-10">
+                                <label 
+                                    tabIndex={0} 
+                                    className="btn btn-ghost btn-square avatar border-2 border-black 
+                                             dark:border-cyan-400 hover:border-orange-400 
+                                             dark:hover:border-orange-400 transition-all 
+                                             p-0.5 sm:p-1 min-h-0 h-auto w-auto"
+                                >
+                                    <div className="w-8 h-8 sm:w-10 sm:h-10">
                                         <img 
                                             src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"} 
                                             alt="Profile"
@@ -96,9 +100,12 @@ const Header = () => {
                                         />
                                     </div>
                                 </label>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-lg 
-                                                           bg-white dark:bg-gray-800 border-2 border-black 
-                                                           dark:border-cyan-400 w-52">
+                                <ul 
+                                    tabIndex={0} 
+                                    className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-lg 
+                                             bg-white dark:bg-gray-800 border-2 border-black 
+                                             dark:border-cyan-400 w-48 sm:w-52 rounded-lg"
+                                >
                                     <li className="menu-title px-4 py-2">
                                         <span className="text-xs font-bold uppercase text-gray-500 dark:text-gray-400">Player</span>
                                         <span className="text-sm font-bold truncate dark:text-white">{user?.displayName || "Anonymous"}</span>
@@ -130,7 +137,7 @@ const Header = () => {
                 </div>
             </div>
 
-        
+     
             {isMenuOpen && (
                 <div className="lg:hidden border-t-2 border-black dark:border-cyan-400 bg-white dark:bg-gray-800">
                     <div className="p-4 space-y-2">

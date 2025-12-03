@@ -19,12 +19,12 @@ const Home = () => {
         <div>
             <title>Home - Gamehub</title>
 
-            <Banner></Banner>
+            <Banner className="bg-white dark:bg-gray-900"></Banner>
 
-            <div className="overflow-hidden my-8 mb-10">
+            {/* <div className="overflow-hidden my-8 mb-10">
                 <Marquee
                     speed={40}
-                    className="marquee-fade bg-[#ff8904] border-y-4 border-black p-4 -rotate-3"
+                    className="marquee-fade bg-[#ff8904] border-y-4 border-black p-4 -rotate-4 md:-rotate-3"
                 >
                     <div className="text-black text-lg md:text-xl font-bold space-mono flex items-center gap-8">
                         <span>🎮 RELIVE THE NOSTALGIA</span>
@@ -37,17 +37,17 @@ const Home = () => {
                         <span className="text-2xl">|</span>
                     </div>
                 </Marquee>
-            </div>
+            </div> */}
 
 
 
 
             <section className="container mx-auto mb-10">
                 <div className="text-center mb-8">
-                    <span className="bg-orange-400 p-4 border-4 border-black inline-block transform rotate-2 text-4xl font-bold leading-tight mb-2 space-mono">
+                    <span className="bg-orange-400 p-4 border-4 border-black inline-block transform rotate-2 text-2xl md:text-4xl font-bold leading-tight mb-2 space-mono">
                         HANDPICKED FOR YOU
                     </span>
-                    <h2 className="font-bold text-3xl md:text-4xl space-mono mb-4">
+                    <h2 className="font-bold text-2xl md:text-4xl space-mono mb-4">
                         FEATURED GAMES
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">

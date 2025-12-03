@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Banner = () => {
     return (
         <section
-            className="relative min-h-[70vh] px-8 md:px-14 mt-10 text-center"
+            className="relative min-h-[50vh] md:min-h-[70vh] px-8 md:px-14 mt-10 mb-10 text-center"
         >
 
             <div className="absolute inset-0 -z-1">
@@ -60,9 +60,6 @@ const Banner = () => {
                             </button>
 
                         </Link>
-
-
-
                     </div>
                 </div>
             </div>
