@@ -86,70 +86,79 @@ const Register = () => {
         <>
             <title>Register - GameHub</title>
 
-            <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono">
-                <div className="w-full max-w-sm border-2 border-black p-4">
+            <div className="flex justify-center items-center min-h-screen p-4 bg-white dark:bg-gray-900 space-mono transition-colors">
+                <div className="w-full max-w-sm border-2 border-black dark:border-cyan-400 p-4 bg-white dark:bg-gray-800 transition-colors">
                     
                     <div className="text-center mb-8">
-                        <h1 className="text-5xl font-black text-black tracking-tight mb-2">
+                        <h1 className="text-5xl font-black text-black dark:text-white tracking-tight mb-2">
                             GAMEHUB
                         </h1>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-center mb-8 text-black uppercase tracking-wide">
+                    <h2 className="text-2xl font-bold text-center mb-8 text-black dark:text-white uppercase tracking-wide">
                         Create Account
                     </h2>
 
                     <form onSubmit={handleRegister} className="space-y-4">
                         
-                   
+                      
                         <div>
                             <input
                                 name="name"
                                 type="text"
                                 placeholder="FULL NAME"
                                 className="w-full px-5 py-4 text-sm font-semibold rounded-xl
-                                       border-2 border-black bg-white text-black
-                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
-                                       focus:outline-none focus:ring-2 focus:ring-black"
+                                       border-2 border-black dark:border-cyan-400 
+                                       bg-white dark:bg-gray-700 
+                                       text-black dark:text-white
+                                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                                       placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-cyan-400"
                                 required
                             />
                         </div>
 
-                    
+                     
                         <div>
                             <input
                                 name="email"
                                 type="email"
                                 placeholder="EMAIL"
                                 className="w-full px-5 py-4 text-sm font-semibold rounded-xl
-                                       border-2 border-black bg-white text-black
-                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
-                                       focus:outline-none focus:ring-2 focus:ring-black"
+                                       border-2 border-black dark:border-cyan-400 
+                                       bg-white dark:bg-gray-700 
+                                       text-black dark:text-white
+                                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                                       placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-cyan-400"
                                 required
                             />
                         </div>
 
-                      
+                    
                         <div className="relative">
                             <input
                                 name="password"
                                 type={show ? "text" : "password"}
                                 placeholder="PASSWORD"
                                 className="w-full px-5 py-4 text-sm font-semibold rounded-xl
-                                       border-2 border-black bg-white text-black
-                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
-                                       focus:outline-none focus:ring-2 focus:ring-black"
+                                       border-2 border-black dark:border-cyan-400 
+                                       bg-white dark:bg-gray-700 
+                                       text-black dark:text-white
+                                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                                       placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-cyan-400"
                                 required
                             />
                             <span
                                 onClick={() => setShow(!show)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600 hover:text-black"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
                             >
                                 {show ? <GoEye size={18} /> : <GoEyeClosed size={18} />}
                             </span>
                         </div>
 
-                       
+                      
                         <button
                             type="submit"
                             className="w-full py-4 text-sm font-bold rounded-xl
@@ -160,35 +169,36 @@ const Register = () => {
                         </button>
                     </form>
 
-                 
                     <div className="flex items-center my-6">
-                        <div className="flex-1 h-px bg-orange-400"></div>
-                        <span className="px-4 text-gray-500 text-sm font-medium">or</span>
-                        <div className="flex-1 h-px bg-orange-400"></div>
+                        <div className="flex-1 h-px bg-orange-400 dark:bg-cyan-400"></div>
+                        <span className="px-4 text-gray-500 dark:text-gray-400 text-sm font-medium">or</span>
+                        <div className="flex-1 h-px bg-orange-400 dark:bg-cyan-400"></div>
                     </div>
 
-                 
-                    <p className="text-center text-sm font-semibold text-black mb-4">
+                
+                    <p className="text-center text-sm font-semibold text-black dark:text-white mb-4">
                         Sign Up Using
                     </p>
 
-                 
+                  
                     <div className="flex justify-center gap-4 mb-8">
                         <button
                             onClick={handleGoogleLogIn}
                             type="button"
                             className="w-full h-14 flex items-center justify-center rounded-2xl
-                                   bg-white border-2 border-orange-400 hover:border-black
+                                   bg-white dark:bg-gray-700 
+                                   border-2 border-orange-400 dark:border-cyan-400 
+                                   hover:border-black dark:hover:border-white
                                    transition-all hover:scale-105"
                         >
-                            <FaGoogle className="text-xl text-black" />
+                            <FaGoogle className="text-xl text-black dark:text-white" />
                         </button>
                     </div>
 
-                  
-                    <p className="text-center text-sm text-gray-600">
+                    
+                    <p className="text-center text-sm text-gray-600 dark:text-gray-400">
                         Already have an account?{" "}
-                        <Link to='/login' className="text-black font-bold hover:underline">
+                        <Link to='/login' className="text-black dark:text-white font-bold hover:underline">
                             Login
                         </Link>
                     </p>
