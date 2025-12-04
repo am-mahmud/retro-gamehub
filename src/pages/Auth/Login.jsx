@@ -98,14 +98,17 @@ const Login = () => {
                                 type={show ? "text" : "password"}
                                 placeholder="PASSWORD"
                                 className="w-full px-5 py-4 text-sm font-semibold rounded-xl
-                                       border-2 border-black bg-white text-black
-                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
-                                       focus:outline-none focus:ring-2 focus:ring-black"
+                                       border-2 border-black dark:border-cyan-400 
+                                       bg-white dark:bg-gray-700 
+                                       text-black dark:text-white
+                                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                                       placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-cyan-400"
                                 required
                             />
                             <span
                                 onClick={() => setShow(!show)}
-                                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600 hover:text-black"
+                                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
                             >
                                 {show ? <GoEye size={18} /> : <GoEyeClosed size={18} />}
                             </span>
@@ -125,7 +128,7 @@ const Login = () => {
                         <div className="text-center">
                             <Link 
                                 to='/resetpassword' 
-                                className="text-gray-500 text-xs hover:text-black transition-colors"
+                                className="text-gray-500 text-xs hover:text-black dark:hover:text-white transition-colors"
                             >
                                 Forgot Password?
                             </Link>
@@ -148,7 +151,9 @@ const Login = () => {
                             onClick={handleGoogleLogIn}
                             type="button"
                             className="w-full h-14 flex items-center justify-center rounded-2xl
-                                   bg-white border-2 border-orange-400 hover:border-black
+                                   bg-white dark:bg-gray-700 
+                                   border-2 border-orange-400 dark:border-cyan-400 
+                                   hover:border-black dark:hover:border-white
                                    transition-all hover:scale-105"
                         >
                             <FaGoogle className="text-xl text-black" />
@@ -159,7 +164,7 @@ const Login = () => {
                    
                     <p className="text-center text-sm text-gray-600">
                         Don't have an account?{" "}
-                        <Link to='/register' className="text-black font-bold hover:underline">
+                        <Link to='/register' className="text-black dark:text-white font-bold hover:underline">
                             Register
                         </Link>
                     </p>
