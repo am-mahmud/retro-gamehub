@@ -2,18 +2,18 @@ import React from 'react';
 
 const ErrorPage = () => {
     return (
-        <div className="min-h-screen  flex flex-col items-center justify-center p-4 font-mono">
+        <div className="min-h-screen bg-white dark:bg-gray-900  flex flex-col items-center justify-center p-4 font-mono">
             <div className="p-8 max-w-2xl w-full">
                 <div
                     className=" text-orange-400 p-6"
                 >
                     <div className="absolute inset-0 z-10 pointer-events-none opacity-5 ">
-                        {/* <div className="h-full w-full"></div> */}
+                      
                     </div>
 
 
 
-                    <div className="relative z-20 border-2 p-4 border-black">
+                    <div className="relative z-20 border-2 p-4 border-black dark:border-cyan-400">
                         <header className="mb-8 border-b border-orange-500/50 pb-2">
                             <h1
                                 className="text-6xl font-extrabold tracking-tight mb-2"
