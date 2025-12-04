@@ -91,8 +91,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-[#ff8904] dark:bg-gray-800 border-t-4 border-black dark:border-cyan-400 px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-black dark:text-white transition-colors">
-        <p>© {new Date().getFullYear()} GAMEHUB. All rights reserved.</p>
+      {/* <div className="bg-[#ff8904] dark:bg-gray-800 border-t-4 border-black dark:border-cyan-400 px-6 py-4 flex flex-col md:flex-row justify-between items-center text-sm text-black dark:text-white transition-colors">
+        <p >© {new Date().getFullYear()} GAMEHUB. All rights reserved.</p>
         <div className="flex gap-5 mt-2 md:mt-0">
           <span className="cursor-pointer hover:underline hover:text-white dark:hover:text-cyan-400 transition-colors">
             Privacy Policy
@@ -101,6 +101,11 @@ const Footer = () => {
             Terms of Service
           </span>
         </div>
+      </div> */}
+
+
+      <div className="bg-[#ff8904] dark:bg-gray-800 border-t-4 border-black dark:border-cyan-400 px-6 py-4 flex flex-col justify-center items-center text-sm text-black dark:text-white transition-colors text-center">
+        <p>© {new Date().getFullYear()} GAMEHUB. All rights reserved.</p>
       </div>
     </footer>
   );
