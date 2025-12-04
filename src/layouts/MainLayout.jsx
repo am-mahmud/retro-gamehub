@@ -6,7 +6,7 @@ import { AnimatePresence } from 'framer-motion';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-colors">
 
             <Header></Header>
           

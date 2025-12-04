@@ -5,6 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router';
 import ghLogo from '../../assets/gamehub-logo.png';
 import GameLink from '../GameLink/GameLink';
+import DarkModeToggle from '../DarkMode/DarkModeToggle';
 
 
 const Header = () => {
@@ -36,7 +37,6 @@ const Header = () => {
         <div className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-4 border-black dark:border-cyan-400 shadow-md transition-colors">
             <div className="navbar space-mono max-w-7xl mx-auto px-2 sm:px-4">
                 
-                {/* Navbar Start */}
                 <div className="navbar-start">
                     <div className="lg:hidden">
                         <button 
@@ -67,7 +67,7 @@ const Header = () => {
             
                 <div className="navbar-end gap-1 sm:gap-2 md:gap-3">
                    
-                    {/* <DarkModeToggle /> */}
+                    <DarkModeToggle /> 
 
                     
                     {!user ? (

@@ -28,10 +28,10 @@ const Newsletter = () => {
     };
 
     return (
-        <section className=" text-black py-12 px-4 space-mono border-4 border-black mt-10 mb-10">
+        <section className="text-black dark:text-white py-12 px-4 space-mono border-4 border-black dark:border-cyan-400 mt-10 mb-10 bg-white dark:bg-gray-800 transition-colors">
             <div className="max-w-md mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
-                <p className="mb-6">Grow Your Games Knowledge</p>
+                <p className="mb-6 dark:text-gray-300">Grow Your Games Knowledge</p>
 
                 <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 justify-center">
                     <div className="w-full">
@@ -40,13 +40,16 @@ const Newsletter = () => {
                             type="email"
                             placeholder="Email"
                             className="w-full p-3 text-lg font-bold rounded-md outline-none 
-                                       border-black border-2 bg-[#FFF8E1] text-[#444]"
+                                       border-black dark:border-cyan-400 border-2 
+                                       bg-[#FFF8E1] dark:bg-gray-700 
+                                       text-[#444] dark:text-white
+                                       dark:placeholder-gray-400"
                             required
                         />
                     </div>
                     <button
                         type="submit"
-                        className="bg-orange-400 text-black font-bold px-6 py-3  hover:bg-orange-500 transition"
+                        className="bg-orange-400 text-black font-bold px-6 py-3 hover:bg-orange-500 dark:hover:bg-[#00D9FF] transition"
                     >
                         Subscribe
                     </button>

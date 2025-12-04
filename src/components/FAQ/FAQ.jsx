@@ -21,7 +21,6 @@ const FAQ = () => {
             question: "Can I request new games to be added?",
             answer: "Yes! We love hearing from our community. Visit our Discord server or send us a message through the contact page to suggest new games you'd like to see."
         },
-
         {
             question: "What browsers are supported?",
             answer: "We support all modern browsers including Chrome, Firefox, Safari, and Edge. For the best experience, we recommend using the latest version of your browser."
@@ -33,15 +32,15 @@ const FAQ = () => {
     };
 
     return (
-        <section className="container mx-auto px-4 py-12 bg-white">
+        <section className="container mx-auto px-4 py-12 bg-white dark:bg-gray-900 transition-colors">
             <div className="text-center mb-12">
                 <div className="flex items-center justify-center gap-3 mb-4">
                     <FaQuestionCircle className="text-4xl text-orange-500" />
-                    <h2 className="font-bold text-3xl md:text-4xl space-mono">
+                    <h2 className="font-bold text-3xl md:text-4xl space-mono dark:text-white">
                         FREQUENTLY ASKED QUESTIONS
                     </h2>
                 </div>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                     Got questions? We've got answers! Check out our most common inquiries below.
                 </p>
             </div>
@@ -50,14 +49,14 @@ const FAQ = () => {
                 {faqs.map((faq, index) => (
                     <div 
                         key={index}
-                        className="bg-white border-4 border-black overflow-hidden"
+                        className="bg-white dark:bg-gray-800 border-4 border-black dark:border-cyan-400 overflow-hidden"
                     >
                         <button
                             onClick={() => toggleFAQ(index)}
                             className={`w-full p-6 flex items-center justify-between text-left font-bold space-mono transition-colors ${
                                 activeIndex === index 
-                                    ? 'bg-[#ff8904]' 
-                                    : 'bg-gray-50 hover:bg-gray-100'
+                                    ? 'bg-[#ff8904] text-black' 
+                                    : 'bg-gray-50 dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-white'
                             }`}
                         >
                             <span className="flex-1 pr-4 text-sm md:text-base">
@@ -74,7 +73,6 @@ const FAQ = () => {
                             </div>
                         </button>
 
-                
                         <div 
                             className={`overflow-hidden transition-all duration-300 ${
                                 activeIndex === index 
@@ -82,8 +80,8 @@ const FAQ = () => {
                                     : 'max-h-0 opacity-0'
                             }`}
                         >
-                            <div className="p-6 bg-white border-t-4 border-black">
-                                <p className="text-gray-700 leading-relaxed">
+                            <div className="p-6 bg-white dark:bg-gray-800 border-t-4 border-black dark:border-cyan-400">
+                                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                     {faq.answer}
                                 </p>
                             </div>
@@ -91,8 +89,6 @@ const FAQ = () => {
                     </div>
                 ))}
             </div>
-
-           
         </section>
     );
 };
