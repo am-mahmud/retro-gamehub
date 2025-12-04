@@ -63,13 +63,13 @@ const Login = () => {
                 <div className="w-full max-w-sm border-2 border-black dark:border-cyan-400 p-4 bg-white dark:bg-gray-800 transition-colors">
                
                     <div className="text-center mb-8">
-                        <h1 className="text-5xl font-black text-black tracking-tight mb-2">
+                        <h1 className="text-5xl font-black text-black dark:text-white tracking-tight mb-2">
                             GAMEHUB
                         </h1>
                        
                     </div>
 
-                    <h2 className="text-2xl font-bold text-center mb-8 text-black uppercase tracking-wide">
+                    <h2 className="text-2xl font-bold text-center mb-8 text-black dark:text-white uppercase tracking-wide">
                         Welcome Back
                     </h2>
 
@@ -81,9 +81,12 @@ const Login = () => {
                                 type="email"
                                 placeholder="USERNAME"
                                 className="w-full px-5 py-4 text-sm font-semibold rounded-xl
-                                       border-2 border-black bg-white text-black
-                                       placeholder:text-gray-400 placeholder:text-xs placeholder:font-bold
-                                       focus:outline-none focus:ring-2 focus:ring-black"
+                                       border-2 border-black dark:border-cyan-400 
+                                       bg-white dark:bg-gray-700 
+                                       text-black dark:text-white
+                                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                                       placeholder:text-xs placeholder:font-bold
+                                       focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-cyan-400"
                                 required
                             />
                         </div>
