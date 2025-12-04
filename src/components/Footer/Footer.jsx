@@ -9,7 +9,7 @@ import ghLogo from "../../assets/gamehub-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-black border-t space-mono">
+    <footer className=" text-black bg-white  border-t space-mono">
       <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
 
         <div>
@@ -32,10 +32,10 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-4 tracking-wide">GAMES</h3>
           <ul className="space-y-2 text-gray-600">
-            <a href="/allgames"><li className="hover:text-black cursor-pointer">Arcade Classics</li></a>
-            <a href="/allgames"><li className="hover:text-black cursor-pointer">Platform Games</li></a>
-            <a href="/allgames"><li className="hover:text-black cursor-pointer">Puzzle Games</li></a>
-            <a href="/allgames"><li className="hover:text-black cursor-pointer">Action Games</li></a>
+            <a href="/allgames"><li className="hover:text-black cursor-pointer">For Gamers</li></a>
+            <a href="/developer"><li className="hover:text-black cursor-pointer">For Developers</li></a>
+            {/* <a href="/allgames"><li className="hover:text-black cursor-pointer">Puzzle Games</li></a>
+            <a href="/allgames"><li className="hover:text-black cursor-pointer">Action Games</li></a> */}
           </ul>
         </div>
 
@@ -44,8 +44,8 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-600">
             <a href="/about"><li className="hover:text-black cursor-pointer">About Us</li></a>
             <a href="/career"><li className="hover:text-black cursor-pointer">Careers</li></a>
-            <a href="/blogs"><li className="hover:text-black cursor-pointer">Blog & News</li></a>
-            <a href="/events"><li className="hover:text-black cursor-pointer">Events</li></a>
+            {/* <a href="/blogs"><li className="hover:text-black cursor-pointer">Blog & News</li></a>
+            <a href="/events"><li className="hover:text-black cursor-pointer">Events</li></a> */}
           </ul>
         </div>
 
@@ -54,9 +54,9 @@ const Footer = () => {
           <h3 className="font-bold mb-4 tracking-wide">SUPPORT</h3>
           <ul className="space-y-2 text-gray-600">
             <a href="/help"><li className="hover:text-black cursor-pointer">Help Center</li></a>
-            <a href="/help"><li className="hover:text-black cursor-pointer">Documentation</li></a>
-            <a href="https://discord.com/"> <li className="hover:text-black cursor-pointer">Discord Community</li></a>
+            {/* <a href="/help"><li className="hover:text-black cursor-pointer">Documentation</li></a> */}
             <a href="/help"><li className="hover:text-black cursor-pointer">Contact</li></a>
+             <a href="https://discord.com/"> <li className="hover:text-black cursor-pointer">Discord Community</li></a>
           </ul>
         </div>
       </div>

@@ -19,7 +19,7 @@ const Home = () => {
         <div>
             <title>Home - Gamehub</title>
 
-            <Banner className="bg-white dark:bg-gray-900"></Banner>
+            <Banner></Banner>
 
             {/* <div className="overflow-hidden my-8 mb-10">
                 <Marquee

@@ -5,7 +5,7 @@ import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router';
 import ghLogo from '../../assets/gamehub-logo.png';
 import GameLink from '../GameLink/GameLink';
-import DarkModeToggle from '../DarkMode/DarkModeToggle';
+
 
 const Header = () => {
     const { user, signOutUser } = use(AuthContext);
@@ -67,7 +67,7 @@ const Header = () => {
             
                 <div className="navbar-end gap-1 sm:gap-2 md:gap-3">
                    
-                    <DarkModeToggle />
+                    {/* <DarkModeToggle /> */}
 
                     
                     {!user ? (

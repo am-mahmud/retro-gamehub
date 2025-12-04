@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router";
 
 
+
 const Banner = () => {
+    
+
+
     return (
         <section
             className="relative min-h-[50vh] md:min-h-[70vh] px-8 md:px-14 mt-10 mb-10 text-center"
@@ -72,31 +76,3 @@ export default Banner;
 
 
 
-{/* <div className="relative w-full aspect-square border-4 border-black bg-white shadow-[8px_8px_0px_#ff8904] overflow-hidden">
-
-
-                    <div className="carousel w-full h-full">
-
-                        <div id="slide1" className="carousel-item w-full h-full">
-                            <img src={gameOne} className="w-full h-full object-cover" />
-                        </div>
-
-                        <div id="slide2" className="carousel-item w-full h-full">
-                            <img src={gameTwo} className="w-full h-full object-cover" />
-                        </div>
-
-                        <div id="slide3" className="carousel-item w-full h-full">
-                            <img src={gameThree} className="w-full h-full object-cover" />
-                        </div>
-
-                    </div>
-
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                        <a href="#slide1" className="w-4 h-4 bg-white border-2 border-black" />
-                        <a href="#slide2" className="w-4 h-4 bg-white border-2 border-black" />
-                        <a href="#slide3" className="w-4 h-4 bg-white border-2 border-black" />
-                    </div>
-
-
-
-                </div> */}
