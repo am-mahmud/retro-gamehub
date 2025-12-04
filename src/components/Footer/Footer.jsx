@@ -5,7 +5,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import ghLogo from "../../assets/gamehub-logo.png";
+import ghLogoBL from '../../assets/gamehub-logo-black.svg';
+import ghLogoCY from '../../assets/gamehub-logo-cyan.svg'
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
 
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={ghLogo} alt="GameHub Logo" className="w-10 h-10" />
+            <img src={ghLogoBL} alt="GameHub Logo" className="w-10 h-10" />
             <h2 className="font-bold text-xl tracking-wide">GAMEHUB</h2>
           </div>
           <p className="text-gray-600 dark:text-gray-400 mb-5">

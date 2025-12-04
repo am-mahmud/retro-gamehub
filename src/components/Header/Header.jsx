@@ -1,20 +1,23 @@
-import React, { use, useState } from 'react';
+import React, { use, useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext/AuthContext';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { Link } from 'react-router';
-import ghLogo from '../../assets/gamehub-logo.png';
+import ghLogoBL from '../../assets/gamehub-logo-black.svg';
+import ghLogoCY from '../../assets/gamehub-logo-cyan.svg'
 import GameLink from '../GameLink/GameLink';
 import DarkModeToggle from '../DarkMode/DarkModeToggle';
+import { ThemeContext } from '../../contexts/ThemeContext/ThemeContext';
 
 
 const Header = () => {
     const { user, signOutUser } = use(AuthContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { dark } = useContext(ThemeContext)
 
     const handleSignOut = () => {
         signOutUser()
-            .then(() => {})
+            .then(() => { })
             .catch(error => {
                 console.log(error);
             })
@@ -36,40 +39,56 @@ const Header = () => {
     return (
         <div className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b-4 border-black dark:border-cyan-400 shadow-md transition-colors">
             <div className="navbar space-mono max-w-7xl mx-auto px-2 sm:px-4">
-                
+
                 <div className="navbar-start">
                     <div className="lg:hidden">
-                        <button 
+                        <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="btn btn-ghost text-2xl sm:text-3xl p-1 sm:p-2 dark:text-white min-h-0 h-auto"
                         >
                             {isMenuOpen ? <IoClose /> : <RxHamburgerMenu />}
                         </button>
                     </div>
-                    
-                    <Link to='/' className="flex items-center gap-1 sm:gap-2">
-                        <img 
-                            className='w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14' 
-                            src={ghLogo} 
-                            alt="gamehub" 
-                        />
-                        <span className="hidden sm:block text-lg md:text-xl font-bold dark:text-white">GAMEHUB</span>
-                    </Link>
+
+                    {!dark ? (
+                        <Link to="/" className="flex items-center gap-1 sm:gap-2">
+                            <img
+                                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                                src={ghLogoBL}
+                                alt=""
+                            />
+                            <span className="hidden sm:block text-lg md:text-xl font-bold dark:text-white">
+                                GAMEHUB
+                            </span>
+                        </Link>
+                    ) : (
+                        <Link to="/" className="flex items-center gap-1 sm:gap-2">
+                            <img
+                                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                                src={ghLogoCY}
+                                alt=""
+                            />
+                            <span className="hidden sm:block text-lg md:text-xl font-bold dark:text-white">
+                                GAMEHUB
+                            </span>
+                        </Link>
+                    )}
+
                 </div>
 
-               
+
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-base font-semibold">
                         {links}
                     </ul>
                 </div>
 
-            
-                <div className="navbar-end gap-1 sm:gap-2 md:gap-3">
-                   
-                    <DarkModeToggle /> 
 
-                    
+                <div className="navbar-end gap-1 sm:gap-2 md:gap-3">
+
+                    <DarkModeToggle />
+
+
                     {!user ? (
                         <Link to='/login'>
                             <button className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-2 
@@ -83,25 +102,25 @@ const Header = () => {
                         </Link>
                     ) : (
                         <div className="flex items-center gap-1 sm:gap-2 md:gap-3">
-                           
+
                             <div className="dropdown dropdown-end">
-                                <label 
-                                    tabIndex={0} 
+                                <label
+                                    tabIndex={0}
                                     className="btn btn-ghost btn-square avatar border-2 border-black 
                                              dark:border-cyan-400 hover:border-orange-400 
                                              dark:hover:border-orange-400 transition-all 
                                              p-0.5 sm:p-1 min-h-0 h-auto w-auto"
                                 >
                                     <div className="w-8 h-8 sm:w-10 sm:h-10">
-                                        <img 
-                                            src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"} 
+                                        <img
+                                            src={user?.photoURL || "https://i.ibb.co.com/chgmm5K6/retro-game-9.jpg"}
                                             alt="Profile"
                                             className="object-cover w-full h-full"
                                         />
                                     </div>
                                 </label>
-                                <ul 
-                                    tabIndex={0} 
+                                <ul
+                                    tabIndex={0}
                                     className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-lg 
                                              bg-white dark:bg-gray-800 border-2 border-black 
                                              dark:border-cyan-400 w-48 sm:w-52 rounded-lg"
@@ -123,7 +142,7 @@ const Header = () => {
                                     </li>
                                     <div className="divider my-1 dark:before:bg-gray-600 dark:after:bg-gray-600"></div>
                                     <li>
-                                        <button 
+                                        <button
                                             onClick={handleSignOut}
                                             className="font-semibold hover:bg-red-500 hover:text-white dark:text-white"
                                         >
@@ -137,7 +156,7 @@ const Header = () => {
                 </div>
             </div>
 
-     
+
             {isMenuOpen && (
                 <div className="lg:hidden border-t-2 border-black dark:border-cyan-400 bg-white dark:bg-gray-800">
                     <div className="p-4 space-y-2">
