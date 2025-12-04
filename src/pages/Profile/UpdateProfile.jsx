@@ -53,18 +53,18 @@ const UpdateProfile = () => {
     <>
       <title>Update Profile - GameHub</title>
 
-      <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono">
+      <div className="flex justify-center items-center min-h-screen p-4 bg-white dark:bg-gray-900 space-mono">
         <div className="w-full max-w-md border-2 border-black p-4">
           
          
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-black text-black tracking-tight mb-2">
+            <h1 className="text-5xl font-black text-black dark:text-white tracking-tight mb-2">
               GAMEHUB
             </h1>
           </div>
 
         
-          <h2 className="text-2xl font-bold text-center mb-4 text-black uppercase tracking-wide">
+          <h2 className="text-2xl font-bold text-center mb-4 text-black dark:text-white uppercase tracking-wide">
             Update Profile
           </h2>
 
@@ -89,7 +89,7 @@ const UpdateProfile = () => {
 
             
             <div>
-              <label className="block text-black font-bold mb-2 text-xs uppercase tracking-wider">
+              <label className="block text-black dark:text-white font-bold mb-2 text-xs uppercase tracking-wider">
                 Player Name
               </label>
               <input
@@ -107,7 +107,7 @@ const UpdateProfile = () => {
 
             
             <div>
-              <label className="block text-black font-bold mb-2 text-xs uppercase tracking-wider">
+              <label className="block text-black dark:text-white font-bold mb-2 text-xs uppercase tracking-wider">
                 Photo URL
               </label>
               <input

@@ -4,7 +4,7 @@ import { FaQuestionCircle, FaSearch, FaBook, FaHeadset, FaEnvelope, FaDiscord, F
 
 const Help = () => {
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-gray-900">
             <title>Help Center - GameHub</title>
 
             <section className="min-h-[50vh] px-8 md:px-14 mt-10 mb-16">
@@ -190,7 +190,7 @@ const Help = () => {
 
             
             <section className="max-w-5xl mx-auto px-4 md:px-8 mb-16">
-                <div className="border-4 border-black p-8 bg-white">
+                <div className="border-4 border-black p-8 bg-white dark:bg-gray-900 dark:border-cyan-400">
                     <h2 className="text-2xl font-bold space-mono mb-6 text-center">Send Us a Message</h2>
                     
                     <form className="max-w-2xl mx-auto space-y-4">
@@ -198,7 +198,7 @@ const Help = () => {
                             <label className="block font-bold mb-2 space-mono text-sm">Your Name</label>
                             <input
                                 type="text"
-                                className="w-full p-3 border-4 border-black focus:outline-none focus:border-orange-400"
+                                className="w-full p-3 border-4 border-black dark:border-cyan-400 focus:outline-none focus:border-orange-400"
                                 placeholder="Enter your name"
                             />
                         </div>
@@ -207,7 +207,7 @@ const Help = () => {
                             <label className="block font-bold mb-2 space-mono text-sm">Email Address</label>
                             <input
                                 type="email"
-                                className="w-full p-3 border-4 border-black focus:outline-none focus:border-orange-400"
+                                className="w-full p-3 border-4 border-black dark:border-cyan-400 focus:outline-none focus:border-orange-400"
                                 placeholder="your.email@example.com"
                             />
                         </div>
@@ -216,7 +216,7 @@ const Help = () => {
                             <label className="block font-bold mb-2 space-mono text-sm">Subject</label>
                             <input
                                 type="text"
-                                className="w-full p-3 border-4 border-black focus:outline-none focus:border-orange-400"
+                                className="w-full p-3 border-4 border-black dark:border-cyan-400 focus:outline-none focus:border-orange-400"
                                 placeholder="What do you need help with?"
                             />
                         </div>
@@ -225,7 +225,7 @@ const Help = () => {
                             <label className="block font-bold mb-2 space-mono text-sm">Message</label>
                             <textarea
                                 rows="5"
-                                className="w-full p-3 border-4 border-black focus:outline-none focus:border-orange-400 resize-none"
+                                className="w-full p-3 border-4 border-black dark:border-cyan-400 focus:outline-none focus:border-orange-400 resize-none"
                                 placeholder="Describe your issue or question..."
                             ></textarea>
                         </div>
@@ -240,7 +240,6 @@ const Help = () => {
                 </div>
             </section>
 
-            {/* Still Need Help CTA */}
             <section className="max-w-5xl mx-auto px-4 md:px-8 mb-16">
                 <div className="border-4 border-black p-8 bg-black text-white text-center">
                     <h2 className="text-3xl font-bold space-mono mb-4">Need Immediate Assistance?</h2>
@@ -258,7 +257,7 @@ const Help = () => {
                 </div>
             </section>
 
-            {/* Newsletter */}
+           
             <div>
                 <Newsletter />
             </div>
@@ -267,3 +266,5 @@ const Help = () => {
 };
 
 export default Help;
+
+
