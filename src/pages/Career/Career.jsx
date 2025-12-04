@@ -3,14 +3,14 @@ import { RiUpload2Fill } from 'react-icons/ri';
 
 const Career = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white dark:bg-gray-900">
             
             <title>Career - GameHub</title>
-            <section className="min-h-[60vh] px-8 md:px-14 py-16">
+            <section className="min-h-[60vh] px-8 md:px-14 py-16 ">
                 <div className="max-w-5xl mx-auto text-center space-y-8">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight space-mono">
                         Are You <br />
-                        <span className="bg-orange-400 px-4 py-2 border-4 border-black inline-block transform -rotate-2">
+                        <span className="bg-orange-400 px-4 py-2 border-4 border-black dark:border-cyan-400 inline-block transform -rotate-2">
                             Unemployed
                         </span>
                         ?
@@ -25,7 +25,7 @@ const Career = () => {
 
                     <div className="pt-4">
                         <button
-                            className="px-8 py-4 text-xl font-bold border-4 border-black 
+                            className="px-8 py-4 text-xl font-bold border-4 border-black dark:border-cyan-400
                                                  bg-orange-400 text-white space-mono uppercase
                                                  hover:translate-x-1 hover:translate-y-1
                                                  hover:shadow-[6px_6px_0px_black] transition-all

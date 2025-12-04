@@ -5,13 +5,13 @@ import { Link } from 'react-router';
 
 const Developer = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white dark:bg-gray-900">
             <title>Developer - GameHub</title>
             <section className="min-h-[60vh] px-8 md:px-14 py-16">
                 <div className="max-w-5xl mx-auto text-center space-y-8">
                     <h1 className="text-5xl md:text-6xl font-bold leading-tight space-mono">
                         Are You A <br />
-                        <span className="bg-orange-400 px-4 py-2 border-4 border-black inline-block transform -rotate-2">
+                        <span className="bg-orange-400 px-4 py-2 border-4 border-black dark:border-cyan-400 inline-block transform -rotate-2">
                             Developer
                         </span>
                         ?
@@ -26,7 +26,7 @@ const Developer = () => {
 
                     <div className="pt-4">
                         <button
-                            className="px-8 py-4 text-xl font-bold border-4 border-black 
+                            className="px-8 py-4 text-xl font-bold border-4 border-black dark:border-cyan-400
                                      bg-orange-400 text-white space-mono uppercase
                                      hover:translate-x-1 hover:translate-y-1
                                      hover:shadow-[6px_6px_0px_black] transition-all
@@ -53,34 +53,34 @@ const Developer = () => {
                
                 <div className="grid md:grid-cols-3 gap-6">
                   
-                    <div className="border-4 border-black p-6 bg-white hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
+                    <div className="border-4 border-black p-6 bg-white dark:bg-gray-900 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
                         <div className="w-16 h-16 bg-orange-400 border-4 border-black flex items-center justify-center mb-4 text-3xl">
                             <FaGamepad />
                         </div>
                         <h3 className="text-xl font-bold space-mono mb-3">Wide Audience</h3>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 dark:text-cyan-400">
                             Reach thousands of retro gaming enthusiasts actively looking for new games to play
                         </p>
                     </div>
 
                   
-                    <div className="border-4 border-black p-6 bg-[#00D9FF] hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
-                        <div className="w-16 h-16 bg-white border-4 border-black flex items-center justify-center mb-4 text-3xl">
+                    <div className="border-4 border-black p-6 bg-[#00D9FF] dark:bg-gray-900 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
+                        <div className="w-16 h-16 bg-white dark:bg-gray-900 border-4 border-black flex items-center justify-center mb-4 text-3xl dark:text-white">
                             <FaCode />
                         </div>
                         <h3 className="text-xl font-bold space-mono mb-3">Easy Upload</h3>
-                        <p className="text-gray-900">
+                        <p className="text-gray-900 dark:text-cyan-400">
                             Simple and straightforward upload process. Get your game live in minutes
                         </p>
                     </div>
 
                    
-                    <div className="border-4 border-black p-6 bg-white hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
+                    <div className="border-4 border-black p-6 bg-white dark:bg-gray-900 hover:translate-x-1 hover:translate-y-1 hover:shadow-[6px_6px_0px_black] transition-all">
                         <div className="w-16 h-16 bg-orange-400 border-4 border-black flex items-center justify-center mb-4 text-3xl">
                             <FaRocket />
                         </div>
                         <h3 className="text-xl font-bold space-mono mb-3">Get Feedback</h3>
-                        <p className="text-gray-700">
+                        <p className="text-gray-700 dark:text-cyan-400">
                             Receive ratings and reviews from players to improve your games
                         </p>
                     </div>
@@ -89,7 +89,7 @@ const Developer = () => {
 
          
             <section className="max-w-6xl mx-auto px-4 py-16">
-                <div className="border-4 border-black bg-white p-8 md:p-12">
+                <div className="border-4 border-black dark:border-cyan-400 bg-white dark:bg-gray-900 p-8 md:p-12">
                     <h2 className="text-3xl font-bold space-mono mb-6 text-center">
                         Submission Guidelines
                     </h2>
@@ -184,17 +184,17 @@ const Developer = () => {
             
             <section className="max-w-6xl mx-auto px-4 pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="border-4 border-black p-8 bg-orange-400 text-center">
+                    <div className="border-4 border-black p-8 bg-orange-400 dark:bg-gray-900 text-center">
                         <p className="text-5xl font-bold space-mono mb-2">1000+</p>
                         <p className="text-lg font-semibold space-mono">Active Players</p>
                     </div>
                     
-                    <div className="border-4 border-black p-8 bg-[#00D9FF] text-center">
+                    <div className="border-4 border-black p-8 bg-[#00D9FF] dark:bg-gray-900 text-center">
                         <p className="text-5xl font-bold space-mono mb-2">500+</p>
                         <p className="text-lg font-semibold space-mono">Games Hosted</p>
                     </div>
                     
-                    <div className="border-4 border-black p-8 bg-white text-center">
+                    <div className="border-4 border-black p-8 bg-white dark:bg-gray-900 text-center">
                         <p className="text-5xl font-bold space-mono mb-2">50+</p>
                         <p className="text-lg font-semibold space-mono">Developers</p>
                     </div>
