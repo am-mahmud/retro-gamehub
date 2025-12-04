@@ -50,7 +50,18 @@ const Header = () => {
                         </button>
                     </div>
 
-                    {!dark ? (
+                    <Link to="/" className="flex items-center gap-1 sm:gap-2">
+                            <img
+                                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
+                                src={ghLogoBL}
+                                alt=""
+                            />
+                            <span className="hidden sm:block text-lg md:text-xl font-bold dark:text-white">
+                                GAMEHUB
+                            </span>
+                        </Link>
+
+                    {/* {!dark ? (
                         <Link to="/" className="flex items-center gap-1 sm:gap-2">
                             <img
                                 className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14"
@@ -72,7 +83,7 @@ const Header = () => {
                                 GAMEHUB
                             </span>
                         </Link>
-                    )}
+                    )} */}
 
                 </div>
 
