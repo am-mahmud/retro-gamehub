@@ -59,8 +59,8 @@ const Login = () => {
         <>
             <title>Login - GameHub</title>
 
-            <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono ">
-                <div className="w-full max-w-sm border-2 border-black p-4">
+            <div className="flex justify-center items-center min-h-screen p-4 bg-white space-mono dark:bg-gray-900 transition-colors">
+                <div className="w-full max-w-sm border-2 border-black dark:border-cyan-400 p-4 bg-white dark:bg-gray-800 transition-colors">
                
                     <div className="text-center mb-8">
                         <h1 className="text-5xl font-black text-black tracking-tight mb-2">
@@ -136,12 +136,10 @@ const Login = () => {
                         <div className="flex-1 h-px bg-orange-400"></div>
                     </div>
 
-                    {/* Social Login Text */}
                     <p className="text-center text-sm font-semibold text-black mb-4">
                         Login Using
                     </p>
 
-                    {/* Social Login Buttons */}
                     <div className="flex justify-center gap-4 mb-8">
                         <button
                             onClick={handleGoogleLogIn}
