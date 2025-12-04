@@ -5,8 +5,8 @@ It features fast routing, secure authentication, smooth animations, game listing
 
 ### 🔗 Links
 
-Live Demo:
-GitHub Repo: https://github.com/am-mahmud/retro-gamehub
+#### Live Demo: https://gamehub-am.netlify.app/
+#### GitHub Repo: https://github.com/am-mahmud/retro-gamehub
 
 ### 🚀 Features
 
